@@ -8,12 +8,22 @@ import javax.swing.*;
 public class Vistas {
     
     public static ArrayList<JPanel> create_vistas(){
+        //Colores
+        Color RisingBlack = new Color(27, 28, 34); //Negro
+
         ArrayList<JPanel> views = new ArrayList<JPanel>();
 
         FlowLayout fl = new FlowLayout();
         fl.setAlignment(FlowLayout.CENTER);
-        JPanel inicio = new JPanel(fl);
+
+
+        JPanel inicio = new JPanel(new GridLayout(10,1));
         inicio.add(new JLabel("INICIO"));
+        JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
+        separator.setForeground(RisingBlack);
+        separator.setBackground(RisingBlack);
+        inicio.add(separator);
+        inicio.add(new JLabel("HOLAAAA"));
         views.add(inicio);
 
         JPanel juegos = new JPanel(fl);
