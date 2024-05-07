@@ -7,13 +7,15 @@ package practicafinal;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author mayumar
  */
 public class Barra_superior {
-    public static JPanel createBarra(){
+
+    public static JPanel createBarra(JPanel parent_panel, ArrayList<JPanel> views, JFrame jf){
         //Colores
         Color Silver = new Color(202, 204, 207); //Gris muy claro
         Color CadetGray = new Color(159, 163, 168); //Gris claro
@@ -40,18 +42,21 @@ public class Barra_superior {
         b_inicio.setBackground(CadetGray);
         b_inicio.setBorder(button_empty_border);
         b_inicio.setForeground(RisingBlack);
+        b_inicio.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(0), BorderLayout.CENTER, jf));
         botones.add(b_inicio);
         
         JButton b_juegos = new JButton("Juegos");
         b_juegos.setBackground(CadetGray);
         b_juegos.setBorder(button_empty_border);
         b_juegos.setForeground(RisingBlack);
+        b_juegos.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(1), BorderLayout.CENTER, jf));
         botones.add(b_juegos);
         
         JButton b_categorias = new JButton("Categorias");
         b_categorias.setBackground(CadetGray);
         b_categorias.setBorder(button_empty_border);
         b_categorias.setForeground(RisingBlack);
+        b_categorias.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(2), BorderLayout.CENTER, jf));
         botones.add(b_categorias);
         
         barra_superior.add(botones, BorderLayout.WEST);
