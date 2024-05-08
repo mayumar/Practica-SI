@@ -17,11 +17,14 @@ public class Linea extends JPanel {
     }
     
     @Override public void paint(Graphics g) {
+        //Colores
+        Color RisingBlack = new Color(27, 28, 34); //Negro
+
         //Get the current size of this component
         Dimension d = this.getSize();
 
         //draw in black
-        g.setColor(Color.BLACK);
+        g.setColor(RisingBlack);
         //draw a centered horizontal line
         g.drawLine(this.x1, this.y1, this.x2, this.y2);
     }
