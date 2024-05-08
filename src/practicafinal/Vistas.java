@@ -3,7 +3,10 @@ package practicafinal;
 import java.awt.*;
 import java.util.ArrayList;
 
+import javax.sound.sampled.Line;
 import javax.swing.*;
+
+import practicafinal.Linea;
 
 public class Vistas {
     
@@ -31,10 +34,11 @@ public class Vistas {
 
         JPanel inicio = new JPanel(new GridLayout(10,1));
         inicio.add(new JLabel("INICIO"));
-        JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
-        separator.setForeground(RisingBlack);
-        separator.setBackground(RisingBlack);
-        inicio.add(separator);
+        // JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
+        // separator.setForeground(RisingBlack);
+        // separator.setBackground(RisingBlack);
+        // inicio.add(separator);
+        inicio.add(new Linea(50, 100, 250, 100));
         inicio.add(new JLabel("HOLAAAA"));
 
         return inicio;
