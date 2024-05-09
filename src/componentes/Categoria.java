@@ -5,6 +5,6 @@ package componentes;
  */
 public class Categoria {
     public Categoria() {
-        
+
     }
 }
