@@ -11,7 +11,8 @@ public class Juegos {
         Color RisingBlack = new Color(27, 28, 34); //Negro
 
         JPanel juegos = new JPanel(new BorderLayout());
-        juegos.add(new Juego("cs2").crear());
+
+        juegos.add(new Juego("CS2").crear());
 
         JLabel titulo = new JLabel(nlista);
         titulo.setForeground(RisingBlack);
@@ -20,7 +21,6 @@ public class Juegos {
         juegos.add(titulo, BorderLayout.NORTH);
 
         juegos.add(new Linea(0, 10, 2000, 10), BorderLayout.CENTER);
-        juegos.add(new Juego("CS2").crear(), BorderLayout.SOUTH);
 
         return juegos;
     }
