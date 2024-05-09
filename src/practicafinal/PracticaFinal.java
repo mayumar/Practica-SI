@@ -23,8 +23,11 @@ public class PracticaFinal {
     public static void main(String[] args) {
         JFrame jf = new JFrame("LevelUp");
         
+        JScrollPane scrollPane = new JScrollPane();
+        jf.add(scrollPane);
+
         JPanel mainPanel = new JPanel(new BorderLayout());
-        jf.setContentPane(mainPanel);
+        scrollPane.setViewportView(mainPanel); // Establecer el JScrollPane como vista del mainPanel
 
         //Panel con margenes
         JPanel panel = new JPanel(new BorderLayout());
@@ -53,7 +56,6 @@ public class PracticaFinal {
         //Barra superior
         JPanel barra_superior = Barra_superior.createBarra(panel, views, jf);
         mainPanel.add(barra_superior, BorderLayout.NORTH);
-
         
         jf.setSize(1452, 779);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
