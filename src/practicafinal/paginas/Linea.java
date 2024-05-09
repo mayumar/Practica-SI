@@ -1,4 +1,4 @@
-package practicafinal;
+package practicafinal.paginas;
 
 import javax.swing.*;
 import java.awt.*;
