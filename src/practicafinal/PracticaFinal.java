@@ -23,6 +23,15 @@ public class PracticaFinal {
         JPanel panel = new JPanel(new BorderLayout());
         jf.setContentPane(panel);
 
+        //Margenes
+        JPanel leftMargin = new JPanel();
+        leftMargin.setPreferredSize(new Dimension(50, 1));
+        panel.add(leftMargin, BorderLayout.WEST);
+
+        JPanel rightMargin = new JPanel();
+        rightMargin.setPreferredSize(new Dimension(50, 1));
+        panel.add(rightMargin, BorderLayout.EAST);
+
         //Vistas
         ArrayList<JPanel> views = Vistas.create_vistas();
         
