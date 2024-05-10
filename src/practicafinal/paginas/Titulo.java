@@ -15,12 +15,21 @@ public class Titulo {
             JLabel logo = new JLabel(icon);
             logo.setHorizontalAlignment(JLabel.LEFT);
             panel.add(logo, BorderLayout.NORTH);
-        }
 
-        JLabel slogan = new JLabel(label);
-        slogan.setForeground(RisingBlack);
-        slogan.setBackground(RisingBlack);
-        panel.add(slogan, BorderLayout.CENTER);
+            JLabel slogan = new JLabel(label);
+            slogan.setForeground(RisingBlack);
+            slogan.setBackground(RisingBlack);
+            Font fuente = slogan.getFont();
+            slogan.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
+            panel.add(slogan, BorderLayout.CENTER);
+        }else{
+            JLabel title = new JLabel(label);
+            title.setForeground(RisingBlack);
+            title.setBackground(RisingBlack);
+            Font fuente = title.getFont();
+            title.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
+            panel.add(title);
+        }
 
         panel.add(new Linea(0, 5, 2000,5), BorderLayout.SOUTH);
 

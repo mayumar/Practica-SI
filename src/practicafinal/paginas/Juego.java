@@ -4,12 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Juego {
-    public static JPanel createJuego(){
-        FlowLayout fl = new FlowLayout();
-        fl.setAlignment(FlowLayout.CENTER);
-
-        JPanel juego = new JPanel(fl);
-        juego.add(new JLabel("JUEGO"));
+    public static JPanel createJuego(String gameName){
+        JPanel juego = new JPanel(new BorderLayout());
+        juego.add(Titulo.createTitulo(gameName, false), BorderLayout.NORTH);
 
         return juego;
     }

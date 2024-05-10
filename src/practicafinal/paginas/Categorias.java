@@ -5,11 +5,9 @@ import java.awt.*;
 
 public class Categorias {
     public static JPanel createCategorias(){
-        FlowLayout fl = new FlowLayout();
-        fl.setAlignment(FlowLayout.CENTER);
-
-        JPanel categorias = new JPanel(fl);
-        categorias.add(new JLabel("CATEGORIAS"));
+        JPanel categorias = new JPanel(new BorderLayout());
+        
+        categorias.add(Titulo.createTitulo("Categorias", false), BorderLayout.NORTH);
 
         return categorias;
     }

@@ -13,10 +13,10 @@ public class Vistas {
         ArrayList<JPanel> views = new ArrayList<JPanel>();
 
         views.add(Inicio.createInicio());
-        views.add(Juegos.createJuegos("JUEGOS"));
+        views.add(Juegos.createJuegos("Juegos"));
         views.add(Categorias.createCategorias());
         views.add(Juegos.createJuegos("FPS"));
-        views.add(Juego.createJuego());
+        views.add(Juego.createJuego("Call Of Duty"));
         views.add(Review.createReview());
 
         return views;

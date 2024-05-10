@@ -20,10 +20,13 @@ public class Linea extends JPanel {
         //Colores
         Color RisingBlack = new Color(27, 28, 34); //Negro
 
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(2));
+
         //draw in black
-        g.setColor(RisingBlack);
+        g2.setColor(RisingBlack);
 
         //draw a centered horizontal line
-        g.drawLine(this.x1, this.y1, this.x2, this.y2);
+        g2.drawLine(this.x1, this.y1, this.x2, this.y2);
     }
 }

@@ -5,11 +5,8 @@ import java.awt.*;
 
 public class Juegos {
     public static JPanel createJuegos(String nlista){
-        FlowLayout fl = new FlowLayout();
-        fl.setAlignment(FlowLayout.CENTER);
-
-        JPanel juegos = new JPanel(fl);
-        juegos.add(new JLabel(nlista));
+        JPanel juegos = new JPanel(new BorderLayout());
+        juegos.add(Titulo.createTitulo(nlista, false), BorderLayout.NORTH);
 
         return juegos;
     }

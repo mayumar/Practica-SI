@@ -69,8 +69,19 @@ public class Barra_superior {
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
         c.insets = new Insets(2,4,2,7);
-        
+
         c.gridx = 0;
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        ImageIcon idioma = new ImageIcon("src/images/idioma.png");
+        JButton b_idioma = new JButton(idioma);
+        b_idioma.setBackground(CadetGray);
+        b_idioma.setBorder(button_empty_border);
+        b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth()+5, idioma.getIconHeight()));
+        busqueda.add(b_idioma, c);
+        
+        c.gridx = 1;
         c.gridy = 0;
         c.gridheight = 1;
         c.gridwidth = 1;
@@ -79,7 +90,7 @@ public class Barra_superior {
         busqueda.add(buscar, c);
         
         ImageIcon icon = new ImageIcon("src/images/buscar.png");
-        c.gridx = 1;
+        c.gridx = 2;
         c.gridy = 0;
         c.gridheight = 1;
         c.gridwidth = 1;
