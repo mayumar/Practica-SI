@@ -50,5 +50,20 @@
             "imagen": "src/images/juegos/fps/p_battlefield.png",
             "calificacion": 8.5
         }
+    ],
+    "mundo_abierto": [
+
+    ],
+    "terror": [
+
+    ],
+    "indie": [
+
+    ],
+    "supervivencia": [
+
+    ],
+    "plataformas": [
+        
     ]
 }
