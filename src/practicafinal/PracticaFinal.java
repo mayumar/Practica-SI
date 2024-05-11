@@ -6,7 +6,7 @@ package practicafinal;
 
 import javax.swing.*;
 
-import componentes.Barra_superior;
+import practicafinal.componentes.Barra_superior;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package componentes;
+package practicafinal.componentes;
 
 import javax.swing.*;
 import javax.swing.border.Border;

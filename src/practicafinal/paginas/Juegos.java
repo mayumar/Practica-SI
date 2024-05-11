@@ -2,7 +2,7 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
-import componentes.Juego;
+import practicafinal.componentes.Juego;
 
 import java.awt.*;
 

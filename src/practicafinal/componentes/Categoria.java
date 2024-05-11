@@ -1,4 +1,4 @@
-package componentes;
+package practicafinal.componentes;
 
 /**
  * @author @Pacatro
