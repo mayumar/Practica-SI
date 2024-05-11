@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import practicafinal.componentes.Titulo;
+
 public class Inicio extends JPanel{
 
     public Inicio(){
@@ -24,8 +26,15 @@ public class Inicio extends JPanel{
         Carrousel carrousel = new Carrousel(elements, 3);
 
         // Añadir el carrousel al panel
-        JPanel contenido = new JPanel();
-        contenido.add(carrousel, BorderLayout.CENTER);
-        add(contenido);
+        JPanel contenido = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+
+        contenido.add(carrousel);
+        
+        //Titulo de destacados
+        contenido.add(new Titulo("DESTACADOS", false));
+
+        add(contenido, BorderLayout.CENTER);
     }
 }

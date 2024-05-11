@@ -1,8 +1,8 @@
-package practicafinal.paginas;
+package practicafinal.componentes;
 
 import javax.swing.*;
 
-import practicafinal.componentes.Colores;
+import practicafinal.paginas.Linea;
 
 import java.awt.*;
 
@@ -32,7 +32,7 @@ public class Titulo extends JPanel{
             title.setBackground(Colores.RisingBlack);
             Font fuente = title.getFont();
             title.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
-            add(title);
+            add(title, BorderLayout.CENTER);
             
         }
 

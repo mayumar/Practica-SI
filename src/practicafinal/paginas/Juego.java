@@ -1,6 +1,9 @@
 package practicafinal.paginas;
 
 import javax.swing.*;
+
+import practicafinal.componentes.Titulo;
+
 import java.awt.*;
 
 public class Juego extends JPanel{
