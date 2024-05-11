@@ -3,12 +3,10 @@ package practicafinal.paginas;
 import javax.swing.*;
 import java.awt.*;
 
-public class Categorias {
-    public static JPanel createCategorias(){
-        JPanel categorias = new JPanel(new BorderLayout());
+public class Categorias extends JPanel{
+    public Categorias(){
+        setLayout(new BorderLayout());
         
-        categorias.add(new Titulo("Categorias", false), BorderLayout.NORTH);
-
-        return categorias;
+        add(new Titulo("Categorias", false), BorderLayout.NORTH);
     }
 }

@@ -2,7 +2,7 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
-import practicafinal.Colores;
+import practicafinal.componentes.Colores;
 
 import java.awt.*;
 import java.awt.event.*;

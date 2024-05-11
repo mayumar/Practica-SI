@@ -3,11 +3,11 @@ package practicafinal.paginas;
 import javax.swing.*;
 import java.awt.*;
 
-public class Review {
-    public static JPanel createReview(){
-        JPanel review = new JPanel(new BorderLayout());
-        review.add(new Titulo("Deja tu reseña", false), BorderLayout.NORTH);
+public class Review extends JPanel{
 
-        return review;
+    public Review(){
+        setLayout(new BorderLayout());
+        add(new Titulo("Deja tu reseña", false), BorderLayout.NORTH);
     }
+
 }

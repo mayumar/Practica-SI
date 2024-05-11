@@ -1,4 +1,4 @@
-package practicafinal;
+package practicafinal.componentes;
 
 import java.awt.*;
 

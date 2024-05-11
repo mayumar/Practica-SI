@@ -5,13 +5,13 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
-public class Inicio {
+public class Inicio extends JPanel{
 
-    public static JPanel createInicio(){
+    public Inicio(){
 
-        JPanel inicio = new JPanel(new BorderLayout());
+        setLayout(new BorderLayout());
 
-        inicio.add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
+        add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
         ArrayList<JPanel> elements = new ArrayList<JPanel>();
@@ -26,8 +26,6 @@ public class Inicio {
         // Añadir el carrousel al panel
         JPanel contenido = new JPanel();
         contenido.add(carrousel, BorderLayout.CENTER);
-        inicio.add(contenido);
-
-        return inicio;
+        add(contenido);
     }
 }
