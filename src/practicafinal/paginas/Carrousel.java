@@ -1,6 +1,9 @@
 package practicafinal.paginas;
 
 import javax.swing.*;
+
+import practicafinal.Colores;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -25,7 +28,7 @@ public class Carrousel extends JPanel {
         setLayout(new BorderLayout());
         add(elementsPanel, BorderLayout.CENTER);
 
-        JButton prevButton = new JButton("Prev");
+        JButton prevButton = new JButton("<");
         prevButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -33,13 +36,25 @@ public class Carrousel extends JPanel {
             }
         });
 
-        JButton nextButton = new JButton("Next");
+        prevButton.setOpaque(false);
+        prevButton.setContentAreaFilled(false);
+        prevButton.setBorderPainted(false);
+        prevButton.setForeground(Colores.RisingBlack);
+        prevButton.setFont(new Font(prevButton.getFont().getFontName(), Font.PLAIN, 30));
+
+        JButton nextButton = new JButton(">");
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 showNext();
             }
         });
+
+        nextButton.setOpaque(false);
+        nextButton.setContentAreaFilled(false);
+        nextButton.setBorderPainted(false);
+        nextButton.setForeground(Colores.RisingBlack);
+        nextButton.setFont(new Font(nextButton.getFont().getFontName(), Font.PLAIN, 30));
 
         add(prevButton, BorderLayout.WEST);
         add(nextButton, BorderLayout.EAST);

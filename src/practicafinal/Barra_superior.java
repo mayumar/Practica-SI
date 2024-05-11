@@ -5,7 +5,6 @@
 package practicafinal;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -13,59 +12,68 @@ import java.util.ArrayList;
  *
  * @author mayumar
  */
-public class Barra_superior {
+public class Barra_superior extends JPanel{
+    private JPanel parentPanel;
+    private ArrayList<JPanel> views;
+    private JFrame jf;
 
-    public static JPanel createBarra(JPanel parent_panel, ArrayList<JPanel> views, JFrame jf){
-        //Colores
-        Color Silver = new Color(202, 204, 207); //Gris muy claro
-        Color CadetGray = new Color(159, 163, 168); //Gris claro
-        Color DimGray = new Color(93, 96, 101); //Gris medio
-        Color RisingBlack = new Color(27, 28, 34); //Negro
+    public Barra_superior(JPanel parentPanel, ArrayList<JPanel> views, JFrame jf){
+        this.parentPanel = parentPanel;
+        this.views = views;
+        this.jf = jf;
         
-        //Bordes
-        Border Gray_border = BorderFactory.createLineBorder(DimGray, 2);
-        Border button_empty_border = BorderFactory.createEmptyBorder(10, 30, 10, 30);
-        
-        
-        JPanel barra_superior = new JPanel(new BorderLayout());
-        barra_superior.setBackground(CadetGray);
-        barra_superior.setBorder(Gray_border);  
+        setLayout(new BorderLayout());
+        setBackground(Colores.CadetGray);
+        setBorder(Bordes.Gray_border);  
         
         
         //Panel de botones
-        FlowLayout fl = new FlowLayout();
-        fl.setAlignment(FlowLayout.LEFT);
-        JPanel botones = new JPanel(fl);
-        botones.setBackground(CadetGray);
+        JPanel botones = createBotones();
         
-        JButton b_inicio = new JButton("Inicio");
-        b_inicio.setBackground(CadetGray);
-        b_inicio.setBorder(button_empty_border);
-        b_inicio.setForeground(RisingBlack);
-        b_inicio.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(0), BorderLayout.CENTER, jf));
-        botones.add(b_inicio);
-        
-        JButton b_juegos = new JButton("Juegos");
-        b_juegos.setBackground(CadetGray);
-        b_juegos.setBorder(button_empty_border);
-        b_juegos.setForeground(RisingBlack);
-        b_juegos.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(1), BorderLayout.CENTER, jf));
-        botones.add(b_juegos);
-        
-        JButton b_categorias = new JButton("Categorias");
-        b_categorias.setBackground(CadetGray);
-        b_categorias.setBorder(button_empty_border);
-        b_categorias.setForeground(RisingBlack);
-        b_categorias.addActionListener(new FocusPanelButtonListener(parent_panel, views, views.get(2), BorderLayout.CENTER, jf));
-        botones.add(b_categorias);
-        
-        barra_superior.add(botones, BorderLayout.WEST);
+        add(botones, BorderLayout.WEST);
         
         
         //Panel de barra de busqueda
+        JPanel busqueda = createBusqueda();
+        
+        add(busqueda, BorderLayout.EAST);
+    }
+
+    private JPanel createBotones(){
+        FlowLayout fl = new FlowLayout();
+        fl.setAlignment(FlowLayout.LEFT);
+        JPanel botones = new JPanel(fl);
+        botones.setBackground(Colores.CadetGray);
+        
+        JButton b_inicio = new JButton("Inicio");
+        b_inicio.setBackground(Colores.CadetGray);
+        b_inicio.setBorder(Bordes.button_empty_border);
+        b_inicio.setForeground(Colores.RisingBlack);
+        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(0), BorderLayout.CENTER, jf));
+        botones.add(b_inicio);
+        
+        JButton b_juegos = new JButton("Juegos");
+        b_juegos.setBackground(Colores.CadetGray);
+        b_juegos.setBorder(Bordes.button_empty_border);
+        b_juegos.setForeground(Colores.RisingBlack);
+        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(1), BorderLayout.CENTER, jf));
+        botones.add(b_juegos);
+        
+        JButton b_categorias = new JButton("Categorias");
+        b_categorias.setBackground(Colores.CadetGray);
+        b_categorias.setBorder(Bordes.button_empty_border);
+        b_categorias.setForeground(Colores.RisingBlack);
+        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(2), BorderLayout.CENTER, jf));
+        botones.add(b_categorias);
+
+        return botones;
+    }
+
+    private JPanel createBusqueda(){
+        FlowLayout fl = new FlowLayout();
         fl.setAlignment(FlowLayout.RIGHT);
         JPanel busqueda = new JPanel(new GridBagLayout());
-        busqueda.setBackground(CadetGray);
+        busqueda.setBackground(Colores.CadetGray);
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
         c.insets = new Insets(2,4,2,7);
@@ -76,8 +84,8 @@ public class Barra_superior {
         c.gridwidth = 1;
         ImageIcon idioma = new ImageIcon("src/images/idioma.png");
         JButton b_idioma = new JButton(idioma);
-        b_idioma.setBackground(CadetGray);
-        b_idioma.setBorder(button_empty_border);
+        b_idioma.setBackground(Colores.CadetGray);
+        b_idioma.setBorder(Bordes.button_empty_border);
         b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth()+5, idioma.getIconHeight()));
         busqueda.add(b_idioma, c);
         
@@ -86,7 +94,7 @@ public class Barra_superior {
         c.gridheight = 1;
         c.gridwidth = 1;
         JTextField buscar = new JTextField(15);
-        buscar.setBorder(Gray_border);
+        buscar.setBorder(Bordes.Gray_border);
         busqueda.add(buscar, c);
         
         ImageIcon icon = new ImageIcon("src/images/buscar.png");
@@ -95,13 +103,11 @@ public class Barra_superior {
         c.gridheight = 1;
         c.gridwidth = 1;
         JButton b_busqueda = new JButton(icon);
-        b_busqueda.setBackground(Silver);
-        b_busqueda.setBorder(Gray_border);
-        b_busqueda.setForeground(RisingBlack);
+        b_busqueda.setBackground(Colores.Silver);
+        b_busqueda.setBorder(Bordes.Gray_border);
+        b_busqueda.setForeground(Colores.RisingBlack);
         busqueda.add(b_busqueda, c);
-        
-        barra_superior.add(busqueda, BorderLayout.EAST);
-        
-        return barra_superior;
+
+        return busqueda;
     }
 }

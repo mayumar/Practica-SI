@@ -51,7 +51,7 @@ public class PracticaFinal {
         panel.add(views.get(0));
 
         //Barra superior
-        JPanel barra_superior = Barra_superior.createBarra(panel, views, jf);
+        Barra_superior barra_superior = new Barra_superior(panel, views, jf);
         mainPanel.add(barra_superior, BorderLayout.NORTH);
         
         jf.setSize(1452, 779);
