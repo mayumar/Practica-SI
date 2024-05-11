@@ -2,9 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package practicafinal;
+package practicafinal.componentes;
 
 import javax.swing.*;
+
+import practicafinal.*;
+
 import java.awt.*;
 import java.util.ArrayList;
 
