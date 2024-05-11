@@ -11,7 +11,7 @@ public class Inicio {
 
         JPanel inicio = new JPanel(new BorderLayout());
 
-        inicio.add(Titulo.createTitulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
+        inicio.add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
         ArrayList<JPanel> elements = new ArrayList<JPanel>();

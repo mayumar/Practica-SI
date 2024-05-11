@@ -7,7 +7,7 @@ public class Categorias {
     public static JPanel createCategorias(){
         JPanel categorias = new JPanel(new BorderLayout());
         
-        categorias.add(Titulo.createTitulo("Categorias", false), BorderLayout.NORTH);
+        categorias.add(new Titulo("Categorias", false), BorderLayout.NORTH);
 
         return categorias;
     }
