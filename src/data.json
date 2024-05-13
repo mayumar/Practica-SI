@@ -1,69 +1,135 @@
 {
-    "fps": [
-        {
-            "nombre": "Doom Eternal",
-            "imagen": "src/images/juegos/fps/p_doom.png",
-            "calificacion": 8.8
-        },
-        {
-            "nombre": "Counter Strike 2",
-            "imagen": "src/images/juegos/fps/p_cs2.png",
-            "calificacion": 8.2
-        },
-        {
-            "nombre": "Splatoon",
-            "imagen": "src/images/juegos/fps/p_splatoon.png",
-            "calificacion": 8.1
-        },
-        {
-            "nombre": "Valorant",
-            "imagen": "src/images/juegos/fps/p_valorant.png",
-            "calificacion": 5.0
-        },
-        {
-            "nombre": "COD: Advance warfare",
-            "imagen": "src/images/juegos/fps/p_cod.png",
-            "calificacion": 9.0
-        },
-        {
-            "nombre": "Borderlands",
-            "imagen": "src/images/juegos/fps/p_borderlands.png",
-            "calificacion": 6.5
-        },
-        {
-            "nombre": "Halo",
-            "imagen": "src/images/juegos/fps/p_halo.png",
-            "calificacion": 4.0
-        },
-        {
-            "nombre": "Quake",
-            "imagen": "src/images/juegos/fps/p_quake.png",
-            "calificacion": 7.5
-        },
-        {
-            "nombre": "Helldivers 2",
-            "imagen": "src/images/juegos/fps/p_helldivers.png",
-            "calificacion": 8.9
-        },
-        {
-            "nombre": "Battlefield 1",
-            "imagen": "src/images/juegos/fps/p_battlefield.png",
-            "calificacion": 8.5
-        }
-    ],
-    "mundo_abierto": [
-
-    ],
-    "terror": [
-
-    ],
-    "indie": [
-
-    ],
-    "supervivencia": [
-
-    ],
-    "plataformas": [
-        
-    ]
+	"fps": [
+		{
+			"nombre": "Doom Eternal",
+			"imagen": "src/images/juegos/fps/p_doom.png",
+			"calificacion": 8.8,
+            "descripcion": "Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software y publicado por Bethesda Softworks. Es la secuela directa del Doom de 2016 y se anunció en la conferencia de prensa de Bethesda en el E3 2018 como el juego Doom: Eternal.",
+			"reviews": [
+				{
+                    "comment": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
+                    "calificacion": 8.0
+                },
+                {
+                    "comment": "El exoesqueleto añade una capa de dinamismo al combate, pero la historia puede sentirse un poco genérica. Aún así, ofrece una experiencia sólida para los fanáticos de los juegos de disparos.",
+                    "calificacion": 7.0
+                },
+                {
+                    "comment": "El multijugador es el punto fuerte de este juego. Acción rápida, mapas bien diseñados y una variedad de modos de juego mantienen la diversión durante horas.",
+                    "calificacion": 9.0
+                },
+                {
+                    "comment": "Si bien ofrece una experiencia entretenida, 'Doom Eternal' no logra destacar significativamente dentro de la serie 'Doom'. La innovación es limitada, pero sigue siendo un título competente en su género.",
+                    "calificacion": 6.0
+                }
+			]
+		},
+		{
+			"nombre": "Counter Strike 2",
+			"imagen": "src/images/juegos/fps/p_cs2.png",
+			"calificacion": 8.2,
+            "descripcion": "Counter-Strike 2 es una secuela del legendario juego de disparos en primera persona Counter-Strike. Desarrollado por Valve Corporation, sigue la fórmula de su predecesor, con partidas multijugador intensas y estratégicas.",
+			"reviews": [
+                {
+                    "comment": "La secuela de Counter-Strike sigue siendo un punto de referencia en los juegos de disparos multijugador. Su enfoque en la estrategia y el trabajo en equipo lo convierte en una experiencia inolvidable para los jugadores.",
+                    "calificacion": 8.0
+                },
+                {
+                    "comment": "Counter-Strike 2 mantiene la esencia de la serie con partidas emocionantes y una comunidad activa de jugadores. Sin embargo, podría beneficiarse de más innovación para destacarse entre la competencia moderna.",
+                    "calificacion": 7.0
+                },
+                {
+                    "comment": "A pesar de su continuismo, Counter-Strike 2 ofrece una experiencia sólida y adictiva para los amantes de los juegos de disparos. Su enfoque en la estrategia y la habilidad individual lo convierten en un clásico instantáneo.",
+                    "calificacion": 9.0
+                }
+            ]
+		},
+		{
+			"nombre": "Splatoon",
+			"imagen": "src/images/juegos/fps/p_splatoon.png",
+			"calificacion": 8.1,
+            "descripcion": "Splatoon es un juego de disparos en tercera persona desarrollado y publicado por Nintendo para la consola Wii U. Destaca por su enfoque en la tinta y el combate en equipo, ofreciendo una experiencia fresca y colorida en el género de los shooters.",
+			"reviews": [
+                {
+                    "comment": "Splatoon ofrece una experiencia única en el género de los shooters con su mecánica de tinta y combate en equipo. Es divertido, fresco y perfecto para jugadores de todas las edades.",
+                    "calificacion": 8.0
+                },
+                {
+                    "comment": "Aunque innovador, Splatoon puede carecer de profundidad en comparación con otros juegos de disparos. Sin embargo, su estilo único lo hace destacar en el catálogo de la Wii U.",
+                    "calificacion": 7.0
+                },
+                {
+                    "comment": "Splatoon es una joya oculta en la biblioteca de la Wii U. Su jugabilidad fresca y su estilo visual vibrante lo convierten en una experiencia única que ningún fanático de los juegos de disparos debería perderse.",
+                    "calificacion": 9.0
+                }
+            ]
+		},
+		{
+			"nombre": "Valorant",
+			"imagen": "src/images/juegos/fps/p_valorant.png",
+			"calificacion": 5,
+            "descripcion": "Valorant es un juego de disparos táctico en primera persona desarrollado y publicado por Riot Games. Lanzado en 2020, combina elementos de juegos como Counter-Strike con habilidades únicas de personajes estilo hero shooter.",
+			"reviews": [
+                {
+                    "comment": "Valorant ofrece un enfoque fresco y estratégico en el género de los shooters. Sin embargo, su curva de aprendizaje empinada y su estilo de arte pueden no ser para todos los gustos.",
+                    "calificacion": 6.0
+                },
+                {
+                    "comment": "El juego tiene potencial, pero necesita más contenido y equilibrio para competir con otros títulos establecidos en el género de los FPS.",
+                    "calificacion": 4.0
+                },
+                {
+                    "comment": "Valorant muestra promesas con su mezcla única de mecánicas tácticas y habilidades de personajes. Sin embargo, su falta de variedad de mapas y modos puede limitar su atractivo a largo plazo.",
+                    "calificacion": 5.5
+                }
+            ]
+		},
+		{
+			"nombre": "COD: Advance warfare",
+			"imagen": "src/images/juegos/fps/p_cod.png",
+			"calificacion": 9,
+            "descripcion": "Call of Duty: Advanced Warfare es un videojuego de disparos en primera persona desarrollado por Sledgehammer Games y publicado por Activision. Es el undécimo título principal de la serie Call of Duty y fue lanzado en 2014.",
+			"reviews": []
+		},
+		{
+			"nombre": "Borderlands",
+			"imagen": "src/images/juegos/fps/p_borderlands.png",
+			"calificacion": 6.5,
+            "descripcion": "Borderlands es una serie de videojuegos de disparos en primera persona desarrollada por Gearbox Software. Con su distintivo estilo gráfico y un enfoque en la cooperación multijugador, ha ganado una sólida base de fanáticos.",
+			"reviews": []
+		},
+		{
+			"nombre": "Halo",
+			"imagen": "src/images/juegos/fps/p_halo.png",
+			"calificacion": 4,
+            "descripcion": "Halo es una serie de videojuegos de disparos en primera persona desarrollada por Bungie y ahora gestionada por 343 Industries, una subsidiaria de Microsoft Studios. Conocida por su historia épica y su multijugador innovador, es una franquicia emblemática en el mundo de los videojuegos.",
+			"reviews": []
+		},
+		{
+			"nombre": "Quake",
+			"imagen": "src/images/juegos/fps/p_quake.png",
+			"calificacion": 7.5,
+            "descripcion": "Quake es un juego de disparos en primera persona desarrollado por id Software y lanzado en 1996. Considerado uno de los pioneros del género, estableció muchos de los tropos y estándares que se ven en los juegos FPS modernos.",
+			"reviews": []
+		},
+		{
+			"nombre": "Helldivers 2",
+			"imagen": "src/images/juegos/fps/p_helldivers.png",
+			"calificacion": 8.9,
+            "descripcion": "Helldivers 2 es un juego de disparos en vista cenital desarrollado por Arrowhead Game Studios. Con un enfoque en la cooperación y el combate estratégico, es una experiencia desafiante y emocionante para los amantes de los juegos de acción.",
+			"reviews": []
+		},
+		{
+			"nombre": "Battlefield 1",
+			"imagen": "src/images/juegos/fps/p_battlefield.png",
+			"calificacion": 8.5,
+            "descripcion": "Battlefield 1 es un videojuego de disparos en primera persona desarrollado por EA DICE y publicado por Electronic Arts. Ambientado en la Primera Guerra Mundial, destaca por su escala épica y su variedad de vehículos y armas.",
+			"reviews": []
+		}
+	],
+	"mundo_abierto": [],
+	"terror": [],
+	"indie": [],
+	"supervivencia": [],
+	"plataformas": []
 }
