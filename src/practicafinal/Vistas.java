@@ -16,7 +16,7 @@ public class Vistas{
         views.add(new Juegos("Juegos"));
         views.add(new Categorias());
         views.add(new Juegos("FPS"));
-        views.add(new Juego("Call Of Duty"));
+        views.add(new PortadaJuego("Call Of Duty"));
         views.add(new Review());
 
         return views;

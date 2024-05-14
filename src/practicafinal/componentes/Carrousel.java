@@ -1,8 +1,6 @@
-package practicafinal.paginas;
+package practicafinal.componentes;
 
 import javax.swing.*;
-
-import practicafinal.componentes.Colores;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -11,10 +9,10 @@ import java.util.ArrayList;
 public class Carrousel extends JPanel {
     private JPanel elementsPanel;
     private int currentIndex;
-    private ArrayList<JPanel> elements;
+    private ArrayList<JButton> elements;
     private int elementsToShow;
 
-    public Carrousel(ArrayList<JPanel> elements, int elementsToShow) {
+    public Carrousel(ArrayList<JButton> elements, int elementsToShow) {
         this.elements = elements;
         this.elementsToShow = elementsToShow;
         currentIndex = 0;

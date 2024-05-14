@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
-import practicafinal.componentes.Titulo;
+import practicafinal.componentes.*;
 
 public class Inicio extends JPanel{
 
@@ -16,14 +16,19 @@ public class Inicio extends JPanel{
         add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
-        ArrayList<JPanel> elements = new ArrayList<JPanel>();
-        for (int i = 0; i < 5; i++) {
-            elements.add(new JPanel());
-            elements.get(i).add(new JLabel("Elemento " + (i+1)));
-        }
+        ArrayList<JButton> elements = new ArrayList<JButton>();
+
+        elements.add(new Juego("cs2"));
+        elements.add(new Juego("battlefield"));
+        elements.add(new Juego("borderlands"));
+        elements.add(new Juego("cod"));
+        elements.add(new Juego("doom"));
+        elements.add(new Juego("halo"));
+        elements.add(new Juego("helldivers"));
+
 
         // Crear el carrousel
-        Carrousel carrousel = new Carrousel(elements, 3);
+        Carrousel carrousel = new Carrousel(elements, 5);
 
         JPanel contenido = new JPanel(new BorderLayout());
         
@@ -33,7 +38,15 @@ public class Inicio extends JPanel{
         //Titulo de destacados
         contenido.add(new Titulo("DESTACADOS", false), BorderLayout.CENTER);
 
-        contenido.add(new JLabel("JUEGO 1"), BorderLayout.SOUTH);
+        FlowLayout fl = new FlowLayout();
+        JPanel destacados = new JPanel(fl);
+
+
+        destacados.add(new Juego("cs2"));
+        destacados.add(new Juego("doom"));
+        destacados.add(new Juego("halo"));
+
+        contenido.add(destacados, BorderLayout.SOUTH);
 
         add(contenido, BorderLayout.CENTER);
     }

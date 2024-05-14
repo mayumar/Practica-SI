@@ -6,9 +6,9 @@ import practicafinal.componentes.Titulo;
 
 import java.awt.*;
 
-public class Juego extends JPanel{
+public class PortadaJuego extends JPanel{
 
-    public Juego(String gameName){
+    public PortadaJuego(String gameName){
         setLayout(new BorderLayout());
         add(new Titulo(gameName, false), BorderLayout.NORTH);
     }
