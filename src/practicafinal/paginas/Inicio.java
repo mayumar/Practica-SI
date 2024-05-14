@@ -30,13 +30,24 @@ public class Inicio extends JPanel{
         // Crear el carrousel
         Carrousel carrousel = new Carrousel(elements, 5);
 
-        JPanel contenido = new JPanel(new BorderLayout());
+        JPanel contenido = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+        c.insets = new Insets(30, 10, 30, 10);
         
         // Añadir el carrousel al panel
-        contenido.add(carrousel, BorderLayout.NORTH);
+        c.gridx = 0;
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        contenido.add(carrousel, c);
         
         //Titulo de destacados
-        contenido.add(new Titulo("DESTACADOS", false), BorderLayout.CENTER);
+        c.gridx = 0;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        contenido.add(new Titulo("DESTACADOS", false), c);
 
         FlowLayout fl = new FlowLayout();
         JPanel destacados = new JPanel(fl);
@@ -46,7 +57,11 @@ public class Inicio extends JPanel{
         destacados.add(new Juego("doom", parentPanel, this, BorderLayout.CENTER, views));
         destacados.add(new Juego("halo", parentPanel, this, BorderLayout.CENTER, views));
 
-        contenido.add(destacados, BorderLayout.SOUTH);
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        contenido.add(destacados, c);
 
         add(contenido, BorderLayout.CENTER);
     }
