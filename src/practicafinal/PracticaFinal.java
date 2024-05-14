@@ -16,6 +16,7 @@ import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -53,11 +54,11 @@ public class PracticaFinal {
         panel.add(topMargin, BorderLayout.NORTH);
 
         //Vistas
-        ArrayList<JPanel> views = Vistas.create_vistas(panel);
+        HashMap<String, JPanel> views = Vistas.create_vistas(panel);
         
         //Inicio como vista por defecto
-        views.get(views.size()-1).setVisible(true);
-        panel.add(views.get(views.size()-1));
+        views.get("inicio").setVisible(true);
+        panel.add(views.get("inicio"));
 
         //Barra superior
         Barra_superior barra_superior = new Barra_superior(panel, views, jf);

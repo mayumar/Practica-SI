@@ -9,19 +9,19 @@ package practicafinal;
  * @author mayumar
  */
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
 public class FocusPanelButtonListener implements ActionListener{
     JPanel parent_panel;
-    ArrayList<JPanel> old_panels;
+    HashMap<String,JPanel> old_panels;
     JPanel new_panel;
     String position;
     JFrame frame;
     
-    public FocusPanelButtonListener(JPanel parent_panel, ArrayList<JPanel> old_panels,
+    public FocusPanelButtonListener(JPanel parent_panel, HashMap<String,JPanel> old_panels,
             JPanel new_panel, String position, JFrame frame){
         this.parent_panel = parent_panel;
         this.old_panels = old_panels;
@@ -32,9 +32,9 @@ public class FocusPanelButtonListener implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e){
-        for(JPanel jp: old_panels){
-            jp.setVisible(false);
-            parent_panel.remove(jp);
+        for(String key: old_panels.keySet()){
+            old_panels.get(key).setVisible(false);
+            parent_panel.remove(old_panels.get(key));
         }
         
         new_panel.setVisible(true);

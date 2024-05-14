@@ -1,6 +1,6 @@
 package practicafinal;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.*;
 
@@ -8,15 +8,15 @@ import practicafinal.paginas.*;
 
 public class Vistas{
     
-    public static ArrayList<JPanel> create_vistas(JPanel parentPanel){
+    public static HashMap<String,JPanel> create_vistas(JPanel parentPanel){
 
-        ArrayList<JPanel> views = new ArrayList<JPanel>();
+        HashMap<String,JPanel> views = new HashMap<String,JPanel>();
 
-        views.add(new Juegos("Juegos"));
-        views.add(new Categorias());
-        views.add(new Juegos("FPS"));
-        views.add(new Review());
-        views.add(new Inicio(parentPanel, views));
+        views.put("inicio", new Inicio(parentPanel, views));
+        views.put("juegos", new Juegos("Juegos"));
+        views.put("categorias", new Categorias());
+        views.put("fps", new Juegos("FPS"));
+        views.put("review", new Review());
 
         return views;
     }

@@ -1,7 +1,6 @@
 package practicafinal.paginas;
 
 import javax.swing.*;
-import practicafinal.componentes.Juego;
 import practicafinal.componentes.Titulo;
 
 import java.awt.*;

@@ -9,7 +9,7 @@ import javax.swing.*;
 import practicafinal.*;
 
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -17,10 +17,10 @@ import java.util.ArrayList;
  */
 public class Barra_superior extends JPanel{
     private JPanel parentPanel;
-    private ArrayList<JPanel> views;
+    private HashMap<String,JPanel> views;
     private JFrame jf;
 
-    public Barra_superior(JPanel parentPanel, ArrayList<JPanel> views, JFrame jf){
+    public Barra_superior(JPanel parentPanel, HashMap<String,JPanel> views, JFrame jf){
         this.parentPanel = parentPanel;
         this.views = views;
         this.jf = jf;
@@ -52,21 +52,21 @@ public class Barra_superior extends JPanel{
         b_inicio.setBackground(Colores.CadetGray);
         b_inicio.setBorder(Bordes.button_empty_border);
         b_inicio.setForeground(Colores.RisingBlack);
-        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(views.size()-1), BorderLayout.CENTER, jf));
+        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("inicio"), BorderLayout.CENTER, jf));
         botones.add(b_inicio);
         
         JButton b_juegos = new JButton("Juegos");
         b_juegos.setBackground(Colores.CadetGray);
         b_juegos.setBorder(Bordes.button_empty_border);
         b_juegos.setForeground(Colores.RisingBlack);
-        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(0), BorderLayout.CENTER, jf));
+        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("juegos"), BorderLayout.CENTER, jf));
         botones.add(b_juegos);
         
         JButton b_categorias = new JButton("Categorias");
         b_categorias.setBackground(Colores.CadetGray);
         b_categorias.setBorder(Bordes.button_empty_border);
         b_categorias.setForeground(Colores.RisingBlack);
-        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get(1), BorderLayout.CENTER, jf));
+        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("categorias"), BorderLayout.CENTER, jf));
         botones.add(b_categorias);
 
         return botones;

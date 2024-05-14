@@ -9,7 +9,6 @@ package practicafinal.componentes;
  * @author mayumar
  */
 
-import java.util.ArrayList;
 import java.awt.event.*;
 import javax.swing.*;
 

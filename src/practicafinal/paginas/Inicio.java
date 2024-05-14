@@ -2,6 +2,7 @@ package practicafinal.paginas;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.*;
 
@@ -9,7 +10,7 @@ import practicafinal.componentes.*;
 
 public class Inicio extends JPanel{
 
-    public Inicio(JPanel parentPanel, ArrayList<JPanel> views){
+    public Inicio(JPanel parentPanel, HashMap<String,JPanel> views){
 
         setLayout(new BorderLayout());
 
