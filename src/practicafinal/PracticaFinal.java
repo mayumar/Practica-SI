@@ -53,11 +53,11 @@ public class PracticaFinal {
         panel.add(topMargin, BorderLayout.NORTH);
 
         //Vistas
-        ArrayList<JPanel> views = Vistas.create_vistas();
+        ArrayList<JPanel> views = Vistas.create_vistas(panel);
         
         //Inicio como vista por defecto
-        views.get(0).setVisible(true);
-        panel.add(views.get(0));
+        views.get(views.size()-1).setVisible(true);
+        panel.add(views.get(views.size()-1));
 
         //Barra superior
         Barra_superior barra_superior = new Barra_superior(panel, views, jf);
