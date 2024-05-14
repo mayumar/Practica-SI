@@ -30,8 +30,8 @@
 			"calificacion": 8.2,
             "descripcion": "Counter-Strike 2 es una secuela del legendario juego de disparos en primera persona Counter-Strike. Desarrollado por Valve Corporation, sigue la fórmula de su predecesor, con partidas multijugador intensas y estratégicas.",
 			"reviews": [
-                {
-                    "comment": "La secuela de Counter-Strike sigue siendo un punto de referencia en los juegos de disparos multijugador. Su enfoque en la estrategia y el trabajo en equipo lo convierte en una experiencia inolvidable para los jugadores.",
+            	{
+                	"comment": "La secuela de Counter-Strike sigue siendo un punto de referencia en los juegos de disparos multijugador. Su enfoque en la estrategia y el trabajo en equipo lo convierte en una experiencia inolvidable para los jugadores.",
                     "calificacion": 8.0
                 },
                 {
@@ -89,42 +89,120 @@
 			"imagen": "src/images/juegos/fps/p_cod.png",
 			"calificacion": 9,
             "descripcion": "Call of Duty: Advanced Warfare es un videojuego de disparos en primera persona desarrollado por Sledgehammer Games y publicado por Activision. Es el undécimo título principal de la serie Call of Duty y fue lanzado en 2014.",
-			"reviews": []
+			"reviews": [
+				{
+					"comment": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
+					"calificacion": 8.0
+				},
+				{
+					"comment": "La campaña es entretenida, pero lo mejor es el multijugador competitivo lleno de acción.",
+					"calificacion": 8.5
+				},
+				{
+					"comment": "Excelente narrativa y una reinvención exitosa de la fórmula Call of Duty.",
+					"calificacion": 9.2
+				}
+			]
 		},
 		{
 			"nombre": "Borderlands",
 			"imagen": "src/images/juegos/fps/p_borderlands.png",
 			"calificacion": 6.5,
             "descripcion": "Borderlands es una serie de videojuegos de disparos en primera persona desarrollada por Gearbox Software. Con su distintivo estilo gráfico y un enfoque en la cooperación multijugador, ha ganado una sólida base de fanáticos.",
-			"reviews": []
+			"reviews": [
+				{
+					"comment": "Un mundo abierto lleno de humor y acción constante. La experiencia cooperativa es simplemente genial.",
+					"calificacion": 7.8
+				},
+				{
+					"comment": "Una gran combinación de disparos y RPG con un estilo visual único.",
+					"calificacion": 8.2
+				},
+				{
+					"comment": "Viciante y divertido, pero puede volverse repetitivo después de un tiempo.",
+					"calificacion": 7.0
+				}
+			]
 		},
 		{
 			"nombre": "Halo",
 			"imagen": "src/images/juegos/fps/p_halo.png",
 			"calificacion": 4,
             "descripcion": "Halo es una serie de videojuegos de disparos en primera persona desarrollada por Bungie y ahora gestionada por 343 Industries, una subsidiaria de Microsoft Studios. Conocida por su historia épica y su multijugador innovador, es una franquicia emblemática en el mundo de los videojuegos.",
-			"reviews": []
+			"reviews": [
+				{
+					"comment": "Una saga legendaria que definió el género FPS en consolas. La historia y el multijugador siguen siendo excelentes.",
+					"calificacion": 9.5
+				},
+				{
+					"comment": "Aunque algunos títulos recientes han sido decepcionantes, Halo sigue siendo una franquicia icónica.",
+					"calificacion": 7.8
+				},
+				{
+					"comment": "Jugabilidad sólida y una narrativa emocionante, pero le falta innovación en las últimas entregas.",
+					"calificacion": 8.0
+				}
+			]
 		},
 		{
 			"nombre": "Quake",
 			"imagen": "src/images/juegos/fps/p_quake.png",
 			"calificacion": 7.5,
-            "descripcion": "Quake es un juego de disparos en primera persona desarrollado por id Software y lanzado en 1996. Considerado uno de los pioneros del género, estableció muchos de los tropos y estándares que se ven en los juegos FPS modernos.",
-			"reviews": []
+			"descripcion": "Quake es un juego de disparos en primera persona desarrollado por id Software y lanzado en 1996. Considerado uno de los pioneros del género, estableció muchos de los tropos y estándares que se ven en los juegos FPS modernos.",
+			"reviews": [
+				{
+					"comment": "Un clásico atemporal que sentó las bases del género FPS. Jugabilidad adictiva y diseño de niveles desafiante.",
+					"calificacion": 9.0
+				},
+				{
+					"comment": "Gráficos anticuados pero una experiencia de juego sólida que sigue siendo divertida hoy en día.",
+					"calificacion": 7.8
+				},
+				{
+					"comment": "Pionero en su época, pero algunos aspectos no han envejecido bien. Aún así, es un juego imprescindible para los fanáticos de FPS.",
+					"calificacion": 8.2
+				}
+			]
 		},
 		{
 			"nombre": "Helldivers 2",
 			"imagen": "src/images/juegos/fps/p_helldivers.png",
 			"calificacion": 8.9,
-            "descripcion": "Helldivers 2 es un juego de disparos en vista cenital desarrollado por Arrowhead Game Studios. Con un enfoque en la cooperación y el combate estratégico, es una experiencia desafiante y emocionante para los amantes de los juegos de acción.",
-			"reviews": []
+			"descripcion": "Helldivers 2 es un juego de disparos en vista cenital desarrollado por Arrowhead Game Studios. Con un enfoque en la cooperación y el combate estratégico, es una experiencia desafiante y emocionante para los amantes de los juegos de acción.",
+			"reviews": [
+				{
+					"comment": "Una secuela superior que mejora en todos los aspectos. El modo cooperativo es una locura absoluta.",
+					"calificacion": 9.2
+				},
+				{
+					"comment": "Excelente juego para jugar con amigos, con una gran variedad de misiones y desafíos.",
+					"calificacion": 8.8
+				},
+				{
+					"comment": "Puede ser frustrante en ocasiones, pero la satisfacción de superar los desafíos en equipo es enorme.",
+					"calificacion": 8.5
+				}
+			]
 		},
 		{
 			"nombre": "Battlefield 1",
 			"imagen": "src/images/juegos/fps/p_battlefield.png",
 			"calificacion": 8.5,
-            "descripcion": "Battlefield 1 es un videojuego de disparos en primera persona desarrollado por EA DICE y publicado por Electronic Arts. Ambientado en la Primera Guerra Mundial, destaca por su escala épica y su variedad de vehículos y armas.",
-			"reviews": []
+			"descripcion": "Battlefield 1 es un videojuego de disparos en primera persona desarrollado por EA DICE y publicado por Electronic Arts. Ambientado en la Primera Guerra Mundial, destaca por su escala épica y su variedad de vehículos y armas.",
+			"reviews": [
+				{
+					"comment": "Una representación impresionante y auténtica de la Primera Guerra Mundial. El modo multijugador es una locura absoluta.",
+					"calificacion": 9.0
+				},
+				{
+					"comment": "Gráficos sobresalientes y una jugabilidad sólida, pero la campaña es un poco débil.",
+					"calificacion": 8.2
+				},
+				{
+					"comment": "Uno de los mejores títulos de la franquicia Battlefield, con combates intensos y un gran valor de producción.",
+					"calificacion": 9.2
+				}
+			]
 		}
 	],
 	"mundo_abierto": [],

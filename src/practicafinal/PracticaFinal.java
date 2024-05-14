@@ -6,16 +6,9 @@ package practicafinal;
 
 import javax.swing.*;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
-
 import practicafinal.componentes.Barra_superior;
 
 import java.awt.*;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -67,25 +60,5 @@ public class PracticaFinal {
         jf.setSize(1452, 779);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setVisible(true);
-
-        try {
-            DataManager dataManager = new DataManager("src/data.json");
-            ArrayList<JSONArray> games = dataManager.getAllGames();
-
-            for(JSONArray gameList : games) {
-                for (Object game : gameList) {
-                    JSONObject jsonGame = (JSONObject) game;
-                    System.out.println(jsonGame.get("nombre"));
-                }
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
     }
-    
 }

@@ -2,17 +2,27 @@ package practicafinal.componentes;
 
 import javax.swing.*;
 
+import org.json.simple.JSONObject;
+
 import practicafinal.paginas.PortadaJuego;
+import practicafinal.DataManager;
 
 import java.awt.*;
 import java.util.HashMap;
 
 public class Juego extends JButton {
-    private String nombre;
 
     public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views) {
-        this.nombre = nombre;
-        ImageIcon imagen = new ImageIcon("src/images/juegos/fps/p_" + this.nombre + ".png");
+        JSONObject game = null;
+
+        try {
+            DataManager dataManager = new DataManager("src/data.json");
+            game = dataManager.getGameFromName(nombre);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
         setIcon(imagen);
         setPreferredSize(new Dimension(207, 224));
         setBorder(Bordes.Black_border);

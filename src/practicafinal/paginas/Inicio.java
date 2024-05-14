@@ -6,6 +6,9 @@ import java.util.HashMap;
 
 import javax.swing.*;
 
+import org.json.simple.JSONObject;
+
+import practicafinal.DataManager;
 import practicafinal.componentes.*;
 
 public class Inicio extends JPanel{
@@ -18,14 +21,20 @@ public class Inicio extends JPanel{
 
         // Crear los elementos del carrousel
         ArrayList<JButton> elements = new ArrayList<JButton>();
+        
+        // Lista de todos los juegos disponibles
+        ArrayList<JSONObject> games = new ArrayList<JSONObject>();
 
-        elements.add(new Juego("cs2", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("battlefield", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("borderlands", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("cod", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("doom", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("halo", parentPanel, this, BorderLayout.CENTER, views));
-        elements.add(new Juego("helldivers", parentPanel, this, BorderLayout.CENTER, views));
+        try {
+            DataManager dataManager = new DataManager("src/data.json");
+            games = dataManager.getAllGames();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        for(int i = 0; i < 7; i ++) {
+            elements.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+        }
 
         // Crear el carrousel
         Carrousel carrousel = new Carrousel(elements, 5);
@@ -41,10 +50,9 @@ public class Inicio extends JPanel{
         FlowLayout fl = new FlowLayout();
         JPanel destacados = new JPanel(fl);
 
-
-        destacados.add(new Juego("cs2", parentPanel, this, BorderLayout.CENTER, views));
-        destacados.add(new Juego("doom", parentPanel, this, BorderLayout.CENTER, views));
-        destacados.add(new Juego("halo", parentPanel, this, BorderLayout.CENTER, views));
+        for(int i = 0; i < 3; i++) {
+            destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+        }
 
         contenido.add(destacados, BorderLayout.SOUTH);
 

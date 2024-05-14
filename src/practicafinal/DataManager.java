@@ -1,19 +1,16 @@
 package practicafinal;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 public class DataManager {
     private JSONObject data;
 
-    public DataManager(String filePath) throws FileNotFoundException, IOException, ParseException {
+    public DataManager(String filePath) throws Exception {
         JSONParser parser = new JSONParser();
         this.data = (JSONObject) parser.parse(new FileReader(filePath));
     }
@@ -26,8 +23,8 @@ public class DataManager {
         return (JSONArray) this.data.get(category);
     }
 
-    public ArrayList<JSONArray> getAllGames() {
-        ArrayList<JSONArray> games = new ArrayList<>();
+    public ArrayList<JSONObject> getAllGames() {
+        ArrayList<JSONObject> games = new ArrayList<>();
         String categorias[] = {
             "fps",
             "mundo_abierto",
@@ -38,9 +35,24 @@ public class DataManager {
         };
 
         for(String cat : categorias) {
-            games.add(getGamesFromCategory(cat));
+            JSONArray gameList = (JSONArray) this.getData().get(cat);
+            for (Object game : gameList) {
+                games.add((JSONObject) game);
+            }
         }
 
         return games;
+    }
+
+    public JSONObject getGameFromName(String name) {
+        ArrayList<JSONObject> games = this.getAllGames();
+        JSONObject game = null;
+
+        for(JSONObject gameList : games) {
+            if (gameList.get("nombre").equals(name))
+                game = gameList;
+        }
+
+        return game;
     }
 }
