@@ -26,7 +26,7 @@ public class DataManager {
 
     @SuppressWarnings("unchecked")
     public Set<String> getAllCategories() {
-        return (Set<String>) this.data.keySet();
+        return this.data.keySet();
     }
 
     public ArrayList<JSONObject> getAllGames() {
