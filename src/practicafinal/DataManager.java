@@ -2,6 +2,7 @@ package practicafinal;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Set;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -23,16 +24,14 @@ public class DataManager {
         return (JSONArray) this.data.get(category);
     }
 
+    @SuppressWarnings("unchecked")
+    public Set<String> getAllCategories() {
+        return (Set<String>) this.data.keySet();
+    }
+
     public ArrayList<JSONObject> getAllGames() {
         ArrayList<JSONObject> games = new ArrayList<>();
-        String categorias[] = {
-            "fps",
-            "mundo_abierto",
-            "terror",
-            "indie",
-            "supervivencia",
-            "plataformas"
-        };
+        Set<String> categorias = this.getAllCategories();
 
         for(String cat : categorias) {
             JSONArray gameList = (JSONArray) this.getData().get(cat);

@@ -2,6 +2,9 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
+import org.json.simple.JSONObject;
+
+import practicafinal.DataManager;
 import practicafinal.componentes.*;
 
 import java.awt.*;
@@ -10,7 +13,7 @@ import java.util.HashMap;
 
 public class Juegos extends JPanel{
 
-    public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views){
+    public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames){
         
         setLayout(new BorderLayout());
 
@@ -20,21 +23,24 @@ public class Juegos extends JPanel{
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(10, 10, 10, 10); // Espaciamiento entre elementos
 
-        ArrayList<String> juegos = new ArrayList<String>();
-        juegos.add("cs2");
-        juegos.add("battlefield");
-        juegos.add("borderlands");
-        juegos.add("cod");
-        juegos.add("doom");
-        juegos.add("halo");
-        juegos.add("helldivers");
+        DataManager dataManager = null;
+
+        try {
+            dataManager = new DataManager("src/data.json");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        @SuppressWarnings("unchecked")
+        ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(nlista);
+        
         int row = 0, col = 0;
         int columns = 5; // Número de columnas en la cuadrícula
 
-        for (String juego : juegos) {
+        for (JSONObject juego : juegos) {
             c.gridx = col;
             c.gridy = row;
-            contenido.add(new Juego(juego, parentPanel, this, BorderLayout.CENTER, views), c);
+            contenido.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views), c);
             col++;
             if (col == columns) {
                 col = 0;

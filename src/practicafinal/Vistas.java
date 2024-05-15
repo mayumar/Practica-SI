@@ -13,9 +13,8 @@ public class Vistas{
         HashMap<String,JPanel> views = new HashMap<String,JPanel>();
 
         views.put("inicio", new Inicio(parentPanel, views));
-        views.put("juegos", new Juegos("Juegos", parentPanel, views));
-        views.put("categorias", new Categorias());
-        views.put("fps", new Juegos("FPS", parentPanel, views));
+        views.put("juegos", new Juegos("Juegos", parentPanel, views, true));
+        views.put("categorias", new Categorias("Categorias", parentPanel, views));
         views.put("review", new Review());
 
         return views;

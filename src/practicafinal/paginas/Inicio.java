@@ -23,15 +23,16 @@ public class Inicio extends JPanel{
         ArrayList<JButton> elements = new ArrayList<JButton>();
         
         // Lista de todos los juegos disponibles
-        ArrayList<JSONObject> games = new ArrayList<JSONObject>();
+        DataManager dataManager = null;
 
         try {
-            DataManager dataManager = new DataManager("src/data.json");
-            games = dataManager.getAllGames();
+            dataManager = new DataManager("src/data.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
+        ArrayList<JSONObject> games = dataManager.getAllGames();
+        
         for(int i = 0; i < 7; i ++) {
             elements.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
         }

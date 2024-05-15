@@ -1,5 +1,5 @@
 {
-	"fps": [
+	"FPS": [
 		{
 			"nombre": "Doom Eternal",
 			"imagen": "src/images/juegos/fps/p_doom.png",
@@ -205,9 +205,17 @@
 			]
 		}
 	],
-	"mundo_abierto": [],
-	"terror": [],
-	"indie": [],
-	"supervivencia": [],
-	"plataformas": []
+	"Mundo abierto": [
+		{
+			"nombre": "Read Dead Redemption 2",
+			"imagen": "src/images/juegos/mundo_abierto/read.png",
+			"calificacion": 9.7,
+            "descripcion": "",
+			"reviews": []
+		}
+	],
+	"Terror": [],
+	"Indie": [],
+	"Superviviencia": [],
+	"Plataformas": []
 }
