@@ -7,7 +7,6 @@ import org.json.simple.JSONObject;
 import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 
-import java.awt.*;
 import java.util.HashMap;
 
 public class Juego extends JButton {
@@ -24,7 +23,6 @@ public class Juego extends JButton {
 
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
         setIcon(imagen);
-        setPreferredSize(new Dimension(207, 224));
         setBorder(Bordes.Black_border);
         setBackground(Colores.CadetGray);
         JPanel portada = new PortadaJuego(nombre);
