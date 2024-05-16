@@ -11,8 +11,19 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * La clase Juegos extiende JPanel y representa un panel que muestra una lista de juegos.
+ * Los juegos pueden ser filtrados por una categoría específica o mostrar todos los juegos disponibles.
+*/
 public class Juegos extends JPanel{
-
+    /**
+     * Crea un panel de juegos con el nombre de la lista especificada y configura sus propiedades y contenido.
+     *
+     * @param nlista El nombre de la lista o categoría de juegos.
+     * @param parentPanel El panel padre que contiene el panel de juegos.
+     * @param views Un HashMap que contiene las vistas de las diferentes categorías de la aplicación.
+     * @param allGames Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
+    */
     public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames){
         
         setLayout(new BorderLayout());
