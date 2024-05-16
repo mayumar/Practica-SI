@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 
+import java.awt.Cursor;
 import java.util.HashMap;
 
 /**
@@ -38,6 +39,7 @@ public class Juego extends JButton {
         setIcon(imagen);
         setBorder(Bordes.black_border);
         setBackground(Colores.CadetGray);
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
         JPanel portada = new PortadaJuego(nombre);
         if(views.get(nombre) == null){
             views.put(nombre, portada);

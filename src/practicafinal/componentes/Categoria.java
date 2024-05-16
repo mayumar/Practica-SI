@@ -1,5 +1,6 @@
 package practicafinal.componentes;
 
+import java.awt.Cursor;
 import java.util.HashMap;
 
 import javax.swing.ImageIcon;
@@ -28,6 +29,7 @@ public class Categoria extends JButton {
         setIcon(imagen);
         setBorder(Bordes.black_border);
         setBackground(Colores.CadetGray);
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
         setText(nombre);
 
         JPanel portada = new Juegos(nombre, parentPanel, views, false);

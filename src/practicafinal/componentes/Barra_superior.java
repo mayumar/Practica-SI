@@ -64,6 +64,7 @@ public class Barra_superior extends JPanel{
         b_inicio.setBackground(Colores.CadetGray);
         b_inicio.setBorder(Bordes.button_empty_border);
         b_inicio.setForeground(Colores.RisingBlack);
+        b_inicio.setCursor(new Cursor(Cursor.HAND_CURSOR));
         b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("inicio"), BorderLayout.CENTER, jf));
         botones.add(b_inicio);
         
@@ -71,6 +72,7 @@ public class Barra_superior extends JPanel{
         b_juegos.setBackground(Colores.CadetGray);
         b_juegos.setBorder(Bordes.button_empty_border);
         b_juegos.setForeground(Colores.RisingBlack);
+        b_juegos.setCursor(new Cursor(Cursor.HAND_CURSOR));
         b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("juegos"), BorderLayout.CENTER, jf));
         botones.add(b_juegos);
         
@@ -78,6 +80,7 @@ public class Barra_superior extends JPanel{
         b_categorias.setBackground(Colores.CadetGray);
         b_categorias.setBorder(Bordes.button_empty_border);
         b_categorias.setForeground(Colores.RisingBlack);
+        b_categorias.setCursor(new Cursor(Cursor.HAND_CURSOR));
         b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("categorias"), BorderLayout.CENTER, jf));
         botones.add(b_categorias);
 
@@ -107,6 +110,7 @@ public class Barra_superior extends JPanel{
         b_idioma.setBackground(Colores.CadetGray);
         b_idioma.setBorder(Bordes.button_empty_border);
         b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth()+5, idioma.getIconHeight()));
+        b_idioma.setCursor(new Cursor(Cursor.HAND_CURSOR));
         busqueda.add(b_idioma, c);
         
         c.gridx = 1;
@@ -126,6 +130,7 @@ public class Barra_superior extends JPanel{
         b_busqueda.setBackground(Colores.Silver);
         b_busqueda.setBorder(Bordes.gray_border);
         b_busqueda.setForeground(Colores.RisingBlack);
+        b_busqueda.setCursor(new Cursor(Cursor.HAND_CURSOR));
         busqueda.add(b_busqueda, c);
 
         return busqueda;
