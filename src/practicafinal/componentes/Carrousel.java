@@ -6,12 +6,22 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+/**
+ * La clase Carrousel extiende JPanel y proporciona una interfaz para mostrar un conjunto de elementos JButton
+ * en un estilo de carrusel, permitiendo al usuario navegar hacia adelante y hacia atrás.
+*/
 public class Carrousel extends JPanel {
     private JPanel elementsPanel;
     private int currentIndex;
     private ArrayList<JButton> elements;
     private int elementsToShow;
 
+    /**
+     * Crea un carrusel con los elementos especificados y la cantidad de elementos a mostrar.
+     *
+     * @param elements Una lista de JButtons que se mostrarán en el carrusel.
+     * @param elementsToShow La cantidad de elementos que se mostrarán simultáneamente en el carrusel.
+    */
     public Carrousel(ArrayList<JButton> elements, int elementsToShow) {
         this.elements = elements;
         this.elementsToShow = elementsToShow;
@@ -58,6 +68,9 @@ public class Carrousel extends JPanel {
         add(nextButton, BorderLayout.EAST);
     }
 
+    /**
+     * Muestra el siguiente conjunto de elementos en el carrusel, si los hay.
+    */
     public void showNext() {
         if (currentIndex + elementsToShow < elements.size()) {
             currentIndex++;
@@ -65,6 +78,9 @@ public class Carrousel extends JPanel {
         }
     }
 
+    /**
+     * Muestra el conjunto anterior de elementos en el carrusel, si los hay.
+    */
     public void showPrevious() {
         if (currentIndex - 1 >= 0) {
             currentIndex--;
@@ -72,6 +88,9 @@ public class Carrousel extends JPanel {
         }
     }
 
+    /**
+     * Actualiza los elementos visibles en el carrusel según el índice actual.
+    */
     private void updateElements() {
         elementsPanel.removeAll();
         for (int i = currentIndex; i < currentIndex + elementsToShow && i < elements.size(); i++) {

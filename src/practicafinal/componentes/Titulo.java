@@ -6,8 +6,17 @@ import practicafinal.paginas.Linea;
 
 import java.awt.*;
 
+/**
+ * La clase Titulo extiende JPanel y se utiliza para mostrar un título o un logo con un eslogan.
+ * Dependiendo del valor de isInicio, se configura con un logo y un eslogan, o solo un título.
+*/
 public class Titulo extends JPanel{
-
+    /**
+     * Crea un panel de título con el texto y la configuración especificados.
+     *
+     * @param label El texto del título o eslogan que se mostrará en el panel.
+     * @param isInicio Si es true, muestra un logo y un eslogan, de lo contrario, solo muestra un título.
+    */
     public Titulo(String label, Boolean isInicio){
         setLayout(new BorderLayout());
 
