@@ -29,7 +29,7 @@ public class Inicio extends JPanel{
         add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
-        ArrayList<JButton> elements = new ArrayList<JButton>();
+        ArrayList<JPanel> elements = new ArrayList<JPanel>();
         
         // Lista de todos los juegos disponibles
         DataManager dataManager = null;
@@ -43,7 +43,7 @@ public class Inicio extends JPanel{
         ArrayList<JSONObject> games = dataManager.getAllGames();
         
         for(int i = 0; i < 7; i ++) {
-            elements.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+            elements.add(Juego.createJuegoConRecuadro((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
         }
 
         // Crear el carrousel
@@ -72,7 +72,7 @@ public class Inicio extends JPanel{
         JPanel destacados = new JPanel(fl);
 
         for(int i = 0; i < 3; i++) {
-            destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+            destacados.add(Juego.createJuegoConRecuadro((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
         }
 
         c.gridx = 0;

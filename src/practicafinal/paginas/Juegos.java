@@ -57,7 +57,7 @@ public class Juegos extends JPanel{
         for (JSONObject juego : juegos) {
             c.gridx = col;
             c.gridy = row;
-            lista.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views), c);
+            lista.add(Juego.createJuegoConRecuadro((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views), c);
             col++;
             if (col == columns) {
                 col = 0;

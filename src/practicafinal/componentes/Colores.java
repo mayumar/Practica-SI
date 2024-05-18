@@ -31,4 +31,19 @@ public class Colores {
      * Negro naciente, representado por el color RGB (27, 28, 34).
      */
     public static final Color rising_black = new Color(27, 28, 34); // Negro
+
+    /**
+     * Verde primavera, representado por el color RGB (10, 255, 112).
+     */
+    public static final Color spring_green = new Color(10, 255, 112); //Verde
+
+    /**
+     * Narciso, representado por el color RGB (255, 204, 0).
+     */
+    public static final Color jonquil = new Color(255, 204, 0); //Amarillo
+
+    /**
+     * Agridulce, representado por el color RGB (255, 102, 102).
+     */
+    public static final Color bittersweet = new Color(255, 102, 102); //Rojo
 }
