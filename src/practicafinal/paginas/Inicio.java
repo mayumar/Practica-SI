@@ -11,8 +11,17 @@ import org.json.simple.JSONObject;
 import practicafinal.DataManager;
 import practicafinal.componentes.*;
 
+/**
+ * La clase Inicio extiende JPanel y representa la vista inicial de la aplicación.
+ * Esta vista incluye un título principal, un carrusel de juegos y una sección de juegos destacados.
+*/
 public class Inicio extends JPanel{
-
+    /**
+     * Crea un panel de inicio con un título, un carrusel de juegos y una sección de juegos destacados.
+     *
+     * @param parentPanel El panel padre que contiene el panel de inicio.
+     * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+    */
     public Inicio(JPanel parentPanel, HashMap<String,JPanel> views){
 
         setLayout(new BorderLayout());

@@ -10,7 +10,17 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ * La clase Categorias extiende JPanel y representa un panel que muestra una lista de categorías de juegos.
+*/
 public class Categorias extends JPanel{
+    /**
+     * Crea un panel de categorías con el nombre de la lista especificada y configura sus propiedades y contenido.
+     *
+     * @param nlista El nombre de la lista o sección de categorías.
+     * @param parentPanel El panel padre que contiene el panel de categorías.
+     * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+    */
     public Categorias(String nlista, JPanel parentPanel, HashMap<String,JPanel> views) {
         setLayout(new BorderLayout());
 

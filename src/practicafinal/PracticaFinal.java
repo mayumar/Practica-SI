@@ -11,14 +11,14 @@ import practicafinal.componentes.Barra_superior;
 import java.awt.*;
 import java.util.HashMap;
 
-/**
- *
- * @author mayumar
- */
+/** 
+ * La clase PracticaFinal es la clase principal del programa
+*/
 public class PracticaFinal {
 
     /**
-     * @param args the command line arguments
+     * Función principal del programa
+     * @param args Los argumentos de la línea de comandos
      */
     public static void main(String[] args) {
         JFrame jf = new JFrame("LevelUp");
