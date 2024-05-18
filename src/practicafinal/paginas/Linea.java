@@ -43,7 +43,7 @@ public class Linea extends JPanel {
         g2.setStroke(new BasicStroke(2));
 
         //draw in black
-        g2.setColor(Colores.RisingBlack);
+        g2.setColor(Colores.rising_black);
 
         //draw a centered horizontal line
         g2.drawLine(this.x1, this.y1, this.x2, this.y2);

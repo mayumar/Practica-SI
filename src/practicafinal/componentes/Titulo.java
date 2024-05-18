@@ -28,8 +28,8 @@ public class Titulo extends JPanel{
             add(logo, BorderLayout.NORTH);
 
             JLabel slogan = new JLabel(label);
-            slogan.setForeground(Colores.RisingBlack);
-            slogan.setBackground(Colores.RisingBlack);
+            slogan.setForeground(Colores.rising_black);
+            slogan.setBackground(Colores.rising_black);
             Font fuente = slogan.getFont();
             slogan.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
             add(slogan, BorderLayout.CENTER);
@@ -37,8 +37,8 @@ public class Titulo extends JPanel{
         }else{
 
             JLabel title = new JLabel(label);
-            title.setForeground(Colores.RisingBlack);
-            title.setBackground(Colores.RisingBlack);
+            title.setForeground(Colores.rising_black);
+            title.setBackground(Colores.rising_black);
             Font fuente = title.getFont();
             title.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
             add(title, BorderLayout.CENTER);

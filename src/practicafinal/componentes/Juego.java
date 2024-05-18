@@ -38,7 +38,7 @@ public class Juego extends JButton {
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
         setIcon(imagen);
         setBorder(Bordes.black_border);
-        setBackground(Colores.CadetGray);
+        setBackground(Colores.cadet_gray);
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         JPanel portada = new PortadaJuego(nombre);
         if(views.get(nombre) == null){

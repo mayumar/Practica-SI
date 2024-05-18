@@ -36,8 +36,8 @@ public class Categoria extends JButton {
         setText(nombre);
         setHorizontalTextPosition(SwingConstants.CENTER);
         setVerticalTextPosition(SwingConstants.CENTER);
-        setBackground(Colores.CadetGray);
-        setForeground(Colores.WhiteSmoke);
+        setBackground(Colores.cadet_gray);
+        setForeground(Colores.white_smoke);
         setFont(new Font(getFont().getFontName(), Font.PLAIN, 25));
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));

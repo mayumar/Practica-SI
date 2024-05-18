@@ -11,7 +11,7 @@ public class Bordes {
     /**
      * Borde de color gris medio con un grosor de 2 píxeles.
     */
-    public static final Border gray_border = BorderFactory.createLineBorder(Colores.DimGray, 2);
+    public static final Border gray_border = BorderFactory.createLineBorder(Colores.dim_gray, 2);
 
     /**
      * Borde vacío con 10 píxeles de espacio en la parte superior e inferior y 30 píxeles de espacio
@@ -22,5 +22,5 @@ public class Bordes {
     /**
      * Borde de color negro naciente con un grosor de 2 píxeles.
     */
-    public static final Border black_border = BorderFactory.createLineBorder(Colores.RisingBlack, 2);
+    public static final Border black_border = BorderFactory.createLineBorder(Colores.rising_black, 2);
 }

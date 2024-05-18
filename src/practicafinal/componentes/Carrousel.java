@@ -47,7 +47,7 @@ public class Carrousel extends JPanel {
         prevButton.setOpaque(false);
         prevButton.setContentAreaFilled(false);
         prevButton.setBorderPainted(false);
-        prevButton.setForeground(Colores.RisingBlack);
+        prevButton.setForeground(Colores.rising_black);
         prevButton.setFont(new Font(prevButton.getFont().getFontName(), Font.PLAIN, 30));
 
         JButton nextButton = new JButton(">");
@@ -61,7 +61,7 @@ public class Carrousel extends JPanel {
         nextButton.setOpaque(false);
         nextButton.setContentAreaFilled(false);
         nextButton.setBorderPainted(false);
-        nextButton.setForeground(Colores.RisingBlack);
+        nextButton.setForeground(Colores.rising_black);
         nextButton.setFont(new Font(nextButton.getFont().getFontName(), Font.PLAIN, 30));
 
         add(prevButton, BorderLayout.WEST);
