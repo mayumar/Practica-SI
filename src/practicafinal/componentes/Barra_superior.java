@@ -9,6 +9,7 @@ import javax.swing.*;
 import practicafinal.*;
 
 import java.awt.*;
+import java.awt.event.*;
 import java.util.HashMap;
 
 /**
@@ -111,6 +112,19 @@ public class Barra_superior extends JPanel{
         b_idioma.setBorder(Bordes.button_empty_border);
         b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth()+5, idioma.getIconHeight()));
         b_idioma.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        JPopupMenu menuIdioma = new JPopupMenu();
+        menuIdioma.add(new JMenuItem("Español"));
+        menuIdioma.add(new JMenuItem("Inglés"));
+
+        b_idioma.addMouseListener(new MouseAdapter() {
+        @Override
+            public void mousePressed(MouseEvent e) {
+                menuIdioma.show(b_idioma, e.getX(), e.getY());
+            }
+        });
+
+
         busqueda.add(b_idioma, c);
         
         c.gridx = 1;
