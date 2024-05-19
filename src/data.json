@@ -67,7 +67,7 @@
 		{
 			"nombre": "Valorant",
 			"imagen": "src/images/juegos/fps/p_valorant.png",
-			"calificacion": 5,
+			"calificacion": 5.0,
             "descripcion": "Valorant es un juego de disparos táctico en primera persona desarrollado y publicado por Riot Games. Lanzado en 2020, combina elementos de juegos como Counter-Strike con habilidades únicas de personajes estilo hero shooter.",
 			"reviews": [
                 {
@@ -87,7 +87,7 @@
 		{
 			"nombre": "COD: Advance warfare",
 			"imagen": "src/images/juegos/fps/p_cod.png",
-			"calificacion": 9,
+			"calificacion": 9.0,
             "descripcion": "Call of Duty: Advanced Warfare es un videojuego de disparos en primera persona desarrollado por Sledgehammer Games y publicado por Activision. Es el undécimo título principal de la serie Call of Duty y fue lanzado en 2014.",
 			"reviews": [
 				{
@@ -127,7 +127,7 @@
 		{
 			"nombre": "Halo",
 			"imagen": "src/images/juegos/fps/p_halo.png",
-			"calificacion": 4,
+			"calificacion": 4.0,
             "descripcion": "Halo es una serie de videojuegos de disparos en primera persona desarrollada por Bungie y ahora gestionada por 343 Industries, una subsidiaria de Microsoft Studios. Conocida por su historia épica y su multijugador innovador, es una franquicia emblemática en el mundo de los videojuegos.",
 			"reviews": [
 				{
@@ -229,7 +229,7 @@
 		{
 			"nombre": "Elden Ring",
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
-			"calificacion": 9,
+			"calificacion": 9.0,
             "descripcion": "",
 			"reviews": []
 		},
@@ -243,14 +243,14 @@
 		{
 			"nombre": "Forza Horizon 5",
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
-			"calificacion": 5,
+			"calificacion": 5.0,
             "descripcion": "",
 			"reviews": []
 		},
 		{
 			"nombre": "The Legend of Zelda: Breath of the Wild",
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
-			"calificacion": 9,
+			"calificacion": 9.0,
             "descripcion": "En 'The Legend of Zelda: Breath of the Wild', los jugadores se sumergen en un vasto reino de Hyrule, que ha sido devastado por la calamidad. Encarnando a Link, el legendario héroe, los jugadores exploran un mundo abierto sin límites, lleno de misterios, peligros y maravillas. Equipado con la Espada Maestra y otros artefactos, Link emprende una épica búsqueda para derrotar a Ganon, el malvado ser que amenaza con destruir Hyrule para siempre. Con una mezcla perfecta de exploración, combate, resolución de acertijos y narrativa envolvente, Breath of the Wild es una aventura inolvidable que desafía a los jugadores a descubrir su propio camino hacia la victoria y restaurar la paz en el reino.",
 			"reviews": [
 				{
@@ -274,7 +274,7 @@
 		{
 			"nombre": "Sea of Thieves",
 			"imagen": "src/images/juegos/mundo_abierto/sea.png",
-			"calificacion": 8,
+			"calificacion": 8.0,
             "descripcion": "",
 			"reviews": []
 		},
@@ -295,14 +295,14 @@
 		{
 			"nombre": "Fallout 76",
 			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
-			"calificacion": 4,
+			"calificacion": 4.0,
             "descripcion": "",
 			"reviews": []
 		},
 		{
 			"nombre": "Sekiro",
 			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
-			"calificacion": 5,
+			"calificacion": 5.0,
             "descripcion": "",
 			"reviews": []
 		}

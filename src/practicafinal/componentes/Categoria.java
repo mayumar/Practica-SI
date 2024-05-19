@@ -1,11 +1,13 @@
 package practicafinal.componentes;
 
+import java.awt.Font;
 import java.awt.Cursor;
 import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 import practicafinal.paginas.Juegos;
 
@@ -25,10 +27,19 @@ public class Categoria extends JButton {
      * @param views Un HashMap que contiene las vistas de las diferentes categorías.
     */
     public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views) {
+
         ImageIcon imagen = new ImageIcon("src/images/categorias/c_" + nombre.toLowerCase() + ".png");
         setIcon(imagen);
+
         setBorder(Bordes.black_border);
-        setBackground(Colores.CadetGray);
+
+        setText(nombre);
+        setHorizontalTextPosition(SwingConstants.CENTER);
+        setVerticalTextPosition(SwingConstants.CENTER);
+        setBackground(Colores.cadet_gray);
+        setForeground(Colores.white_smoke);
+        setFont(new Font(getFont().getFontName(), Font.PLAIN, 25));
+
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         setText(nombre);
 
@@ -36,7 +47,7 @@ public class Categoria extends JButton {
         if(views.get(nombre) == null){
             views.put(nombre, portada);
         }
-
+        
         addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
     }
 }

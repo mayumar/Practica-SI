@@ -1,31 +1,45 @@
 package practicafinal.componentes;
 
 import javax.swing.*;
+import java.awt.*;
 
 import org.json.simple.JSONObject;
 
 import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 
-import java.awt.Cursor;
 import java.util.HashMap;
 
 /**
- * La clase Juego extiende JButton y representa un botón personalizado para un juego específico.
- * Al crear una instancia de esta clase, se configura un botón con una imagen del juego, 
+ * La clase Juego extiende JPanel y representa un componente personalizado para un juego específico.
+ * Al crear una instancia de esta clase, se configura un botón con una imagen del juego,
  * y se establece un ActionListener que cambia el panel de enfoque al panel del juego seleccionado.
-*/
-public class Juego extends JButton {
+ * Además, muestra un recuadro con la calificación del juego sobre el botón.
+ */
+public class Juego extends JPanel {
+    private String nombre;
+    JPanel parentPanel;
+    JPanel oldPanel;
+    String position;
+    HashMap<String,JPanel> views;
+    JSONObject game;
+
     /**
-     * Crea un botón de juego con el nombre especificado y configura sus propiedades y comportamiento.
+     * Crea un componente de juego con el nombre especificado y configura sus propiedades y comportamiento.
      *
-     * @param nombre El nombre del juego que este botón representará.
-     * @param parentPanel El panel padre que contiene el botón.
-     * @param oldPanel El panel anterior que se reemplazará cuando se haga clic en el botón.
+     * @param nombre El nombre del juego que este componente representará.
+     * @param parentPanel El panel padre que contiene el componente.
+     * @param oldPanel El panel anterior que se reemplazará cuando se haga clic en el botón del juego.
      * @param position La posición del panel dentro del contenedor.
      * @param views Un HashMap que contiene las vistas de los diferentes juegos.
-    */
+     */
     public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views) {
+        this.nombre = nombre;
+        this.parentPanel = parentPanel;
+        this.oldPanel = oldPanel;
+        this.position = position;
+        this.views = views;
+        
         JSONObject game = null;
 
         try {
@@ -35,15 +49,80 @@ public class Juego extends JButton {
             e.printStackTrace();
         }
 
+        this.game = game;
+
+        // Crear el botón del juego
+        JButton juegoButton = createJuego();
+
+        // Crear un JLayeredPane para contener el botón y el recuadro
+        JLayeredPane layeredPane = new JLayeredPane();
+        layeredPane.setPreferredSize(new Dimension(207, 224)); // Tamaño del contenedor
+
+        // Añadir el botón al JLayeredPane en la capa base (DEFAULT_LAYER)
+        juegoButton.setBounds(0, 0, 207, 224); // Ajustar el tamaño y posición del botón
+        layeredPane.add(juegoButton, JLayeredPane.DEFAULT_LAYER);
+        
+        // Añadir el recuadro al JLayeredPane en la capa superior (PALETTE_LAYER)
+        layeredPane.add(createRecuadro(), JLayeredPane.PALETTE_LAYER);
+
+        // Añade el JLayeredPane al JPanel
+        setLayout(new BorderLayout());
+        add(layeredPane, BorderLayout.CENTER);
+    }
+
+
+    /**
+     * Crea un recuadro que muestra la calificación del juego.
+     *
+     * @return Un JPanel que contiene el recuadro con la calificación.
+     */
+    private JPanel createRecuadro(){
+        JPanel recuadro = new JPanel(new BorderLayout());
+
+        Double calificacionDouble = (Double) game.get("calificacion");
+        JLabel calificacion = new JLabel(Double.toString(calificacionDouble));
+        calificacion.setHorizontalAlignment(SwingConstants.CENTER);
+        calificacion.setForeground(Colores.rising_black);
+        recuadro.add(calificacion, BorderLayout.CENTER);
+
+        recuadro.setBorder(Bordes.black_border); // Crear un borde negro
+
+        recuadro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        if(calificacionDouble < 5.0){
+            recuadro.setBackground(Colores.bittersweet);
+        }else if(calificacionDouble < 8.0){
+            recuadro.setBackground(Colores.jonquil);
+        }else{
+            recuadro.setBackground(Colores.spring_green);
+        }
+
+        recuadro.setBounds(127, 158, 60, 47); // Ajustar el tamaño y posición del recuadro
+
+        return recuadro;
+    }
+
+    /**
+     * Crea un botón del juego con su imagen y configura su comportamiento.
+     *
+     * @return Un JButton que representa el juego.
+     */
+    private JButton createJuego(){
+        JButton juego = new JButton();
+
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
-        setIcon(imagen);
-        setBorder(Bordes.black_border);
-        setBackground(Colores.CadetGray);
-        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        juego.setIcon(imagen);
+
+        juego.setBorder(Bordes.black_border);
+        juego.setBackground(Colores.cadet_gray);
+        juego.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         JPanel portada = new PortadaJuego(nombre);
         if(views.get(nombre) == null){
             views.put(nombre, portada);
         }
-        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
+        juego.addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
+
+        return juego;
     }
 }

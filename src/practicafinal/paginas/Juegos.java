@@ -30,9 +30,15 @@ public class Juegos extends JPanel{
 
         add(new Titulo(nlista, false), BorderLayout.NORTH);
 
-        JPanel contenido = new JPanel(new GridBagLayout());
+        JPanel contenido = new JPanel(new BorderLayout());
+
+        JPanel topMargin = new JPanel();
+        topMargin.setPreferredSize(new Dimension(1, 40));
+        contenido.add(topMargin, BorderLayout.NORTH);
+
+        JPanel lista = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(10, 10, 10, 10); // Espaciamiento entre elementos
+        c.insets = new Insets(20, 10, 20, 10); // Espaciamiento entre elementos
 
         DataManager dataManager = null;
 
@@ -51,13 +57,15 @@ public class Juegos extends JPanel{
         for (JSONObject juego : juegos) {
             c.gridx = col;
             c.gridy = row;
-            contenido.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views), c);
+            lista.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views), c);
             col++;
             if (col == columns) {
                 col = 0;
                 row++;
             }
         }
+
+        contenido.add(lista, BorderLayout.CENTER);
 
         add(contenido, BorderLayout.CENTER);
     }

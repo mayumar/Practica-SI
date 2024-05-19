@@ -29,7 +29,7 @@ public class Inicio extends JPanel{
         add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
-        ArrayList<JButton> elements = new ArrayList<JButton>();
+        ArrayList<JPanel> elements = new ArrayList<JPanel>();
         
         // Lista de todos los juegos disponibles
         DataManager dataManager = null;

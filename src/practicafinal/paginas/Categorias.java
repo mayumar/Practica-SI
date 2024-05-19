@@ -28,7 +28,7 @@ public class Categorias extends JPanel{
 
         JPanel contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(10, 10, 10, 10); // Espaciamiento entre elementos
+        c.insets = new Insets(40, 40, 40, 40); // Espaciamiento entre elementos
 
         DataManager dataManager = null;
 

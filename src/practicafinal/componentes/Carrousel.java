@@ -13,16 +13,16 @@ import java.util.ArrayList;
 public class Carrousel extends JPanel {
     private JPanel elementsPanel;
     private int currentIndex;
-    private ArrayList<JButton> elements;
+    private ArrayList<JPanel> elements;
     private int elementsToShow;
 
     /**
      * Crea un carrusel con los elementos especificados y la cantidad de elementos a mostrar.
      *
-     * @param elements Una lista de JButtons que se mostrarán en el carrusel.
+     * @param elements Una lista de JPanels que se mostrarán en el carrusel.
      * @param elementsToShow La cantidad de elementos que se mostrarán simultáneamente en el carrusel.
     */
-    public Carrousel(ArrayList<JButton> elements, int elementsToShow) {
+    public Carrousel(ArrayList<JPanel> elements, int elementsToShow) {
         this.elements = elements;
         this.elementsToShow = elementsToShow;
         currentIndex = 0;
@@ -47,7 +47,7 @@ public class Carrousel extends JPanel {
         prevButton.setOpaque(false);
         prevButton.setContentAreaFilled(false);
         prevButton.setBorderPainted(false);
-        prevButton.setForeground(Colores.RisingBlack);
+        prevButton.setForeground(Colores.rising_black);
         prevButton.setFont(new Font(prevButton.getFont().getFontName(), Font.PLAIN, 30));
 
         JButton nextButton = new JButton(">");
@@ -61,7 +61,7 @@ public class Carrousel extends JPanel {
         nextButton.setOpaque(false);
         nextButton.setContentAreaFilled(false);
         nextButton.setBorderPainted(false);
-        nextButton.setForeground(Colores.RisingBlack);
+        nextButton.setForeground(Colores.rising_black);
         nextButton.setFont(new Font(nextButton.getFont().getFontName(), Font.PLAIN, 30));
 
         add(prevButton, BorderLayout.WEST);
