@@ -47,14 +47,14 @@ public class PracticaFinal {
         panel.add(topMargin, BorderLayout.NORTH);
 
         //Vistas
-        HashMap<String, JPanel> views = Vistas.create_vistas(panel);
+        HashMap<String, JPanel> views = Vistas.create_vistas(panel, Inter.getBundle());
         
         //Inicio como vista por defecto
         views.get("inicio").setVisible(true);
         panel.add(views.get("inicio"));
 
         //Barra superior
-        Barra_superior barra_superior = new Barra_superior(panel, views, jf);
+        Barra_superior barra_superior = new Barra_superior(panel, views, jf, Inter.getBundle());
         mainPanel.add(barra_superior, BorderLayout.NORTH);
         
         jf.setSize(1452, 779);

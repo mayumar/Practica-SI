@@ -11,6 +11,7 @@ import practicafinal.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 /**
  * La clase Barra_superior extiende JPanel y representa la barra de navegación superior de la aplicación.
@@ -27,8 +28,9 @@ public class Barra_superior extends JPanel{
      * @param parentPanel El panel padre que contiene la barra de navegación.
      * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
      * @param jf El JFrame principal de la aplicación.
+     * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
     */
-    public Barra_superior(JPanel parentPanel, HashMap<String,JPanel> views, JFrame jf){
+    public Barra_superior(JPanel parentPanel, HashMap<String,JPanel> views, JFrame jf, ResourceBundle bundleText){
         this.parentPanel = parentPanel;
         this.views = views;
         this.jf = jf;
@@ -39,13 +41,13 @@ public class Barra_superior extends JPanel{
         
         
         //Panel de botones
-        JPanel botones = createBotones();
+        JPanel botones = createBotones(bundleText);
         
         add(botones, BorderLayout.WEST);
         
         
         //Panel de barra de busqueda
-        JPanel busqueda = createBusqueda();
+        JPanel busqueda = createBusqueda(bundleText);
         
         add(busqueda, BorderLayout.EAST);
     }
@@ -53,15 +55,17 @@ public class Barra_superior extends JPanel{
     /**
      * Crea el panel de botones de la barra de navegación.
      *
+     * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
+     * 
      * @return El JPanel que contiene los botones de la barra de navegación.
     */
-    private JPanel createBotones(){
+    private JPanel createBotones(ResourceBundle bundleText){
         FlowLayout fl = new FlowLayout();
         fl.setAlignment(FlowLayout.LEFT);
         JPanel botones = new JPanel(fl);
         botones.setBackground(Colores.cadet_gray);
         
-        JButton b_inicio = new JButton("Inicio");
+        JButton b_inicio = new JButton(bundleText.getString("Texto_inicio"));
         b_inicio.setBackground(Colores.cadet_gray);
         b_inicio.setBorder(Bordes.button_empty_border);
         b_inicio.setForeground(Colores.rising_black);
@@ -69,7 +73,7 @@ public class Barra_superior extends JPanel{
         b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("inicio"), BorderLayout.CENTER, jf));
         botones.add(b_inicio);
         
-        JButton b_juegos = new JButton("Juegos");
+        JButton b_juegos = new JButton(bundleText.getString("Texto_juegos"));
         b_juegos.setBackground(Colores.cadet_gray);
         b_juegos.setBorder(Bordes.button_empty_border);
         b_juegos.setForeground(Colores.rising_black);
@@ -77,7 +81,7 @@ public class Barra_superior extends JPanel{
         b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("juegos"), BorderLayout.CENTER, jf));
         botones.add(b_juegos);
         
-        JButton b_categorias = new JButton("Categorias");
+        JButton b_categorias = new JButton(bundleText.getString("Texto_categorias"));
         b_categorias.setBackground(Colores.cadet_gray);
         b_categorias.setBorder(Bordes.button_empty_border);
         b_categorias.setForeground(Colores.rising_black);
@@ -91,9 +95,11 @@ public class Barra_superior extends JPanel{
     /**
      * Crea el panel de barra de búsqueda de la barra de navegación.
      *
+     * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
+     * 
      * @return El JPanel que contiene la barra de búsqueda.
     */
-    private JPanel createBusqueda(){
+    private JPanel createBusqueda(ResourceBundle bundleText){
         FlowLayout fl = new FlowLayout();
         fl.setAlignment(FlowLayout.RIGHT);
         JPanel busqueda = new JPanel(new GridBagLayout());
@@ -114,8 +120,8 @@ public class Barra_superior extends JPanel{
         b_idioma.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JPopupMenu menuIdioma = new JPopupMenu();
-        menuIdioma.add(new JMenuItem("Español"));
-        menuIdioma.add(new JMenuItem("Inglés"));
+        menuIdioma.add(new JMenuItem(bundleText.getString("Texto_espanol")));
+        menuIdioma.add(new JMenuItem(bundleText.getString("Texto_ingles")));
 
         b_idioma.addMouseListener(new MouseAdapter() {
         @Override

@@ -3,6 +3,7 @@ package practicafinal.paginas;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 import javax.swing.*;
 
@@ -22,11 +23,11 @@ public class Inicio extends JPanel{
      * @param parentPanel El panel padre que contiene el panel de inicio.
      * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
     */
-    public Inicio(JPanel parentPanel, HashMap<String,JPanel> views){
+    public Inicio(JPanel parentPanel, HashMap<String,JPanel> views, ResourceBundle bundleText){
 
         setLayout(new BorderLayout());
 
-        add(new Titulo("EXPLORA, JUEGA, DECIDE: LA GUÍA DEFINITVA PARA GAMERS", true), BorderLayout.NORTH);
+        add(new Titulo(bundleText.getString("Texto_slogan"), true), BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
         ArrayList<JPanel> elements = new ArrayList<JPanel>();
@@ -66,7 +67,7 @@ public class Inicio extends JPanel{
         c.gridy = 1;
         c.gridheight = 1;
         c.gridwidth = 1;
-        contenido.add(new Titulo("DESTACADOS", false), c);
+        contenido.add(new Titulo(bundleText.getString("Texto_destacados"), false), c);
 
         FlowLayout fl = new FlowLayout();
         JPanel destacados = new JPanel(fl);

@@ -3,6 +3,7 @@ package practicafinal.componentes;
 import java.awt.Font;
 import java.awt.Cursor;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,15 +26,20 @@ public class Categoria extends JButton {
      * @param oldPanel El panel anterior que se reemplazará cuando se haga clic en el botón.
      * @param position La posición del panel dentro del contenedor.
      * @param views Un HashMap que contiene las vistas de las diferentes categorías.
+     * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
     */
-    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views) {
+    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
+        String nombre_cat = nombre;
 
-        ImageIcon imagen = new ImageIcon("src/images/categorias/c_" + nombre.toLowerCase() + ".png");
+        if (nombre.contains(" "))
+            nombre = nombre.replace(" ", "_");
+
+        ImageIcon imagen = new ImageIcon("src/images/categorias/c_" + nombre_cat.toLowerCase() + ".png");
         setIcon(imagen);
 
         setBorder(Bordes.black_border);
 
-        setText(nombre);
+        setText(bundleText.getString("Texto_" + nombre.toLowerCase()));
         setHorizontalTextPosition(SwingConstants.CENTER);
         setVerticalTextPosition(SwingConstants.CENTER);
         setBackground(Colores.cadet_gray);
@@ -41,11 +47,10 @@ public class Categoria extends JButton {
         setFont(new Font(getFont().getFontName(), Font.PLAIN, 25));
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-        setText(nombre);
 
-        JPanel portada = new Juegos(nombre, parentPanel, views, false);
-        if(views.get(nombre) == null){
-            views.put(nombre, portada);
+        JPanel portada = new Juegos(nombre_cat, parentPanel, views, false);
+        if(views.get(nombre_cat) == null){
+            views.put(nombre_cat, portada);
         }
         
         addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));

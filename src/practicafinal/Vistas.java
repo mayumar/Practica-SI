@@ -1,6 +1,7 @@
 package practicafinal;
 
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 import javax.swing.*;
 
@@ -16,13 +17,14 @@ public class Vistas{
      * @param parentPanel El panel padre al que se añadirán las vistas.
      * @return Un HashMap que contiene las vistas asociadas a sus nombres clave.
     */
-    public static HashMap<String,JPanel> create_vistas(JPanel parentPanel){
+    public static HashMap<String,JPanel> create_vistas(JPanel parentPanel, ResourceBundle bundleText){
+        
 
         HashMap<String,JPanel> views = new HashMap<String,JPanel>();
 
-        views.put("inicio", new Inicio(parentPanel, views));
-        views.put("juegos", new Juegos("Juegos", parentPanel, views, true));
-        views.put("categorias", new Categorias("Categorias", parentPanel, views));
+        views.put("inicio", new Inicio(parentPanel, views, bundleText));
+        views.put("juegos", new Juegos(bundleText.getString("Texto_juegos"), parentPanel, views, true));
+        views.put("categorias", new Categorias(bundleText.getString("Texto_categorias"), parentPanel, views, bundleText));
         views.put("review", new Review());
 
         return views;
