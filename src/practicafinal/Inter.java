@@ -9,12 +9,12 @@ public class Inter {
 
         if (!(
             (currentLocale.getLanguage().equals("es") && currentLocale.getCountry().equals("ES")) || 
-            (currentLocale.getLanguage().equals("en") && currentLocale.getCountry().equals("EN")
+            (currentLocale.getLanguage().equals("en") && currentLocale.getCountry().equals("GB")
         ))) {
             currentLocale = new Locale("es", "ES");
         }
 
-        currentLocale = new Locale("en", "EN");
+        currentLocale = new Locale("en", "GB");
         return ResourceBundle.getBundle("bundles.Bundle", currentLocale);
     }
 }
