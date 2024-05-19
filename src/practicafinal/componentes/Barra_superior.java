@@ -119,19 +119,39 @@ public class Barra_superior extends JPanel{
         b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth()+5, idioma.getIconHeight()));
         b_idioma.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPopupMenu menuIdioma = new JPopupMenu();
-        menuIdioma.add(new JMenuItem(bundleText.getString("Texto_espanol")));
-        menuIdioma.add(new JMenuItem(bundleText.getString("Texto_ingles")));
+        JPopupMenu menuIdiomas = new JPopupMenu();
+        JMenuItem itemEspanol = new JMenuItem(bundleText.getString("Texto_espanol"));
+        menuIdiomas.add(itemEspanol);
+        JMenuItem itemIngles = new JMenuItem(bundleText.getString("Texto_ingles"));
+        menuIdiomas.add(itemIngles);
 
-        b_idioma.addMouseListener(new MouseAdapter() {
-        @Override
-            public void mousePressed(MouseEvent e) {
-                menuIdioma.show(b_idioma, e.getX(), e.getY());
+        // Añadir un ActionListener al botón para mostrar el menú
+        b_idioma.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                menuIdiomas.show(b_idioma, b_idioma.getWidth(), b_idioma.getHeight());
             }
         });
 
+        // Puedes añadir ActionListener a los ítems del menú para manejar sus acciones
+        itemEspanol.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Acción para cambiar a Español
+                System.out.println("Español seleccionado");
+            }
+        });
 
-        busqueda.add(b_idioma, c);
+        itemIngles.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Acción para cambiar a Inglés
+                System.out.println("Inglés seleccionado");
+            }
+        });
+
+    busqueda.add(b_idioma, c);
+
         
         c.gridx = 1;
         c.gridy = 0;
