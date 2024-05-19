@@ -53,6 +53,6 @@ public class Categoria extends JButton {
             views.put(nombre_cat, portada);
         }
         
-        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
+        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre_cat), position));
     }
 }

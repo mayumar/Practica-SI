@@ -48,6 +48,7 @@ public class Juegos extends JPanel{
             e.printStackTrace();
         }
         
+        // TODO: ESTO DA UN ERROR CUANDO ESTAMOS EN INGLES, YA QUE LAS CATEGORÍAS SOLO ESTAN EN ESPÑOL EN EL JSON
         @SuppressWarnings("unchecked")
         ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(nlista);
         
