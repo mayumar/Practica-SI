@@ -48,7 +48,7 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new Juegos(nombre_cat, parentPanel, views, false);
+        JPanel portada = new Juegos(bundleText.getString("Texto_" + nombre.toLowerCase()), parentPanel, views, false);
         if(views.get(nombre_cat) == null){
             views.put(nombre_cat, portada);
         }
