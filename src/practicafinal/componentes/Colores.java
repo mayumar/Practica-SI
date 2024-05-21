@@ -13,6 +13,11 @@ public class Colores {
     public static final Color white_smoke = new Color(245, 245, 245); // Blanco
 
     /**
+     * Platino, representado por el color RGB (224, 225, 226).
+     */
+    public static final Color platinum = new Color(224, 225, 226); //Gris aun mas claro
+
+    /**
      * Plata, representado por el color RGB (202, 204, 207).
      */
     public static final Color silver = new Color(202, 204, 207); // Gris muy claro

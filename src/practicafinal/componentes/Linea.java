@@ -1,8 +1,6 @@
-package practicafinal.paginas;
+package practicafinal.componentes;
 
 import javax.swing.*;
-
-import practicafinal.componentes.Colores;
 
 import java.awt.*;
 
