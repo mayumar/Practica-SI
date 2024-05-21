@@ -48,11 +48,11 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new Juegos(nombre_cat, parentPanel, views, false);
+        JPanel portada = new Juegos(nombre, parentPanel, views, false, bundleText);
         if(views.get(nombre_cat) == null){
             views.put(nombre_cat, portada);
         }
         
-        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
+        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre_cat), position));
     }
 }

@@ -7,42 +7,50 @@ import java.awt.*;
 /**
  * La clase Titulo extiende JPanel y se utiliza para mostrar un título o un logo con un eslogan.
  * Dependiendo del valor de isInicio, se configura con un logo y un eslogan, o solo un título.
-*/
-public class Titulo extends JPanel{
+ */
+public class Titulo extends JPanel {
+    private String label;
+    private JLabel textLabel;
+
     /**
      * Crea un panel de título con el texto y la configuración especificados.
      *
      * @param label El texto del título o eslogan que se mostrará en el panel.
      * @param isInicio Si es true, muestra un logo y un eslogan, de lo contrario, solo muestra un título.
-    */
-    public Titulo(String label, Boolean isInicio){
+     */
+    public Titulo(String label, Boolean isInicio) {
         setLayout(new BorderLayout());
-
-        if(isInicio){
-
+        this.label = label;
+        if (isInicio) {
             ImageIcon icon = new ImageIcon("src/images/logo.png");
             JLabel logo = new JLabel(icon);
             logo.setHorizontalAlignment(JLabel.LEFT);
             add(logo, BorderLayout.NORTH);
 
-            JLabel slogan = new JLabel(label);
-            slogan.setForeground(Colores.rising_black);
-            slogan.setBackground(Colores.rising_black);
-            Font fuente = slogan.getFont();
-            slogan.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
-            add(slogan, BorderLayout.CENTER);
-
-        }else{
-
-            JLabel title = new JLabel(label);
-            title.setForeground(Colores.rising_black);
-            title.setBackground(Colores.rising_black);
-            Font fuente = title.getFont();
-            title.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
-            add(title, BorderLayout.CENTER);
-            
+            textLabel = new JLabel(this.label);
+            textLabel.setForeground(Colores.rising_black);
+            textLabel.setBackground(Colores.rising_black);
+            Font fuente = textLabel.getFont();
+            textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
+            add(textLabel, BorderLayout.CENTER);
+        } else {
+            textLabel = new JLabel(this.label);
+            textLabel.setForeground(Colores.rising_black);
+            textLabel.setBackground(Colores.rising_black);
+            Font fuente = textLabel.getFont();
+            textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
+            add(textLabel, BorderLayout.CENTER);
         }
 
-        add(new Linea(0, 5, 2000,5), BorderLayout.SOUTH);
+        add(new Linea(0, 5, 2000, 5), BorderLayout.SOUTH);
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+        if (textLabel != null) {
+            textLabel.setText(label);
+        }
+        revalidate();
+        repaint();
     }
 }
