@@ -2,8 +2,6 @@ package practicafinal.componentes;
 
 import javax.swing.*;
 
-import practicafinal.paginas.Linea;
-
 import java.awt.*;
 
 /**
