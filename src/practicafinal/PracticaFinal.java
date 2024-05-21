@@ -35,11 +35,11 @@ public class PracticaFinal {
 
         //Margenes
         JPanel leftMargin = new JPanel();
-        leftMargin.setPreferredSize(new Dimension(100, 1));
+        leftMargin.setPreferredSize(new Dimension(80, 1));
         panel.add(leftMargin, BorderLayout.WEST);
 
         JPanel rightMargin = new JPanel();
-        rightMargin.setPreferredSize(new Dimension(100, 1));
+        rightMargin.setPreferredSize(new Dimension(80, 1));
         panel.add(rightMargin, BorderLayout.EAST);
 
         JPanel topMargin = new JPanel();

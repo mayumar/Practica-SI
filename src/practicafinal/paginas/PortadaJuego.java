@@ -5,11 +5,7 @@ import javax.swing.*;
 import org.json.simple.JSONObject;
 
 import practicafinal.DataManager;
-import practicafinal.componentes.Bordes;
-import practicafinal.componentes.Carrousel;
-import practicafinal.componentes.Colores;
-import practicafinal.componentes.Recuadro;
-import practicafinal.componentes.Titulo;
+import practicafinal.componentes.*;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -18,6 +14,8 @@ import java.util.ArrayList;
  * La clase PortadaJuego representa un panel que muestra la portada de un juego específico.
 */
 public class PortadaJuego extends JPanel{
+    JSONObject game;
+
     /**
      * Crea una instancia de PortadaJuego. Este panel utiliza un BorderLayout y contiene un título en la parte superior
      * que muestra el nombre del juego.
@@ -45,6 +43,8 @@ public class PortadaJuego extends JPanel{
             e.printStackTrace();
         }
 
+        this.game = game;
+
         // Panel para la imagen
         JPanel imagePanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon((String) game.get("imagen"));
@@ -64,108 +64,8 @@ public class PortadaJuego extends JPanel{
         c_contenido.gridwidth = 1;
         contenido.add(carrousel, c_contenido);
 
-        JPanel informacion = new JPanel(new GridBagLayout());
-        GridBagConstraints c_informacion = new GridBagConstraints();
-        c_informacion.fill = GridBagConstraints.BOTH;
-        c_informacion.insets = new Insets(10, 5, 10, 5);
+        JPanel informacion = createInformacion();
 
-        JPanel descripcion = new JPanel(new GridLayout(1,1));
-        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center;'>" + (String) game.get("descripcion") + "</div></html>");
-        descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        descripcionLabel.setForeground(Colores.rising_black);
-        descripcion.add(descripcionLabel);
-
-        descripcion.setBorder(Bordes.black_border);
-        descripcion.setBackground(Colores.platinum);
-        descripcion.setPreferredSize(new Dimension(638, 165));
-
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 0;
-        c_informacion.gridheight = 2;
-        c_informacion.gridwidth = 5;
-        informacion.add(descripcion, c_informacion);
-
-        
-        JPanel info = new JPanel(new GridLayout(0,1));
-        JLabel fecha = new JLabel("Fecha de lanzamiento: ()");
-        fecha.setForeground(Colores.rising_black);
-        info.add(fecha);
-        JLabel desarrollador = new JLabel("Desarrollador: ()");
-        desarrollador.setForeground(Colores.rising_black);
-        info.add(desarrollador);
-        
-        info.setBackground(Colores.platinum);
-        info.setBorder(Bordes.black_border);
-        info.setPreferredSize(new Dimension(400, 34));
-        
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 2;
-        informacion.add(info, c_informacion);
-        
-        JButton b_tienda1 = new JButton("Tienda 1");
-        c_informacion.gridx = 2;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda1, c_informacion);
-        
-        JButton b_tienda2 = new JButton("Tienda 2");
-        c_informacion.gridx = 3;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda2, c_informacion);
-        
-        JButton b_tienda3 = new JButton("Tienda 3");
-        c_informacion.gridx = 4;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda3, c_informacion);
-
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(new Recuadro(game), c_informacion);
-
-        JPanel resume_reviews = new JPanel(new GridLayout(0,1));
-
-        resume_reviews.setPreferredSize(new Dimension(300, 48));
-        resume_reviews.setBorder(Bordes.black_border);
-
-        Double calificacionDouble = (Double) game.get("calificacion");
-        if(calificacionDouble < 5.0){
-            resume_reviews.setBackground(Colores.bittersweet);
-            resume_reviews.add(new JLabel("Las reseñas de usuarios son mayoritariamente negativas."));
-            resume_reviews.add(new JLabel("Los jugadores han expresado insatisfacción con la experiencia ofrecida."));
-        }else if(calificacionDouble < 8.0){
-            resume_reviews.setBackground(Colores.jonquil);
-            resume_reviews.add(new JLabel("Las reseñas de usuarios son mixtas."));
-            resume_reviews.add(new JLabel("Los jugadores han expresado no se que con la experiencia ofrecida."));
-        }else{
-            resume_reviews.setBackground(Colores.spring_green);
-            resume_reviews.add(new JLabel("Las reseñas de usuarios son mayormente positivas."));
-            resume_reviews.add(new JLabel("Los jugadores han expresado satisfacción con la experiencia ofrecida."));
-        }
-
-        c_informacion.gridx = 1;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 2;
-        informacion.add(resume_reviews, c_informacion);
-
-        JButton reviews = new JButton("Realizar reseña");
-        reviews.setBackground(Colores.cadet_gray);
-        reviews.setBorder(Bordes.black_border);
-        c_informacion.gridx = 3;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 2;
-        informacion.add(reviews, c_informacion);
-        
         c_contenido.gridx = 1;
         c_contenido.gridy = 0;
         c_contenido.gridheight = 1;
@@ -228,6 +128,163 @@ public class PortadaJuego extends JPanel{
             rightPanel.add(smallPanel);
         }
 */
+    }
+
+    private JPanel createInformacion(){
+        JPanel informacion = new JPanel(new GridBagLayout());
+        GridBagConstraints c_informacion = new GridBagConstraints();
+        c_informacion.fill = GridBagConstraints.BOTH;
+        c_informacion.insets = new Insets(5, 5, 5, 5);
+
+
+        /********************************************/
+        /* Descripcion del juego                    */
+        /********************************************/
+
+        JPanel descripcion = new JPanel(new GridLayout(1,1));
+        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center;'>" + (String) game.get("descripcion") + "</div></html>");
+        descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        descripcionLabel.setForeground(Colores.rising_black);
+        descripcion.add(descripcionLabel);
+
+        descripcion.setBorder(Bordes.black_border);
+        descripcion.setBackground(Colores.platinum);
+        descripcion.setPreferredSize(new Dimension(700, 165));
+
+        c_informacion.gridx = 0;
+        c_informacion.gridy = 0;
+        c_informacion.gridheight = 2;
+        c_informacion.gridwidth = 5;
+        informacion.add(descripcion, c_informacion);
+
+
+        /********************************************/
+        /* Fecha y desarrollador                    */
+        /********************************************/
+
+        JPanel info = new JPanel(new GridLayout(0,1));
+        JLabel fecha = new JLabel("Fecha de lanzamiento: ()");
+        fecha.setForeground(Colores.rising_black);
+        info.add(fecha);
+        JLabel desarrollador = new JLabel("Desarrollador: ()");
+        desarrollador.setForeground(Colores.rising_black);
+        info.add(desarrollador);
+        
+        info.setBackground(Colores.platinum);
+        info.setBorder(Bordes.black_border);
+        //info.setPreferredSize(new Dimension(300, 34));
+        
+        c_informacion.gridx = 0;
+        c_informacion.gridy = 2;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 2;
+        informacion.add(info, c_informacion);
+        
+
+        /********************************************/
+        /* Tiendas                                  */
+        /********************************************/
+
+        ImageIcon idioma = new ImageIcon("src/images/idioma.png");
+
+        JButton b_tienda1 = new JButton(idioma);
+        b_tienda1.setBorder(Bordes.button_empty_border);
+        b_tienda1.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
+        c_informacion.gridx = 2;
+        c_informacion.gridy = 2;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 1;
+        informacion.add(b_tienda1, c_informacion);
+        
+        JButton b_tienda2 = new JButton(idioma);
+        b_tienda2.setBorder(Bordes.button_empty_border);
+        b_tienda2.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
+        c_informacion.gridx = 3;
+        c_informacion.gridy = 2;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 1;
+        informacion.add(b_tienda2, c_informacion);
+        
+        JButton b_tienda3 = new JButton(idioma);
+        b_tienda3.setBorder(Bordes.button_empty_border);
+        b_tienda3.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
+        c_informacion.gridx = 4;
+        c_informacion.gridy = 2;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 1;
+        informacion.add(b_tienda3, c_informacion);
+
+
+        /********************************************/
+        /* Resumen de calificaciones                */
+        /********************************************/
+
+        c_informacion.gridx = 0;
+        c_informacion.gridy = 3;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 1;
+        Double calificacionDouble = (Double) game.get("calificacion");
+        Recuadro recuadro = new Recuadro(calificacionDouble);
+        informacion.add(recuadro, c_informacion);
+
+        JPanel resume_reviews = new JPanel(new GridLayout(0,1));
+
+        //resume_reviews.setPreferredSize(new Dimension(350, 48));
+        resume_reviews.setBorder(Bordes.black_border);
+
+        if(calificacionDouble < 5.0){
+            resume_reviews.setBackground(Colores.bittersweet);
+            JLabel linea1 = new JLabel("Las reseñas de usuarios son mayoritariamente negativas.");
+            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
+            linea1.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea1);
+            JLabel linea2 = new JLabel("Los jugadores han expresado insatisfacción con la experiencia ofrecida.");
+            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
+            linea2.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea2);
+        }else if(calificacionDouble < 8.0){
+            resume_reviews.setBackground(Colores.jonquil);
+            JLabel linea1 = new JLabel("Las reseñas de usuarios son mixtas.");
+            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
+            linea1.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea1);
+            JLabel linea2 = new JLabel("Los jugadores han expresado no se que con la experiencia ofrecida.");
+            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
+            linea2.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea2);
+        }else{
+            resume_reviews.setBackground(Colores.spring_green);
+            JLabel linea1 = new JLabel("Las reseñas de usuarios son mayormente positivas.");
+            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
+            linea1.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea1);
+            JLabel linea2 = new JLabel("Los jugadores han expresado satisfacción con la experiencia ofrecida.");
+            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
+            linea2.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea2);
+        }
+
+        c_informacion.gridx = 1;
+        c_informacion.gridy = 3;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 1;
+        informacion.add(resume_reviews, c_informacion);
+
+
+        /********************************************/
+        /* Boton para hacer review                  */
+        /********************************************/
+        JButton reviews = new JButton("Realizar reseña");
+        reviews.setBackground(Colores.cadet_gray);
+        reviews.setBorder(Bordes.black_border);
+        reviews.setForeground(Colores.rising_black);
+        c_informacion.gridx = 2;
+        c_informacion.gridy = 3;
+        c_informacion.gridheight = 1;
+        c_informacion.gridwidth = 3;
+        informacion.add(reviews, c_informacion);
+        
+        return informacion;
     }
     
 }
