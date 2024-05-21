@@ -10,6 +10,7 @@ import practicafinal.componentes.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 /**
  * La clase Juegos extiende JPanel y representa un panel que muestra una lista de juegos.
@@ -24,11 +25,16 @@ public class Juegos extends JPanel{
      * @param views Un HashMap que contiene las vistas de las diferentes categorías de la aplicación.
      * @param allGames Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
     */
-    public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames){
+    public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
         
         setLayout(new BorderLayout());
 
-        add(new Titulo(nlista, false), BorderLayout.NORTH);
+        if (nlista.contains("_"))
+            nlista = nlista.replace("_", " ");
+
+        String texto_titulo = allGames ? nlista : bundleText.getString("Texto_" + nlista.toLowerCase());
+
+        add(new Titulo(texto_titulo, false), BorderLayout.NORTH);
 
         JPanel contenido = new JPanel(new BorderLayout());
 

@@ -23,7 +23,7 @@ public class Vistas{
         HashMap<String,JPanel> views = new HashMap<String,JPanel>();
 
         views.put("inicio", new Inicio(parentPanel, views, bundleText));
-        views.put("juegos", new Juegos(bundleText.getString("Texto_juegos"), parentPanel, views, true));
+        views.put("juegos", new Juegos(bundleText.getString("Texto_juegos"), parentPanel, views, true, bundleText));
         views.put("categorias", new Categorias(bundleText.getString("Texto_categorias"), parentPanel, views, bundleText));
         views.put("review", new Review());
 
