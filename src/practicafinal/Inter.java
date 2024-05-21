@@ -4,17 +4,25 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Inter {
-    public static ResourceBundle getBundle() {
-        Locale currentLocale = Locale.getDefault();
+    private static Inter instance;
+    private Locale currentLocale;
 
-        if (!(
-            (currentLocale.getLanguage().equals("es") && currentLocale.getCountry().equals("ES")) || 
-            (currentLocale.getLanguage().equals("en") && currentLocale.getCountry().equals("GB")
-        ))) {
-            currentLocale = new Locale("es", "ES");
+    private Inter() {
+        this.currentLocale = Locale.getDefault();
+    }
+
+    public static Inter getInstance() {
+        if (instance == null) {
+            instance = new Inter();
         }
+        return instance;
+    }
 
-        currentLocale = new Locale("en", "GB");
-        return ResourceBundle.getBundle("bundles.Bundle", currentLocale);
+    public void setCurrentLocale(Locale currentLocale) {
+        this.currentLocale = currentLocale;
+    }
+
+    public ResourceBundle getBundle() {
+        return ResourceBundle.getBundle("bundles.Bundle", this.currentLocale);
     }
 }

@@ -48,7 +48,6 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        // TODO: Hacer que el nombre de la categoria este en español
         JPanel portada = new Juegos(nombre, parentPanel, views, false, bundleText);
         if(views.get(nombre_cat) == null){
             views.put(nombre_cat, portada);

@@ -26,15 +26,14 @@ public class Juegos extends JPanel{
      * @param allGames Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
     */
     public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
-        
         setLayout(new BorderLayout());
-
-        if (nlista.contains("_"))
-            nlista = nlista.replace("_", " ");
 
         String texto_titulo = allGames ? nlista : bundleText.getString("Texto_" + nlista.toLowerCase());
 
         add(new Titulo(texto_titulo, false), BorderLayout.NORTH);
+
+        if (nlista.contains("_"))
+            nlista = nlista.replace("_", " ");
 
         JPanel contenido = new JPanel(new BorderLayout());
 

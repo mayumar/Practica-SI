@@ -18,8 +18,6 @@ public class Vistas{
      * @return Un HashMap que contiene las vistas asociadas a sus nombres clave.
     */
     public static HashMap<String,JPanel> create_vistas(JPanel parentPanel, ResourceBundle bundleText){
-        
-
         HashMap<String,JPanel> views = new HashMap<String,JPanel>();
 
         views.put("inicio", new Inicio(parentPanel, views, bundleText));
@@ -29,5 +27,4 @@ public class Vistas{
 
         return views;
     }
-
 }

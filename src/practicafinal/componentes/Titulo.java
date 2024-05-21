@@ -9,6 +9,7 @@ import java.awt.*;
  * Dependiendo del valor de isInicio, se configura con un logo y un eslogan, o solo un título.
 */
 public class Titulo extends JPanel{
+    private String label;
     /**
      * Crea un panel de título con el texto y la configuración especificados.
      *
@@ -17,7 +18,7 @@ public class Titulo extends JPanel{
     */
     public Titulo(String label, Boolean isInicio){
         setLayout(new BorderLayout());
-
+        this.label = label;
         if(isInicio){
 
             ImageIcon icon = new ImageIcon("src/images/logo.png");
@@ -25,7 +26,7 @@ public class Titulo extends JPanel{
             logo.setHorizontalAlignment(JLabel.LEFT);
             add(logo, BorderLayout.NORTH);
 
-            JLabel slogan = new JLabel(label);
+            JLabel slogan = new JLabel(this.label);
             slogan.setForeground(Colores.rising_black);
             slogan.setBackground(Colores.rising_black);
             Font fuente = slogan.getFont();
@@ -34,7 +35,7 @@ public class Titulo extends JPanel{
 
         }else{
 
-            JLabel title = new JLabel(label);
+            JLabel title = new JLabel(this.label);
             title.setForeground(Colores.rising_black);
             title.setBackground(Colores.rising_black);
             Font fuente = title.getFont();
@@ -44,5 +45,9 @@ public class Titulo extends JPanel{
         }
 
         add(new Linea(0, 5, 2000,5), BorderLayout.SOUTH);
+    }
+
+    public void setLabel(String label){
+        this.label = label;
     }
 }
