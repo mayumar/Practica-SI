@@ -63,43 +63,11 @@ public class Juego extends JPanel {
         layeredPane.add(juegoButton, JLayeredPane.DEFAULT_LAYER);
         
         // Añadir el recuadro al JLayeredPane en la capa superior (PALETTE_LAYER)
-        layeredPane.add(createRecuadro(), JLayeredPane.PALETTE_LAYER);
+        layeredPane.add(new Recuadro(game), JLayeredPane.PALETTE_LAYER);
 
         // Añade el JLayeredPane al JPanel
         setLayout(new BorderLayout());
         add(layeredPane, BorderLayout.CENTER);
-    }
-
-
-    /**
-     * Crea un recuadro que muestra la calificación del juego.
-     *
-     * @return Un JPanel que contiene el recuadro con la calificación.
-     */
-    private JPanel createRecuadro(){
-        JPanel recuadro = new JPanel(new BorderLayout());
-
-        Double calificacionDouble = (Double) game.get("calificacion");
-        JLabel calificacion = new JLabel(Double.toString(calificacionDouble));
-        calificacion.setHorizontalAlignment(SwingConstants.CENTER);
-        calificacion.setForeground(Colores.rising_black);
-        recuadro.add(calificacion, BorderLayout.CENTER);
-
-        recuadro.setBorder(Bordes.black_border); // Crear un borde negro
-
-        recuadro.setCursor(new Cursor(Cursor.HAND_CURSOR));
-
-        if(calificacionDouble < 5.0){
-            recuadro.setBackground(Colores.bittersweet);
-        }else if(calificacionDouble < 8.0){
-            recuadro.setBackground(Colores.jonquil);
-        }else{
-            recuadro.setBackground(Colores.spring_green);
-        }
-
-        recuadro.setBounds(127, 158, 60, 47); // Ajustar el tamaño y posición del recuadro
-
-        return recuadro;
     }
 
     /**
