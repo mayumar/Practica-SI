@@ -189,7 +189,9 @@ package practicafinal.componentes;
 import javax.swing.*;
 
 import practicafinal.*;
+import practicafinal.paginas.Categorias;
 import practicafinal.paginas.Inicio;
+import practicafinal.paginas.Juegos;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -320,6 +322,9 @@ public class Barra_superior extends JPanel {
         });
 
         Inicio inicio = (Inicio) views.get("inicio");
+        Juegos juegos = (Juegos) views.get("juegos");
+        Categorias categorias = (Categorias) views.get("categorias");
+
         // Puedes añadir ActionListener a los ítems del menú para manejar sus acciones
         itemEspanol.addActionListener(new ActionListener() {
             @Override
@@ -329,6 +334,10 @@ public class Barra_superior extends JPanel {
                 inter.setCurrentLocale(new Locale("es", "ES"));
                 updateTexts(inter.getBundle());
                 inicio.updateTexts(inter.getBundle());
+                juegos.updateTexts(inter.getBundle());
+                categorias.updateTexts(inter.getBundle());
+                revalidate();
+                repaint();
             }
         });
         
@@ -338,8 +347,12 @@ public class Barra_superior extends JPanel {
                 // Acción para cambiar a Inglés
                 System.out.println("Inglés seleccionado");
                 inter.setCurrentLocale(new Locale("en", "GB"));
-                updateTexts(inter.getBundle());
+                updateTexts(inter.getBundle());                
                 inicio.updateTexts(inter.getBundle());
+                juegos.updateTexts(inter.getBundle());
+                categorias.updateTexts(inter.getBundle());
+                revalidate();
+                repaint();
             }
         });
 
@@ -379,6 +392,8 @@ public class Barra_superior extends JPanel {
         b_categorias.setText(bundleText.getString("Texto_categorias"));
         itemEspanol.setText(bundleText.getString("Texto_espanol"));
         itemIngles.setText(bundleText.getString("Texto_ingles"));
+        revalidate();
+        repaint();
     }
 }
 

@@ -184,5 +184,7 @@ public class Inicio extends JPanel {
         // Actualizar los textos de los títulos
         this.tituloPrincipal.setLabel(bundleText.getString("Texto_slogan"));
         this.tituloDestacados.setLabel(bundleText.getString("Texto_destacados"));
+        revalidate();
+        repaint();
     }
 }

@@ -17,6 +17,9 @@ import java.util.ResourceBundle;
  * Los juegos pueden ser filtrados por una categoría específica o mostrar todos los juegos disponibles.
 */
 public class Juegos extends JPanel{
+    private Titulo title;
+    private String titleText;
+    
     /**
      * Crea un panel de juegos con el nombre de la lista especificada y configura sus propiedades y contenido.
      *
@@ -27,10 +30,9 @@ public class Juegos extends JPanel{
     */
     public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
         setLayout(new BorderLayout());
-
-        String texto_titulo = allGames ? nlista : bundleText.getString("Texto_" + nlista.toLowerCase());
-
-        add(new Titulo(texto_titulo, false), BorderLayout.NORTH);
+        this.titleText = allGames ? nlista : bundleText.getString("Texto_" + nlista.toLowerCase());
+        this.title = new Titulo(titleText, false);
+        add(this.title, BorderLayout.NORTH);
 
         if (nlista.contains("_"))
             nlista = nlista.replace("_", " ");
@@ -53,7 +55,6 @@ public class Juegos extends JPanel{
             e.printStackTrace();
         }
         
-        // TODO: CAMBIAR EL JSON PARA QUE ALMACENE IDS QUE LUEGO SE BUSCAN EN EL BUNDLE
         @SuppressWarnings("unchecked")
         ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(nlista);
         
@@ -76,4 +77,7 @@ public class Juegos extends JPanel{
         add(contenido, BorderLayout.CENTER);
     }
 
+    public void updateTexts(ResourceBundle bundleText) {
+        this.title.setLabel(bundleText.getString("Texto_" + titleText.toLowerCase()));
+    }
 }
