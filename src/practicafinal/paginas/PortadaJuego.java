@@ -28,9 +28,9 @@ public class PortadaJuego extends JPanel{
         add(new Titulo(gameName, false), BorderLayout.NORTH);
 
         JPanel contenido = new JPanel(new GridBagLayout());
-        GridBagConstraints c_contenido = new GridBagConstraints();
-        c_contenido.fill = GridBagConstraints.BOTH;
-        c_contenido.insets = new Insets(10, 10, 10, 10);
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+        c.insets = new Insets(10, 10, 10, 10);
 
         ArrayList<JPanel> elements = new ArrayList<JPanel>();
 
@@ -58,83 +58,36 @@ public class PortadaJuego extends JPanel{
 
         Carrousel carrousel = new Carrousel(elements, 1);
 
-        c_contenido.gridx = 0;
-        c_contenido.gridy = 0;
-        c_contenido.gridheight = 1;
-        c_contenido.gridwidth = 1;
-        contenido.add(carrousel, c_contenido);
+        c.gridx = 0;
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        contenido.add(carrousel, c);
 
         JPanel informacion = createInformacion();
 
-        c_contenido.gridx = 1;
-        c_contenido.gridy = 0;
-        c_contenido.gridheight = 1;
-        c_contenido.gridwidth = 1;
-        contenido.add(informacion, c_contenido);
+        c.gridx = 1;
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        contenido.add(informacion, c);
 
+        JPanel reviews = createReviews();
+
+        c.gridx = 0;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 2;
+        contenido.add(reviews, c);
         
         add(contenido, BorderLayout.CENTER);
-        /*
-        // Panel para los primeros componentes
-        JPanel rightTopPanel = new JPanel();
-        rightTopPanel.setLayout(new GridLayout(0, 1)); // Un GridLayout de una columna y filas variables
-        //topPanel.add(rightTopPanel, BorderLayout.EAST);
-
-        // Caja de texto 1
-        JTextField textField1 = new JTextField("Texto predefinido 1");
-        textField1.setEditable(false); // Hacer que el campo de texto no sea editable
-        rightTopPanel.add(textField1);
-
-        // Panel para el primer número y el segundo texto
-        JPanel numberTextPanel = new JPanel();
-        numberTextPanel.setLayout(new BorderLayout());
-
-        // Cuadro con número
-        JTextField numberTextField = new JTextField("42");
-        numberTextField.setEditable(false); // Hacer que el campo de texto no sea editable
-        numberTextField.setPreferredSize(new Dimension(50, numberTextField.getPreferredSize().height)); // Ajustar el ancho del campo de texto del número
-        numberTextPanel.add(numberTextField, BorderLayout.WEST);
-
-        // Caja de texto 2 debajo del cuadro con número
-        JTextField textField2 = new JTextField("Texto predefinido 2");
-        textField2.setEditable(false); // Hacer que el campo de texto no sea editable
-        numberTextPanel.add(textField2, BorderLayout.CENTER);
-
-        rightTopPanel.add(numberTextPanel);
-
-        // Panel derecho para los demás componentes
-        JPanel rightPanel = new JPanel();
-        rightPanel.setLayout(new GridLayout(0, 1)); // Un GridLayout de una columna y filas variables
-        rightPanel.setPreferredSize(new Dimension(300, 0)); // Ancho fijo para el panel derecho
-        add(rightPanel, BorderLayout.SOUTH);
-
-        // Otras cajas de texto pequeñas
-        String[] predefinedTexts = {"Texto 3", "Texto 4", "Texto 5"};
-        for (String text : predefinedTexts) {
-            // Panel para el campo de número y el campo de texto
-            JPanel smallPanel = new JPanel();
-            smallPanel.setLayout(new BorderLayout());
-
-            // Campo de número pequeño
-            JTextField numberField = new JTextField("0", 3); // Crear un campo de número con ancho fijo
-            numberField.setEditable(false); // Hacer que el campo de texto no sea editable
-            smallPanel.add(numberField, BorderLayout.WEST);
-
-            // Campo de texto
-            JTextField textField = new JTextField(text);
-            textField.setEditable(false); // Hacer que el campo de texto no sea editable
-            smallPanel.add(textField, BorderLayout.CENTER);
-
-            rightPanel.add(smallPanel);
-        }
-*/
     }
 
     private JPanel createInformacion(){
         JPanel informacion = new JPanel(new GridBagLayout());
-        GridBagConstraints c_informacion = new GridBagConstraints();
-        c_informacion.fill = GridBagConstraints.BOTH;
-        c_informacion.insets = new Insets(5, 5, 5, 5);
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+        c.insets = new Insets(5, 5, 5, 5);
 
 
         /********************************************/
@@ -142,20 +95,20 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel descripcion = new JPanel(new GridLayout(1,1));
-        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center;'>" + (String) game.get("descripcion") + "</div></html>");
+        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + (String) game.get("descripcion") + "</div></html>");
         descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
         descripcionLabel.setForeground(Colores.rising_black);
         descripcion.add(descripcionLabel);
 
         descripcion.setBorder(Bordes.black_border);
         descripcion.setBackground(Colores.platinum);
-        descripcion.setPreferredSize(new Dimension(700, 165));
+        descripcion.setPreferredSize(new Dimension(650, 165));
 
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 0;
-        c_informacion.gridheight = 2;
-        c_informacion.gridwidth = 5;
-        informacion.add(descripcion, c_informacion);
+        c.gridx = 0;
+        c.gridy = 0;
+        c.gridheight = 1;
+        c.gridwidth = 10;
+        informacion.add(descripcion, c);
 
 
         /********************************************/
@@ -163,22 +116,20 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel info = new JPanel(new GridLayout(0,1));
-        JLabel fecha = new JLabel("Fecha de lanzamiento: ()");
-        fecha.setForeground(Colores.rising_black);
-        info.add(fecha);
-        JLabel desarrollador = new JLabel("Desarrollador: ()");
-        desarrollador.setForeground(Colores.rising_black);
-        info.add(desarrollador);
+        JLabel infoLabel = new JLabel("<html><div style='margin: 10px'>Fecha de lanzamiento: ()<br/>Desarrollador: ()<div/></html>");
+        infoLabel.setForeground(Colores.rising_black);
+        info.add(infoLabel);
         
         info.setBackground(Colores.platinum);
         info.setBorder(Bordes.black_border);
-        //info.setPreferredSize(new Dimension(300, 34));
+        info.setPreferredSize(new Dimension(300, 50));
         
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 2;
-        informacion.add(info, c_informacion);
+        c.gridx = 0;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 7;
+        c.weightx = 0.5;
+        informacion.add(info, c);
         
 
         /********************************************/
@@ -189,86 +140,65 @@ public class PortadaJuego extends JPanel{
 
         JButton b_tienda1 = new JButton(idioma);
         b_tienda1.setBorder(Bordes.button_empty_border);
-        b_tienda1.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
-        c_informacion.gridx = 2;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda1, c_informacion);
+        b_tienda1.setOpaque(false);
+        b_tienda1.setContentAreaFilled(false);
+        b_tienda1.setBorderPainted(false);
+        b_tienda1.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        c.gridx = 7;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        c.weightx = 0.1;
+        informacion.add(b_tienda1, c);
         
         JButton b_tienda2 = new JButton(idioma);
         b_tienda2.setBorder(Bordes.button_empty_border);
-        b_tienda2.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
-        c_informacion.gridx = 3;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda2, c_informacion);
+        b_tienda2.setOpaque(false);
+        b_tienda2.setContentAreaFilled(false);
+        b_tienda2.setBorderPainted(false);
+        b_tienda2.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        c.gridx = 8;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        c.weightx = 0.1;
+        informacion.add(b_tienda2, c);
         
         JButton b_tienda3 = new JButton(idioma);
         b_tienda3.setBorder(Bordes.button_empty_border);
-        b_tienda3.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
-        c_informacion.gridx = 4;
-        c_informacion.gridy = 2;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(b_tienda3, c_informacion);
+        b_tienda3.setOpaque(false);
+        b_tienda3.setContentAreaFilled(false);
+        b_tienda3.setBorderPainted(false);
+        b_tienda3.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        c.gridx = 9;
+        c.gridy = 1;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        c.weightx = 0.1;
+        informacion.add(b_tienda3, c);
 
 
         /********************************************/
         /* Resumen de calificaciones                */
         /********************************************/
 
-        c_informacion.gridx = 0;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
+        c.gridx = 0;
+        c.gridy = 2;
+        c.gridheight = 1;
+        c.gridwidth = 1;
+        c.weightx = 0.2;
         Double calificacionDouble = (Double) game.get("calificacion");
         Recuadro recuadro = new Recuadro(calificacionDouble);
-        informacion.add(recuadro, c_informacion);
+        informacion.add(recuadro, c);
 
-        JPanel resume_reviews = new JPanel(new GridLayout(0,1));
+        JPanel resume_reviews = getResumeReviews(calificacionDouble);
 
-        //resume_reviews.setPreferredSize(new Dimension(350, 48));
-        resume_reviews.setBorder(Bordes.black_border);
-
-        if(calificacionDouble < 5.0){
-            resume_reviews.setBackground(Colores.bittersweet);
-            JLabel linea1 = new JLabel("Las reseñas de usuarios son mayoritariamente negativas.");
-            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
-            linea1.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea1);
-            JLabel linea2 = new JLabel("Los jugadores han expresado insatisfacción con la experiencia ofrecida.");
-            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
-            linea2.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea2);
-        }else if(calificacionDouble < 8.0){
-            resume_reviews.setBackground(Colores.jonquil);
-            JLabel linea1 = new JLabel("Las reseñas de usuarios son mixtas.");
-            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
-            linea1.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea1);
-            JLabel linea2 = new JLabel("Los jugadores han expresado no se que con la experiencia ofrecida.");
-            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
-            linea2.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea2);
-        }else{
-            resume_reviews.setBackground(Colores.spring_green);
-            JLabel linea1 = new JLabel("Las reseñas de usuarios son mayormente positivas.");
-            linea1.setFont(new Font(linea1.getFont().getFontName(), Font.PLAIN, 9));
-            linea1.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea1);
-            JLabel linea2 = new JLabel("Los jugadores han expresado satisfacción con la experiencia ofrecida.");
-            linea2.setFont(new Font(linea2.getFont().getFontName(), Font.PLAIN, 9));
-            linea2.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea2);
-        }
-
-        c_informacion.gridx = 1;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 1;
-        informacion.add(resume_reviews, c_informacion);
+        c.gridx = 1;
+        c.gridy = 2;
+        c.gridheight = 1;
+        c.gridwidth = 6;
+        c.weightx = 0.5;
+        informacion.add(resume_reviews, c);
 
 
         /********************************************/
@@ -278,13 +208,50 @@ public class PortadaJuego extends JPanel{
         reviews.setBackground(Colores.cadet_gray);
         reviews.setBorder(Bordes.black_border);
         reviews.setForeground(Colores.rising_black);
-        c_informacion.gridx = 2;
-        c_informacion.gridy = 3;
-        c_informacion.gridheight = 1;
-        c_informacion.gridwidth = 3;
-        informacion.add(reviews, c_informacion);
+        c.gridx = 7;
+        c.gridy = 2;
+        c.gridheight = 1;
+        c.gridwidth = 3;
+        c.weightx = 0.5;
+        informacion.add(reviews, c);
         
         return informacion;
+    }
+
+    private JPanel getResumeReviews(Double calification){
+        JPanel resume_reviews = new JPanel(new GridLayout(1,1));
+
+        //resume_reviews.setPreferredSize(new Dimension(350, 48));
+        resume_reviews.setBorder(Bordes.black_border);
+
+
+        if(calification < 5.0){
+            resume_reviews.setBackground(Colores.bittersweet);
+            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayoritariamente negativas.<br/>Los jugadores han expresado insatisfacción con la experiencia ofrecida.</div></html>");
+            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
+            linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea);
+        }else if(calification < 8.0){
+            resume_reviews.setBackground(Colores.jonquil);
+            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado no se que con la experiencia ofrecida.</div></html>");
+            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
+            linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea);
+        }else{
+            resume_reviews.setBackground(Colores.spring_green);
+            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayormente positivas.<br/>Los jugadores han expresado satisfacción con la experiencia ofrecida.</div></html>");
+            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
+            linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(linea);
+        }
+
+        return resume_reviews;
+    }
+
+    private JPanel createReviews(){
+        JPanel reviews = new JPanel();
+
+        return reviews;
     }
     
 }
