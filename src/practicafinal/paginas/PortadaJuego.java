@@ -251,6 +251,13 @@ public class PortadaJuego extends JPanel{
     private JPanel createReviews(){
         JPanel reviews = new JPanel();
 
+        try {
+            DataManager dataManager = new DataManager("src/data.json");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        
         return reviews;
     }
     
