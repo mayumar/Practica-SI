@@ -59,14 +59,14 @@ public class DataManager {
      *
      * @return Una lista de objetos JSONObject, cada uno representando un juego.
     */
-    public ArrayList<JSONObject> getAllGames() {
-        ArrayList<JSONObject> games = new ArrayList<>();
+    public JSONArray getAllGames() {
+        JSONArray games = new JSONArray();
         Set<String> categorias = this.getAllCategories();
 
         for(String cat : categorias) {
             JSONArray gameList = (JSONArray) this.getData().get(cat);
             for (Object game : gameList) {
-                games.add((JSONObject) game);
+                games.add(game);
             }
         }
 

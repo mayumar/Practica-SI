@@ -23,7 +23,7 @@ public class Vistas{
         views.put("inicio", new Inicio(parentPanel, views, bundleText));
         views.put("juegos", new Juegos("Juegos", parentPanel, views, true, bundleText));
         views.put("categorias", new Categorias(bundleText.getString("Texto_categorias"), parentPanel, views, bundleText));
-        views.put("review", new Review());
+        views.put("review", new Review(bundleText));
 
         return views;
     }

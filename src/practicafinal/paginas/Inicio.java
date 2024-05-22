@@ -43,7 +43,7 @@ public class Inicio extends JPanel {
 
         ArrayList<JSONObject> games = dataManager.getAllGames();
         for (int i = 0; i < 7; i++) {
-            elements.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+            elements.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
         }
 
         // Crear el carrousel
@@ -73,7 +73,7 @@ public class Inicio extends JPanel {
         JPanel destacados = new JPanel(fl);
 
         for (int i = 0; i < 3; i++) {
-            destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+            destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
         }
 
         c.gridx = 0;
