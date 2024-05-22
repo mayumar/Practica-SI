@@ -16,8 +16,6 @@ import practicafinal.componentes.*;
 public class Inicio extends JPanel {
     private Titulo tituloPrincipal;
     private Titulo tituloDestacados;
-    private Carrousel carrousel;
-    private JPanel destacados;
 
     /**
      * Crea un panel de inicio con un título, un carrusel de juegos y una sección de juegos destacados.
@@ -49,7 +47,7 @@ public class Inicio extends JPanel {
         }
 
         // Crear el carrousel
-        this.carrousel = new Carrousel(elements, 5);
+        Carrousel carrousel = new Carrousel(elements, 5);
 
         JPanel contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -72,10 +70,10 @@ public class Inicio extends JPanel {
         contenido.add(this.tituloDestacados, c);
 
         FlowLayout fl = new FlowLayout();
-        this.destacados = new JPanel(fl);
+        JPanel destacados = new JPanel(fl);
 
         for (int i = 0; i < 3; i++) {
-            this.destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
+            destacados.add(new Juego((String) games.get(i).get("nombre"), parentPanel, this, BorderLayout.CENTER, views));
         }
 
         c.gridx = 0;

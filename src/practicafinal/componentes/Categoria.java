@@ -18,6 +18,10 @@ import practicafinal.paginas.Juegos;
  * y se establece un ActionListener que cambia el panel de enfoque al panel de la categoría seleccionada.
 */
 public class Categoria extends JButton {
+    private String nombre;
+    HashMap<String,JPanel> views;
+    JPanel parentPanel;
+
     /**
      * Crea un botón de categoría con el nombre especificado y configura sus propiedades y comportamiento.
      *
@@ -29,17 +33,16 @@ public class Categoria extends JButton {
      * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
     */
     public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
-        String nombre_cat = nombre;
+        this.nombre = nombre;
+        this.views = views;
+        this.parentPanel = parentPanel;
 
-        if (nombre.contains(" "))
-            nombre = nombre.replace(" ", "_");
-
-        ImageIcon imagen = new ImageIcon("src/images/categorias/c_" + nombre_cat.toLowerCase() + ".png");
+        ImageIcon imagen = new ImageIcon("src/images/categorias/c_" + this.nombre.toLowerCase() + ".png");
         setIcon(imagen);
 
         setBorder(Bordes.black_border);
 
-        setText(bundleText.getString("Texto_" + nombre.toLowerCase()));
+        setText(bundleText.getString("Texto_" + this.nombre.toLowerCase()));
         setHorizontalTextPosition(SwingConstants.CENTER);
         setVerticalTextPosition(SwingConstants.CENTER);
         setBackground(Colores.cadet_gray);
@@ -48,11 +51,18 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new Juegos(nombre, parentPanel, views, false, bundleText);
-        if(views.get(nombre_cat) == null){
-            views.put(nombre_cat, portada);
+        JPanel portada = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
+        if(this.views.get(this.nombre) == null){
+            this.views.put(this.nombre, portada);
         }
         
-        addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre_cat), position));
+        addActionListener(new FocusPanelGameListener(this.parentPanel, oldPanel, this.views.get(this.nombre), position));
+    }
+
+    public void updateTexts(ResourceBundle bundleText) {
+        JPanel portada = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
+        if(this.views.get(this.nombre) == null){
+            this.views.put(this.nombre, portada);
+        }
     }
 }

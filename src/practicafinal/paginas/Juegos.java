@@ -23,19 +23,21 @@ public class Juegos extends JPanel{
     /**
      * Crea un panel de juegos con el nombre de la lista especificada y configura sus propiedades y contenido.
      *
-     * @param nlista El nombre de la lista o categoría de juegos.
+     * @param viewTitle El nombre de la lista o categoría de juegos.
      * @param parentPanel El panel padre que contiene el panel de juegos.
      * @param views Un HashMap que contiene las vistas de las diferentes categorías de la aplicación.
      * @param allGames Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
     */
-    public Juegos(String nlista, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
+    public Juegos(String viewTitle, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
         setLayout(new BorderLayout());
-        this.titleText = allGames ? nlista : bundleText.getString("Texto_" + nlista.toLowerCase());
-        this.title = new Titulo(titleText, false);
+        
+        this.titleText = viewTitle;
+        this.title = new Titulo(bundleText.getString("Texto_" + this.titleText.toLowerCase()), false);
+
         add(this.title, BorderLayout.NORTH);
 
-        if (nlista.contains("_"))
-            nlista = nlista.replace("_", " ");
+        if (viewTitle.contains("_"))
+            viewTitle = viewTitle.replace("_", " ");
 
         JPanel contenido = new JPanel(new BorderLayout());
 
@@ -56,7 +58,7 @@ public class Juegos extends JPanel{
         }
         
         @SuppressWarnings("unchecked")
-        ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(nlista);
+        ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(viewTitle);
         
         int row = 0, col = 0;
         int columns = 5; // Número de columnas en la cuadrícula
@@ -78,6 +80,9 @@ public class Juegos extends JPanel{
     }
 
     public void updateTexts(ResourceBundle bundleText) {
-        this.title.setLabel(bundleText.getString("Texto_" + titleText.toLowerCase()));
+        remove(this.title);
+        this.title = new Titulo(bundleText.getString("Texto_" + this.titleText.toLowerCase()), false);
+        revalidate();
+        repaint();
     }
 }

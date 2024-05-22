@@ -6,7 +6,7 @@ package practicafinal;
 
 import javax.swing.*;
 
-import practicafinal.componentes.Barra_superior;
+import practicafinal.componentes.BarraSuperior;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -54,7 +54,7 @@ public class PracticaFinal {
         panel.add(views.get("inicio"));
 
         //Barra superior
-        Barra_superior barra_superior = new Barra_superior(panel, views, jf, Inter.getInstance());
+        BarraSuperior barra_superior = new BarraSuperior(panel, views, jf, Inter.getInstance());
         mainPanel.add(barra_superior, BorderLayout.NORTH);
         
         jf.setSize(1452, 779);
