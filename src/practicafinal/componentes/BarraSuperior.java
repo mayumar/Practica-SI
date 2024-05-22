@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
  * La clase Barra_superior extiende JPanel y representa la barra de navegación superior de la aplicación.
  * Contiene botones para cambiar entre las diferentes vistas y una barra de búsqueda.
 */
-public class Barra_superior extends JPanel {
+public class BarraSuperior extends JPanel {
     private JPanel parentPanel;
     private HashMap<String, JPanel> views;
     private JFrame jf;
@@ -41,7 +41,7 @@ public class Barra_superior extends JPanel {
      * @param jf El JFrame principal de la aplicación.
      * @param inter Instancia de la clase Inter para gestionar el idioma.
     */
-    public Barra_superior(JPanel parentPanel, HashMap<String, JPanel> views, JFrame jf, Inter inter) {
+    public BarraSuperior(JPanel parentPanel, HashMap<String, JPanel> views, JFrame jf, Inter inter) {
         this.parentPanel = parentPanel;
         this.views = views;
         this.jf = jf;
@@ -140,10 +140,6 @@ public class Barra_superior extends JPanel {
             }
         });
 
-        Inicio inicio = (Inicio) views.get("inicio");
-        Juegos juegos = (Juegos) views.get("juegos");
-        Categorias categorias = (Categorias) views.get("categorias");
-
         // Puedes añadir ActionListener a los ítems del menú para manejar sus acciones
         itemEspanol.addActionListener(new ActionListener() {
             @Override
@@ -151,6 +147,11 @@ public class Barra_superior extends JPanel {
                 // Acción para cambiar a Español
                 System.out.println("Español seleccionado");
                 inter.setCurrentLocale(new Locale("es", "ES"));
+
+                Inicio inicio = (Inicio) views.get("inicio");
+                Juegos juegos = (Juegos) views.get("juegos");
+                Categorias categorias = (Categorias) views.get("categorias");
+
                 updateTexts(inter.getBundle());
                 inicio.updateTexts(inter.getBundle());
                 juegos.updateTexts(inter.getBundle());
@@ -166,6 +167,11 @@ public class Barra_superior extends JPanel {
                 // Acción para cambiar a Inglés
                 System.out.println("Inglés seleccionado");
                 inter.setCurrentLocale(new Locale("en", "GB"));
+
+                Inicio inicio = (Inicio) views.get("inicio");
+                Juegos juegos = (Juegos) views.get("juegos");
+                Categorias categorias = (Categorias) views.get("categorias");
+
                 updateTexts(inter.getBundle());                
                 inicio.updateTexts(inter.getBundle());
                 juegos.updateTexts(inter.getBundle());

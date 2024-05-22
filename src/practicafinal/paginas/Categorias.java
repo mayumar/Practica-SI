@@ -19,6 +19,7 @@ public class Categorias extends JPanel {
     private DataManager dataManager;
     private ResourceBundle bundleText;
     private JPanel contenido;
+    private String nombre;
 
     /**
      * Crea un panel de categorías con el nombre de la lista especificada y configura sus propiedades y contenido.
@@ -34,6 +35,7 @@ public class Categorias extends JPanel {
         this.parentPanel = parentPanel;
         this.views = views;
         this.bundleText = bundleText;
+        this.nombre = nlista;
         
         this.title = new Titulo(nlista, false);
         add(this.title, BorderLayout.NORTH);
@@ -54,7 +56,7 @@ public class Categorias extends JPanel {
     }
 
     private void updateCategoryList() {
-        contenido.removeAll();
+        this.contenido.removeAll();
         
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(40, 40, 40, 40); // Espaciamiento entre elementos
@@ -66,7 +68,10 @@ public class Categorias extends JPanel {
         for (String cat : categorias) {
             c.gridx = col;
             c.gridy = row;
-            contenido.add(new Categoria(cat, parentPanel, this, BorderLayout.CENTER, views, bundleText), c);
+            
+            if (cat.contains(" ")) cat = cat.replace(" ", "_");
+
+            this.contenido.add(new Categoria(cat, this.parentPanel, this, BorderLayout.CENTER, this.views, this.bundleText), c);
             col++;
             if (col == columns) {
                 col = 0;
@@ -86,6 +91,7 @@ public class Categorias extends JPanel {
     public void updateTexts(ResourceBundle bundleText) {
         this.bundleText = bundleText;
         this.title.setLabel(bundleText.getString("Texto_categorias"));
+        this.views.remove(this.nombre);
         updateCategoryList();
     }
 }
