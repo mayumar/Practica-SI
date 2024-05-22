@@ -5,6 +5,7 @@ import practicafinal.DataManager;
 import practicafinal.componentes.Categoria;
 import practicafinal.componentes.Titulo;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -19,7 +20,7 @@ public class Categorias extends JPanel {
     private DataManager dataManager;
     private ResourceBundle bundleText;
     private JPanel contenido;
-    private String nombre;
+    private ArrayList<Juegos> juegos;
 
     /**
      * Crea un panel de categorías con el nombre de la lista especificada y configura sus propiedades y contenido.
@@ -35,7 +36,7 @@ public class Categorias extends JPanel {
         this.parentPanel = parentPanel;
         this.views = views;
         this.bundleText = bundleText;
-        this.nombre = nlista;
+        this.juegos = new ArrayList<>();
         
         this.title = new Titulo(nlista, false);
         add(this.title, BorderLayout.NORTH);
@@ -71,7 +72,7 @@ public class Categorias extends JPanel {
             
             if (cat.contains(" ")) cat = cat.replace(" ", "_");
 
-            this.contenido.add(new Categoria(cat, this.parentPanel, this, BorderLayout.CENTER, this.views, this.bundleText), c);
+            this.contenido.add(new Categoria(cat, this.parentPanel, this, BorderLayout.CENTER, this.views, this.bundleText, juegos), c);
             col++;
             if (col == columns) {
                 col = 0;
@@ -83,6 +84,12 @@ public class Categorias extends JPanel {
         repaint();
     }
 
+    private void updateCategoryTitles(){
+        for(Juegos j: juegos){
+            j.updateTexts(bundleText);
+        }
+    }
+
     /**
      * Actualiza los textos del panel de categorías con el nuevo ResourceBundle.
      *
@@ -91,7 +98,7 @@ public class Categorias extends JPanel {
     public void updateTexts(ResourceBundle bundleText) {
         this.bundleText = bundleText;
         this.title.setLabel(bundleText.getString("Texto_categorias"));
-        this.views.remove(this.nombre);
         updateCategoryList();
+        updateCategoryTitles();
     }
 }

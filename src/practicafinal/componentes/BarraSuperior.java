@@ -156,6 +156,7 @@ public class BarraSuperior extends JPanel {
                 inicio.updateTexts(inter.getBundle());
                 juegos.updateTexts(inter.getBundle());
                 categorias.updateTexts(inter.getBundle());
+                
                 revalidate();
                 repaint();
             }

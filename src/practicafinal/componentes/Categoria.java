@@ -2,6 +2,7 @@ package practicafinal.componentes;
 
 import java.awt.Font;
 import java.awt.Cursor;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -32,7 +33,7 @@ public class Categoria extends JButton {
      * @param views Un HashMap que contiene las vistas de las diferentes categorías.
      * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
     */
-    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
+    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos) {
         this.nombre = nombre;
         this.views = views;
         this.parentPanel = parentPanel;
@@ -51,12 +52,17 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
+        Juegos listaJuegos = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
         if(this.views.get(this.nombre) == null){
-            this.views.put(this.nombre, portada);
+            juegos.add(listaJuegos);
+            this.views.put(this.nombre, listaJuegos);
         }
         
         addActionListener(new FocusPanelGameListener(this.parentPanel, oldPanel, this.views.get(this.nombre), position));
+    }
+
+    public void updateTitle(){
+
     }
 
     public void updateTexts(ResourceBundle bundleText) {

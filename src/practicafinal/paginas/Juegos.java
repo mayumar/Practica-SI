@@ -80,8 +80,7 @@ public class Juegos extends JPanel{
     }
 
     public void updateTexts(ResourceBundle bundleText) {
-        remove(this.title);
-        this.title = new Titulo(bundleText.getString("Texto_" + this.titleText.toLowerCase()), false);
+        this.title.setLabel(bundleText.getString("Texto_" + this.titleText.toLowerCase()));
         revalidate();
         repaint();
     }

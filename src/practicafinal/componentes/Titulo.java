@@ -50,7 +50,5 @@ public class Titulo extends JPanel {
         if (textLabel != null) {
             textLabel.setText(label);
         }
-        revalidate();
-        repaint();
     }
 }
