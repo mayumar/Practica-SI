@@ -57,7 +57,6 @@ public class Juegos extends JPanel{
             e.printStackTrace();
         }
         
-        @SuppressWarnings("unchecked")
         ArrayList<JSONObject> juegos = allGames ? dataManager.getAllGames() : dataManager.getGamesFromCategory(viewTitle);
         
         int row = 0, col = 0;

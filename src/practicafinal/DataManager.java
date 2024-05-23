@@ -2,6 +2,7 @@ package practicafinal;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.json.simple.JSONArray;
@@ -38,10 +39,17 @@ public class DataManager {
      * Obtiene una lista de juegos de una categoría específica.
      *
      * @param category La categoría de la cual se desean obtener los juegos.
-     * @return Un JSONArray que contiene los juegos de la categoría especificada.
+     * @return Un ArrayList<JSONObject> que contiene los juegos de la categoría especificada.
     */
-    public JSONArray getGamesFromCategory(String category) {
-        return (JSONArray) this.data.get(category);
+    public ArrayList<JSONObject> getGamesFromCategory(String category) {
+        JSONArray datalist = (JSONArray) this.data.get(category);
+        ArrayList<JSONObject> result = new ArrayList<JSONObject>();
+
+        for(Object o : datalist){
+            result.add((JSONObject) o);
+        }
+
+        return result;
     }
 
     /**
@@ -49,9 +57,14 @@ public class DataManager {
      *
      * @return Un conjunto de cadenas que representan todas las categorías.
     */
-    @SuppressWarnings("unchecked")
     public Set<String> getAllCategories() {
-        return this.data.keySet();
+        Set<String> categories = new HashSet<>();
+        for (Object key : this.data.keySet()) {
+            if (key instanceof String) {
+                categories.add((String) key);
+            }
+        }
+        return categories;
     }
 
     /**
@@ -59,14 +72,14 @@ public class DataManager {
      *
      * @return Una lista de objetos JSONObject, cada uno representando un juego.
     */
-    public JSONArray getAllGames() {
-        JSONArray games = new JSONArray();
+    public ArrayList<JSONObject> getAllGames() {
+        ArrayList<JSONObject> games = new ArrayList<JSONObject>();
         Set<String> categorias = this.getAllCategories();
 
         for(String cat : categorias) {
             JSONArray gameList = (JSONArray) this.getData().get(cat);
             for (Object game : gameList) {
-                games.add(game);
+                games.add((JSONObject)game);
             }
         }
 
@@ -81,9 +94,11 @@ public class DataManager {
     */
     public JSONObject getGameFromName(String name) {
         ArrayList<JSONObject> games = this.getAllGames();
+
         JSONObject game = null;
 
-        for(JSONObject gameList : games) {
+        for(Object gameListObject : games) {
+            JSONObject gameList = (JSONObject) gameListObject;
             if (gameList.get("nombre").equals(name))
                 game = gameList;
         }

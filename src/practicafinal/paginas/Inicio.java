@@ -7,7 +7,6 @@ import java.util.Random;
 import java.util.ResourceBundle;
 import javax.swing.*;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import practicafinal.DataManager;
 import practicafinal.componentes.*;
@@ -44,7 +43,7 @@ public class Inicio extends JPanel {
             e.printStackTrace();
         }
 
-        JSONArray games = (JSONArray) dataManager.getAllGames();
+        ArrayList<JSONObject> games = dataManager.getAllGames();
         Random random = new Random();
         ArrayList<Integer> randomNum = new ArrayList<Integer>();
 
@@ -59,9 +58,8 @@ public class Inicio extends JPanel {
         }
 
 
-        for (int i = 0; i < randomNum.size(); i++) {
-            JSONObject game = (JSONObject) games.get(randomNum.get(i));
-            elements.add(new Juego((String) game.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
+        for (int n : randomNum) {
+            elements.add(new Juego((String) games.get(n).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
         }
 
         // Crear el carrousel
