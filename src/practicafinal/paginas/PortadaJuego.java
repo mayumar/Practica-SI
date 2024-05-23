@@ -10,12 +10,16 @@ import practicafinal.componentes.*;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.ResourceBundle;
 
 /**
  * La clase PortadaJuego representa un panel que muestra la portada de un juego específico.
 */
 public class PortadaJuego extends JPanel{
-    JSONObject game;
+    private JSONObject game;
+    private JPanel parentPanel;
+    private HashMap<String,JPanel> views;
 
     /**
      * Crea una instancia de PortadaJuego. Este panel utiliza un BorderLayout y contiene un título en la parte superior
@@ -23,7 +27,9 @@ public class PortadaJuego extends JPanel{
      *
      * @param gameName El nombre del juego que se mostrará en la portada.
     */
-    public PortadaJuego(String gameName){
+    public PortadaJuego(String gameName, JPanel parentPanel, HashMap<String,JPanel> views, ResourceBundle bundleText){
+        this.parentPanel = parentPanel;
+        this.views = views;
         setLayout(new BorderLayout());
 
         add(new Titulo(gameName, false), BorderLayout.NORTH);
@@ -35,20 +41,16 @@ public class PortadaJuego extends JPanel{
 
         ArrayList<JPanel> elements = new ArrayList<JPanel>();
 
-        JSONObject game = null;
-
         try {
             DataManager dataManager = new DataManager("src/data.json");
-            game = dataManager.getGameFromName(gameName);
+            this.game = dataManager.getGameFromName(gameName);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        this.game = game;
-
         // Panel para la imagen
         JPanel imagePanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon((String) game.get("imagen"));
+        ImageIcon imageIcon = new ImageIcon((String) this.game.get("imagen"));
         JLabel imageLabel = new JLabel(imageIcon);
         imagePanel.add(imageLabel);
         imagePanel.setPreferredSize(new Dimension(443, 275));
@@ -65,7 +67,7 @@ public class PortadaJuego extends JPanel{
         c.gridwidth = 1;
         contenido.add(carrousel, c);
 
-        JPanel informacion = createInformacion();
+        JPanel informacion = createInformacion(bundleText);
 
         c.gridx = 1;
         c.gridy = 0;
@@ -84,7 +86,7 @@ public class PortadaJuego extends JPanel{
         add(contenido, BorderLayout.CENTER);
     }
 
-    private JPanel createInformacion(){
+    private JPanel createInformacion(ResourceBundle bundleText){
         JPanel informacion = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
@@ -96,7 +98,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel descripcion = new JPanel(new GridLayout(1,1));
-        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + (String) game.get("descripcion") + "</div></html>");
+        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + (String) this.game.get("descripcion") + "</div></html>");
         descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
         descripcionLabel.setForeground(Colores.rising_black);
         descripcion.add(descripcionLabel);
@@ -188,7 +190,7 @@ public class PortadaJuego extends JPanel{
         c.gridheight = 1;
         c.gridwidth = 1;
         c.weightx = 0.2;
-        Double calificacionDouble = (Double) game.get("calificacion");
+        Double calificacionDouble = (Double) this.game.get("calificacion");
         Recuadro recuadro = new Recuadro(calificacionDouble);
         informacion.add(recuadro, c);
 
@@ -205,16 +207,20 @@ public class PortadaJuego extends JPanel{
         /********************************************/
         /* Boton para hacer review                  */
         /********************************************/
-        JButton reviews = new JButton("Realizar reseña");
-        reviews.setBackground(Colores.cadet_gray);
-        reviews.setBorder(Bordes.black_border);
-        reviews.setForeground(Colores.rising_black);
+        JButton buttonReviews = new JButton("Realizar reseña");
+        buttonReviews.setBackground(Colores.cadet_gray);
+        buttonReviews.setBorder(Bordes.black_border);
+        buttonReviews.setForeground(Colores.rising_black);
         c.gridx = 7;
         c.gridy = 2;
         c.gridheight = 1;
         c.gridwidth = 3;
         c.weightx = 0.5;
-        informacion.add(reviews, c);
+        informacion.add(buttonReviews, c);
+
+        this.views.put("review", new Review(bundleText));
+
+        buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review"), BorderLayout.CENTER));
         
         return informacion;
     }

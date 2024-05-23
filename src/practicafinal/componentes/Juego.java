@@ -9,6 +9,7 @@ import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 /**
  * La clase Juego extiende JPanel y representa un componente personalizado para un juego específico.
@@ -18,11 +19,11 @@ import java.util.HashMap;
  */
 public class Juego extends JPanel {
     private String nombre;
-    JPanel parentPanel;
-    JPanel oldPanel;
-    String position;
-    HashMap<String,JPanel> views;
-    JSONObject game;
+    private JPanel parentPanel;
+    private JPanel oldPanel;
+    private String position;
+    private HashMap<String,JPanel> views;
+    private JSONObject game;
 
     /**
      * Crea un componente de juego con el nombre especificado y configura sus propiedades y comportamiento.
@@ -33,7 +34,7 @@ public class Juego extends JPanel {
      * @param position La posición del panel dentro del contenedor.
      * @param views Un HashMap que contiene las vistas de los diferentes juegos.
      */
-    public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views) {
+    public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
         this.nombre = nombre;
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
@@ -52,7 +53,7 @@ public class Juego extends JPanel {
         this.game = game;
 
         // Crear el botón del juego
-        JButton juegoButton = createJuego();
+        JButton juegoButton = createJuego(bundleText);
 
         // Crear un JLayeredPane para contener el botón y el recuadro
         JLayeredPane layeredPane = new JLayeredPane();
@@ -76,7 +77,7 @@ public class Juego extends JPanel {
      *
      * @return Un JButton que representa el juego.
      */
-    private JButton createJuego(){
+    private JButton createJuego(ResourceBundle bundleText){
         JButton juego = new JButton();
 
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
@@ -86,7 +87,7 @@ public class Juego extends JPanel {
         juego.setBackground(Colores.cadet_gray);
         juego.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new PortadaJuego(nombre);
+        JPanel portada = new PortadaJuego(nombre, parentPanel, this.views, bundleText);
         if(views.get(nombre) == null){
             views.put(nombre, portada);
         }
