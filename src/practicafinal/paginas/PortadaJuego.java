@@ -232,7 +232,8 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.5;
         informacion.add(buttonReviews, c);
 
-        this.views.put("review", new Review(bundleText));
+        if(this.views.get("review") == null)
+            this.views.put("review", new Review(bundleText));
 
         buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review"), BorderLayout.CENTER));
         
