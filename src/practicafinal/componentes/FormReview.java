@@ -53,7 +53,7 @@ public class FormReview extends JPanel {
         JPanel ratingPanel = new JPanel(new GridLayout());
         
         for (int i = 0; i <= 10; i++)
-        ratingPanel.add(new RatingButton(i));
+            ratingPanel.add(new RatingButton(i));
         
         gbc.gridy = 3;
         add(ratingPanel, gbc);
