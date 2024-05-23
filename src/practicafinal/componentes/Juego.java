@@ -28,11 +28,12 @@ public class Juego extends JPanel {
     /**
      * Crea un componente de juego con el nombre especificado y configura sus propiedades y comportamiento.
      *
-     * @param nombre El nombre del juego que este componente representará.
+     * @param nombre      El nombre del juego que este componente representará.
      * @param parentPanel El panel padre que contiene el componente.
-     * @param oldPanel El panel anterior que se reemplazará cuando se haga clic en el botón del juego.
-     * @param position La posición del panel dentro del contenedor.
-     * @param views Un HashMap que contiene las vistas de los diferentes juegos.
+     * @param oldPanel    El panel anterior que se reemplazará cuando se haga clic en el botón del juego.
+     * @param position    La posición del panel dentro del contenedor.
+     * @param views       Un HashMap que contiene las vistas de los diferentes juegos.
+     * @param bundleText  El ResourceBundle que contiene los textos traducidos.
      */
     public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
         this.nombre = nombre;
@@ -74,7 +75,8 @@ public class Juego extends JPanel {
 
     /**
      * Crea un botón del juego con su imagen y configura su comportamiento.
-     *
+     * 
+     * @param bundleText El ResourceBundle que contiene los textos traducidos.
      * @return Un JButton que representa el juego.
      */
     private JButton createJuego(ResourceBundle bundleText){

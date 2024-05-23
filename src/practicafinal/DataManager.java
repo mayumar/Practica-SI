@@ -18,7 +18,7 @@ public class DataManager {
     /**
      * Crea una instancia de DataManager y carga los datos desde el archivo JSON especificado.
      *
-     * @param filePath La ruta del archivo JSON que contiene los datos.
+     * @param filePath   La ruta del archivo JSON que contiene los datos.
      * @throws Exception Si ocurre un error al leer o parsear el archivo JSON.
     */
     public DataManager(String filePath) throws Exception {

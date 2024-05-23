@@ -19,7 +19,7 @@ public class Carrousel extends JPanel {
     /**
      * Crea un carrusel con los elementos especificados y la cantidad de elementos a mostrar.
      *
-     * @param elements Una lista de JPanels que se mostrarán en el carrusel.
+     * @param elements       Una lista de JPanels que se mostrarán en el carrusel.
      * @param elementsToShow La cantidad de elementos que se mostrarán simultáneamente en el carrusel.
     */
     public Carrousel(ArrayList<JPanel> elements, int elementsToShow) {

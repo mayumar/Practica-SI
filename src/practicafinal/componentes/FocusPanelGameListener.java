@@ -21,9 +21,9 @@ public class FocusPanelGameListener implements ActionListener{
      * Crea un listener para cambiar el panel visible dentro de un contenedor.
      *
      * @param parent_panel El panel padre que contiene los paneles a cambiar.
-     * @param old_panel El panel antiguo que se ocultará.
-     * @param new_panel El nuevo panel que se mostrará.
-     * @param position La posición del nuevo panel dentro del contenedor.
+     * @param old_panel    El panel antiguo que se ocultará.
+     * @param new_panel    El nuevo panel que se mostrará.
+     * @param position     La posición del nuevo panel dentro del contenedor.
     */
     public FocusPanelGameListener(JPanel parent_panel, JPanel old_panel, JPanel new_panel, String position){
         this.parent_panel = parent_panel;

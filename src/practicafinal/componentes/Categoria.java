@@ -26,12 +26,13 @@ public class Categoria extends JButton {
     /**
      * Crea un botón de categoría con el nombre especificado y configura sus propiedades y comportamiento.
      *
-     * @param nombre El nombre de la categoría que este botón representará.
+     * @param nombre      El nombre de la categoría que este botón representará.
      * @param parentPanel El panel padre que contiene el botón.
-     * @param oldPanel El panel anterior que se reemplazará cuando se haga clic en el botón.
-     * @param position La posición del panel dentro del contenedor.
-     * @param views Un HashMap que contiene las vistas de las diferentes categorías.
-     * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
+     * @param oldPanel    El panel anterior que se reemplazará cuando se haga clic en el botón.
+     * @param position    La posición del panel dentro del contenedor.
+     * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+     * @param bundleText  Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
+     * @param juegos      ArrayList que contiene la lista de juegos de la categoría.
     */
     public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos) {
         this.nombre = nombre;
@@ -61,10 +62,11 @@ public class Categoria extends JButton {
         addActionListener(new FocusPanelGameListener(this.parentPanel, oldPanel, this.views.get(this.nombre), position));
     }
 
-    public void updateTitle(){
-
-    }
-
+    /**
+     * Actualiza los textos del botón de categoría con el nuevo ResourceBundle.
+     * 
+     * @param bundleText El nuevo ResourceBundle que contiene los textos traducidos.
+     */
     public void updateTexts(ResourceBundle bundleText) {
         JPanel portada = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
         if(this.views.get(this.nombre) == null){

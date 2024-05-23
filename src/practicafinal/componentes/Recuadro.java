@@ -1,11 +1,19 @@
 package practicafinal.componentes;
 
 import javax.swing.*;
-
-
 import java.awt.*;
 
+/**
+ * La clase Recuadro extiende JPanel y se utiliza para representar una calificación en forma de recuadro con un número.
+ * El color del recuadro y el número varían dependiendo de la calificación proporcionada.
+ */
 public class Recuadro extends JPanel{
+
+    /**
+     * Crea un recuadro con la calificación proporcionada en forma de número decimal.
+     * 
+     * @param calificacionDouble La calificación del recuadro representada como un número decimal.
+     */
     public Recuadro(Double calificacionDouble){
         setLayout(new BorderLayout());
 
@@ -30,6 +38,11 @@ public class Recuadro extends JPanel{
         setBounds(127, 158, 60, 47); // Ajustar el tamaño y posición del recuadro
     }
 
+    /**
+     * Crea un recuadro con la calificación proporcionada en forma de número entero.
+     * 
+     * @param calificacionLong La calificación del recuadro representada como un número entero.
+     */
     public Recuadro(Long calificacionLong){
         setLayout(new BorderLayout());
 

@@ -56,6 +56,11 @@ public class Categorias extends JPanel {
         add(contenido, BorderLayout.CENTER);
     }
 
+    /**
+     * Actualiza la lista de categorías en el panel de categorías. Elimina todos los elementos anteriores del contenido y
+     * genera nuevos componentes de categoría basados en las categorías obtenidas del DataManager. Cada categoría se
+     * representa como un componente de categoría en el panel de contenido.
+     */
     private void updateCategoryList() {
         this.contenido.removeAll();
         
@@ -84,6 +89,11 @@ public class Categorias extends JPanel {
         repaint();
     }
 
+    /**
+     * Actualiza los títulos de las categorías existentes en la lista de juegos. Llama al método `updateTexts` en cada
+     * objeto de juegos en la lista de juegos, pasando el nuevo ResourceBundle como parámetro. Esto garantiza que los
+     * textos de las categorías se actualicen correctamente al realizarse un cambio de idioma.
+     */
     private void updateCategoryTitles(){
         for(Juegos j: juegos){
             j.updateTexts(bundleText);

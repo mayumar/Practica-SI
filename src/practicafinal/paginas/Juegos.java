@@ -23,10 +23,11 @@ public class Juegos extends JPanel{
     /**
      * Crea un panel de juegos con el nombre de la lista especificada y configura sus propiedades y contenido.
      *
-     * @param viewTitle El nombre de la lista o categoría de juegos.
+     * @param viewTitle   El nombre de la lista o categoría de juegos.
      * @param parentPanel El panel padre que contiene el panel de juegos.
-     * @param views Un HashMap que contiene las vistas de las diferentes categorías de la aplicación.
-     * @param allGames Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
+     * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+     * @param allGames    Un booleano que indica si se deben mostrar todos los juegos o solo los de una categoría específica.
+     * @param bundleText  El ResourceBundle que contiene los textos necesarios para internacionalización.
     */
     public Juegos(String viewTitle, JPanel parentPanel, HashMap<String,JPanel> views, Boolean allGames, ResourceBundle bundleText){
         setLayout(new BorderLayout());
@@ -78,6 +79,11 @@ public class Juegos extends JPanel{
         add(contenido, BorderLayout.CENTER);
     }
 
+    /**
+     * Actualiza los textos de la clase con los nuevos textos del ResourceBundle.
+     * 
+     * @param bundleText El ResourceBundle que contiene los textos actualizados.
+     */
     public void updateTexts(ResourceBundle bundleText) {
         this.title.setLabel(bundleText.getString("Texto_" + this.titleText.toLowerCase()));
         revalidate();

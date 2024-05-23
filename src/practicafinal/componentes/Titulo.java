@@ -15,7 +15,7 @@ public class Titulo extends JPanel {
     /**
      * Crea un panel de título con el texto y la configuración especificados.
      *
-     * @param label El texto del título o eslogan que se mostrará en el panel.
+     * @param label    El texto del título o eslogan que se mostrará en el panel.
      * @param isInicio Si es true, muestra un logo y un eslogan, de lo contrario, solo muestra un título.
      */
     public Titulo(String label, Boolean isInicio) {
@@ -45,6 +45,11 @@ public class Titulo extends JPanel {
         add(new Linea(0, 5, 2000, 5), BorderLayout.SOUTH);
     }
 
+    /**
+     * Establece el texto del título.
+     * 
+     * @param label El texto del título que se establecerá.
+     */
     public void setLabel(String label) {
         this.label = label;
         if (textLabel != null) {

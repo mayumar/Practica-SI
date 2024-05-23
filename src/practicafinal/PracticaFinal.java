@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package practicafinal;
 
 import javax.swing.*;
@@ -13,11 +9,15 @@ import java.util.HashMap;
 
 /** 
  * La clase PracticaFinal es la clase principal del programa
+ * Se encarga de inicializar la interfaz gráfica de usuario y de configurar los elementos principales de la aplicación.
 */
 public class PracticaFinal {
 
     /**
      * Función principal del programa
+     * Inicializa la ventana principal, configura el panel de desplazamiento y los márgenes, 
+     * crea las vistas necesarias, y establece la vista inicial y la barra superior.
+     * 
      * @param args Los argumentos de la línea de comandos
      */
     public static void main(String[] args) {

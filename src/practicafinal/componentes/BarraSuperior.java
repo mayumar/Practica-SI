@@ -37,9 +37,9 @@ public class BarraSuperior extends JPanel {
      * Crea una barra de navegación superior con los paneles y el marco especificados.
      *
      * @param parentPanel El panel padre que contiene la barra de navegación.
-     * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
-     * @param jf El JFrame principal de la aplicación.
-     * @param inter Instancia de la clase Inter para gestionar el idioma.
+     * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+     * @param jf          El JFrame principal de la aplicación.
+     * @param inter       Instancia de la clase Inter para gestionar el idioma.
     */
     public BarraSuperior(JPanel parentPanel, HashMap<String, JPanel> views, JFrame jf, Inter inter) {
         this.parentPanel = parentPanel;

@@ -22,11 +22,13 @@ public class PortadaJuego extends JPanel{
     private HashMap<String,JPanel> views;
 
     /**
-     * Crea una instancia de PortadaJuego. Este panel utiliza un BorderLayout y contiene un título en la parte superior
-     * que muestra el nombre del juego.
-     *
-     * @param gameName El nombre del juego que se mostrará en la portada.
-    */
+     * Crea una instancia de PortadaJuego que muestra la portada de un juego específico.
+     * 
+     * @param gameName    El nombre del juego que se mostrará en la portada.
+     * @param parentPanel El panel principal al que se añadirá esta portada.
+     * @param views       Un mapa de vistas para gestionar la navegación entre ellas.
+     * @param bundleText  ResourceBundle que contiene los textos para internacionalización.
+     */
     public PortadaJuego(String gameName, JPanel parentPanel, HashMap<String,JPanel> views, ResourceBundle bundleText){
         this.parentPanel = parentPanel;
         this.views = views;
@@ -86,6 +88,12 @@ public class PortadaJuego extends JPanel{
         add(contenido, BorderLayout.CENTER);
     }
 
+    /**
+     * Crea y devuelve un panel que contiene información detallada sobre el juego, incluida su descripción, fecha de lanzamiento, desarrollador y enlaces a tiendas.
+     * 
+     * @param bundleText El ResourceBundle que contiene los textos necesarios para internacionalización.
+     * @return Un JPanel que contiene la información detallada sobre el juego.
+     */
     private JPanel createInformacion(ResourceBundle bundleText){
         JPanel informacion = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -225,6 +233,12 @@ public class PortadaJuego extends JPanel{
         return informacion;
     }
 
+    /**
+     * Crea y devuelve un panel que resume las calificaciones y comentarios de los usuarios sobre el juego.
+     * 
+     * @param calification La calificación promedio del juego.
+     * @return Un JPanel que resume las calificaciones y comentarios de los usuarios.
+     */
     private JPanel getResumeReviews(Double calification){
         JPanel resume_reviews = new JPanel(new GridLayout(1,1));
 
@@ -255,6 +269,11 @@ public class PortadaJuego extends JPanel{
         return resume_reviews;
     }
 
+    /**
+     * Crea y devuelve un panel que contiene las reseñas de los usuarios sobre el juego.
+     * 
+     * @return Un JPanel que contiene las reseñas de los usuarios sobre el juego.
+     */
     private JPanel createReviews(){
         GridLayout gl = new GridLayout(0, 1);
         gl.setVgap(10);

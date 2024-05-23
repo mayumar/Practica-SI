@@ -23,8 +23,8 @@ public class Inicio extends JPanel {
      * Crea un panel de inicio con un título, un carrusel de juegos y una sección de juegos destacados.
      *
      * @param parentPanel El panel padre que contiene el panel de inicio.
-     * @param views Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
-     * @param bundleText El ResourceBundle que contiene los textos traducidos.
+     * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
+     * @param bundleText  El ResourceBundle que contiene los textos traducidos.
     */
     public Inicio(JPanel parentPanel, HashMap<String, JPanel> views, ResourceBundle bundleText) {
         setLayout(new BorderLayout());
