@@ -4,7 +4,7 @@
 			"nombre": "Doom Eternal",
 			"imagen": "src/images/juegos/fps/p_doom.png",
 			"calificacion": 8.8,
-            "descripcion": "Doom Eternal es un videojuego de disparos en primera persona desarrollado por id Software y publicado por Bethesda Softworks. Es la secuela directa del Doom de 2016 y se anunció en la conferencia de prensa de Bethesda en el E3 2018 como el juego Doom: Eternal.",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": [
 				{
                     "comentario": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
@@ -28,7 +28,7 @@
 			"nombre": "Counter Strike 2",
 			"imagen": "src/images/juegos/fps/p_cs2.png",
 			"calificacion": 8.2,
-            "descripcion": "Counter-Strike 2 es una secuela del legendario juego de disparos en primera persona Counter-Strike. Desarrollado por Valve Corporation, sigue la fórmula de su predecesor, con partidas multijugador intensas y estratégicas.",
+			"descripcion": "Texto_descripcion_CS2",
 			"reviews": [
             	{
                 	"comentario": "La secuela de Counter-Strike sigue siendo un punto de referencia en los juegos de disparos multijugador. Su enfoque en la estrategia y el trabajo en equipo lo convierte en una experiencia inolvidable para los jugadores.",
@@ -48,7 +48,7 @@
 			"nombre": "Splatoon",
 			"imagen": "src/images/juegos/fps/p_splatoon.png",
 			"calificacion": 8.1,
-            "descripcion": "Splatoon es un juego de disparos en tercera persona desarrollado y publicado por Nintendo para la consola Wii U. Destaca por su enfoque en la tinta y el combate en equipo, ofreciendo una experiencia fresca y colorida en el género de los shooters.",
+			"descripcion": "Texto_descripcion_Splatoon",
 			"reviews": [
                 {
                     "comentario": "Splatoon ofrece una experiencia única en el género de los shooters con su mecánica de tinta y combate en equipo. Es divertido, fresco y perfecto para jugadores de todas las edades.",
@@ -68,7 +68,7 @@
 			"nombre": "Valorant",
 			"imagen": "src/images/juegos/fps/p_valorant.png",
 			"calificacion": 5.0,
-            "descripcion": "Valorant es un juego de disparos táctico en primera persona desarrollado y publicado por Riot Games. Lanzado en 2020, combina elementos de juegos como Counter-Strike con habilidades únicas de personajes estilo hero shooter.",
+			"descripcion": "Texto_descripcion_Valorant",
 			"reviews": [
                 {
                     "comentario": "Valorant ofrece un enfoque fresco y estratégico en el género de los shooters. Sin embargo, su curva de aprendizaje empinada y su estilo de arte pueden no ser para todos los gustos.",
@@ -88,7 +88,7 @@
 			"nombre": "COD: Advance warfare",
 			"imagen": "src/images/juegos/fps/p_cod.png",
 			"calificacion": 9.0,
-            "descripcion": "Call of Duty: Advanced Warfare es un videojuego de disparos en primera persona desarrollado por Sledgehammer Games y publicado por Activision. Es el undécimo título principal de la serie Call of Duty y fue lanzado en 2014.",
+			"descripcion": "Texto_descripcion_COD",
 			"reviews": [
 				{
 					"comentario": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
@@ -108,7 +108,7 @@
 			"nombre": "Borderlands",
 			"imagen": "src/images/juegos/fps/p_borderlands.png",
 			"calificacion": 6.5,
-            "descripcion": "Borderlands es una serie de videojuegos de disparos en primera persona desarrollada por Gearbox Software. Con su distintivo estilo gráfico y un enfoque en la cooperación multijugador, ha ganado una sólida base de fanáticos.",
+			"descripcion": "Texto_descripcion_Borderlands",
 			"reviews": [
 				{
 					"comentario": "Un mundo abierto lleno de humor y acción constante. La experiencia cooperativa es simplemente genial.",
@@ -128,7 +128,7 @@
 			"nombre": "Halo",
 			"imagen": "src/images/juegos/fps/p_halo.png",
 			"calificacion": 4.0,
-            "descripcion": "Halo es una serie de videojuegos de disparos en primera persona desarrollada por Bungie y ahora gestionada por 343 Industries, una subsidiaria de Microsoft Studios. Conocida por su historia épica y su multijugador innovador, es una franquicia emblemática en el mundo de los videojuegos.",
+			"descripcion": "Texto_descripcion_Halo",
 			"reviews": [
 				{
 					"comentario": "Una saga legendaria que definió el género FPS en consolas. La historia y el multijugador siguen siendo excelentes.",
@@ -148,7 +148,7 @@
 			"nombre": "Quake",
 			"imagen": "src/images/juegos/fps/p_quake.png",
 			"calificacion": 7.5,
-			"descripcion": "Quake es un juego de disparos en primera persona desarrollado por id Software y lanzado en 1996. Considerado uno de los pioneros del género, estableció muchos de los tropos y estándares que se ven en los juegos FPS modernos.",
+			"descripcion": "Texto_descripcion_Quake",
 			"reviews": [
 				{
 					"comentario": "Un clásico atemporal que sentó las bases del género FPS. Jugabilidad adictiva y diseño de niveles desafiante.",
@@ -168,7 +168,7 @@
 			"nombre": "Helldivers 2",
 			"imagen": "src/images/juegos/fps/p_helldivers.png",
 			"calificacion": 8.9,
-			"descripcion": "Helldivers 2 es un juego de disparos en vista cenital desarrollado por Arrowhead Game Studios. Con un enfoque en la cooperación y el combate estratégico, es una experiencia desafiante y emocionante para los amantes de los juegos de acción.",
+			"descripcion": "Texto_descripcion_Helldivers",
 			"reviews": [
 				{
 					"comentario": "Una secuela superior que mejora en todos los aspectos. El modo cooperativo es una locura absoluta.",
@@ -188,7 +188,7 @@
 			"nombre": "Battlefield 1",
 			"imagen": "src/images/juegos/fps/p_battlefield.png",
 			"calificacion": 8.5,
-			"descripcion": "Battlefield 1 es un videojuego de disparos en primera persona desarrollado por EA DICE y publicado por Electronic Arts. Ambientado en la Primera Guerra Mundial, destaca por su escala épica y su variedad de vehículos y armas.",
+			"descripcion": "Texto_descripcion_BTF1",
 			"reviews": [
 				{
 					"comentario": "Una representación impresionante y auténtica de la Primera Guerra Mundial. El modo multijugador es una locura absoluta.",
@@ -210,7 +210,7 @@
 			"nombre": "Read Dead Redemption 2",
 			"imagen": "src/images/juegos/mundo_abierto/read.png",
 			"calificacion": 9.7,
-            "descripcion": "Red Dead Redemption 2 es un videojuego de acción-aventura de mundo abierto desarrollado y publicado por Rockstar Games. El juego es la tercera entrada de la serie Red Dead y una precuela del juego de 2010 Red Dead Redemption. La historia está ambientada en una representación ficticia de los Estados Unidos en 1899 y sigue las hazañas de Arthur Morgan, un forajido y miembro de la pandilla Van der Linde, que debe lidiar con el declive del Salvaje Oeste mientras intenta sobrevivir contra las fuerzas gubernamentales, las pandillas rivales y otros adversarios.",
+			"descripcion": "Texto_descripcion_RDR2",
 			"reviews": [
 				{
 					"comentario": "Red Dead Redemption 2 es una experiencia de juego inmersiva como ninguna otra. Desde los impresionantes paisajes hasta la compleja narrativa y los personajes memorables, este juego lo tiene todo. Cada detalle, desde la forma en que el personaje interactúa con el mundo hasta las misiones secundarias, está meticulosamente diseñado. Una obra maestra del género que ofrece horas interminables de diversión y exploración.",
@@ -230,28 +230,28 @@
 			"nombre": "Elden Ring",
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
 			"calificacion": 9.0,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "Stardew Valley",
 			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
 			"calificacion": 8.9,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "Forza Horizon 5",
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
 			"calificacion": 5.0,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "The Legend of Zelda: Breath of the Wild",
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
 			"calificacion": 9.0,
-            "descripcion": "En 'The Legend of Zelda: Breath of the Wild', los jugadores se sumergen en un vasto reino de Hyrule, que ha sido devastado por la calamidad. Encarnando a Link, el legendario héroe, los jugadores exploran un mundo abierto sin límites, lleno de misterios, peligros y maravillas. Equipado con la Espada Maestra y otros artefactos, Link emprende una épica búsqueda para derrotar a Ganon, el malvado ser que amenaza con destruir Hyrule para siempre. Con una mezcla perfecta de exploración, combate, resolución de acertijos y narrativa envolvente, Breath of the Wild es una aventura inolvidable que desafía a los jugadores a descubrir su propio camino hacia la victoria y restaurar la paz en el reino.",
+			"descripcion": "Texto_descripcion_Zelda",
 			"reviews": [
 				{
 					"comentario": "El mundo está muy vivo y las mecánicas de combate son increíbles.",
@@ -275,35 +275,35 @@
 			"nombre": "Sea of Thieves",
 			"imagen": "src/images/juegos/mundo_abierto/sea.png",
 			"calificacion": 8.0,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "The Witcher: Wild hunt",
 			"imagen": "src/images/juegos/mundo_abierto/witcher.png",
 			"calificacion": 8.5,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "Palword",
 			"imagen": "src/images/juegos/mundo_abierto/palword.png",
 			"calificacion": 7.5,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "Fallout 76",
 			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
 			"calificacion": 4.0,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		},
 		{
 			"nombre": "Sekiro",
 			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
 			"calificacion": 5.0,
-            "descripcion": "",
+			"descripcion": "Texto_descripcion_Doom",
 			"reviews": []
 		}
 	],

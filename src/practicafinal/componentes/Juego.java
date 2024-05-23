@@ -9,6 +9,7 @@ import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelGameListener;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ public class Juego extends JPanel {
     private String position;
     private HashMap<String,JPanel> views;
     private JSONObject game;
+    private PortadaJuego portada;
 
     /**
      * Crea un componente de juego con el nombre especificado y configura sus propiedades y comportamiento.
@@ -93,12 +95,16 @@ public class Juego extends JPanel {
         juego.setBackground(Colores.cadet_gray);
         juego.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JPanel portada = new PortadaJuego(nombre, parentPanel, this.views, bundleText);
+        this.portada = new PortadaJuego(nombre, parentPanel, this.views, bundleText);
         if(views.get(nombre) == null){
-            views.put(nombre, portada);
+            views.put(nombre, this.portada);
         }
         juego.addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
 
         return juego;
+    }
+
+    public void updateTexts(ResourceBundle bundleText) {
+        this.portada.updateTexts(bundleText);
     }
 }

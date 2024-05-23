@@ -1,4 +1,4 @@
-package practicafinal;
+package practicafinal.eventos;
 
 import java.util.HashMap;
 import java.awt.event.ActionListener;

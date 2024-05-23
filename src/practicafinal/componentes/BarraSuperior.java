@@ -10,6 +10,7 @@ import javax.swing.*;
 import practicafinal.*;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelButtonListener;
 import practicafinal.paginas.Categorias;
 import practicafinal.paginas.Inicio;
 import practicafinal.paginas.Juegos;
@@ -190,7 +191,8 @@ public class BarraSuperior extends JPanel {
         c.gridy = 0;
         c.gridheight = 1;
         c.gridwidth = 1;
-        JTextField buscar = new JTextField(15);
+        HintTextField buscar = new HintTextField("Buscar");
+        buscar.setColumns(15);
         buscar.setBorder(Bordes.gray_border);
         busqueda.add(buscar, c);
         
