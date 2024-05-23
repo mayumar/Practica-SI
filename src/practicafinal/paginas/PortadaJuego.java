@@ -23,6 +23,10 @@ public class PortadaJuego extends JPanel{
     private JSONObject game;
     private JPanel parentPanel;
     private HashMap<String,JPanel> views;
+    private JLabel descripcionLabel;
+    private JLabel infoLabel;
+    private JLabel linea;
+    private JLabel comentario;
 
     /**
      * Crea una instancia de PortadaJuego que muestra la portada de un juego específico.
@@ -109,10 +113,10 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel descripcion = new JPanel(new GridLayout(1,1));
-        JLabel descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + (String) this.game.get("descripcion") + "</div></html>");
-        descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        descripcionLabel.setForeground(Colores.rising_black);
-        descripcion.add(descripcionLabel);
+        this.descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
+        this.descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        this.descripcionLabel.setForeground(Colores.rising_black);
+        descripcion.add(this.descripcionLabel);
 
         descripcion.setBorder(Bordes.black_border);
         descripcion.setBackground(Colores.platinum);
@@ -130,9 +134,9 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel info = new JPanel(new GridLayout(0,1));
-        JLabel infoLabel = new JLabel("<html><div style='margin: 10px'>Fecha de lanzamiento: ()<br/>Desarrollador: ()<div/></html>");
-        infoLabel.setForeground(Colores.rising_black);
-        info.add(infoLabel);
+        this.infoLabel = new JLabel("<html><div style='margin: 10px'>Fecha de lanzamiento: ()<br/>Desarrollador: ()<div/></html>");
+        this.infoLabel.setForeground(Colores.rising_black);
+        info.add(this.infoLabel);
         
         info.setBackground(Colores.platinum);
         info.setBorder(Bordes.black_border);
@@ -221,7 +225,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
         /* Boton para hacer review                  */
         /********************************************/
-        JButton buttonReviews = new JButton("Realizar reseña");
+        JButton buttonReviews = new JButton(bundleText.getString("Texto_escribir_review"));
         buttonReviews.setBackground(Colores.cadet_gray);
         buttonReviews.setBorder(Bordes.black_border);
         buttonReviews.setForeground(Colores.rising_black);
@@ -256,22 +260,22 @@ public class PortadaJuego extends JPanel{
 
         if(calification < 5.0){
             resume_reviews.setBackground(Colores.bittersweet);
-            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayoritariamente negativas.<br/>Los jugadores han expresado insatisfacción con la experiencia ofrecida.</div></html>");
-            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
-            linea.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea);
+            this.linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayoritariamente negativas.<br/>Los jugadores han expresado insatisfacción con la experiencia ofrecida.</div></html>");
+            this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
+            this.linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(this.linea);
         }else if(calification < 8.0){
             resume_reviews.setBackground(Colores.jonquil);
-            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado no se que con la experiencia ofrecida.</div></html>");
-            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
-            linea.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea);
+            this.linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado no se que con la experiencia ofrecida.</div></html>");
+            this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
+            this.linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(this.linea);
         }else{
             resume_reviews.setBackground(Colores.spring_green);
-            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayormente positivas.<br/>Los jugadores han expresado satisfacción con la experiencia ofrecida.</div></html>");
-            linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
-            linea.setHorizontalAlignment(SwingConstants.CENTER);
-            resume_reviews.add(linea);
+            this.linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayormente positivas.<br/>Los jugadores han expresado satisfacción con la experiencia ofrecida.</div></html>");
+            this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
+            this.linea.setHorizontalAlignment(SwingConstants.CENTER);
+            resume_reviews.add(this.linea);
         }
 
         return resume_reviews;
@@ -299,10 +303,10 @@ public class PortadaJuego extends JPanel{
             linea.add(recuadro);
 
             JPanel review = new JPanel(new GridLayout(1, 1));
-            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + (String) reviewJsonObject.get("comentario") + "</div></html>");
-            comentario.setHorizontalAlignment(SwingConstants.CENTER);
-            comentario.setForeground(Colores.rising_black);
-            review.add(comentario);
+            this.comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + (String) reviewJsonObject.get("comentario") + "</div></html>");
+            this.comentario.setHorizontalAlignment(SwingConstants.CENTER);
+            this.comentario.setForeground(Colores.rising_black);
+            review.add(this.comentario);
             review.setBackground(Colores.platinum);
             review.setForeground(Colores.rising_black);
             review.setBorder(Bordes.black_border);
@@ -314,5 +318,10 @@ public class PortadaJuego extends JPanel{
         
         return reviews;
     }
-    
+
+    public void updateTexts(ResourceBundle bundleText) {
+        this.descripcionLabel.setText("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
+        revalidate();
+        repaint();
+    }
 }

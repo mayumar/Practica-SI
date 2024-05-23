@@ -18,6 +18,8 @@ import practicafinal.componentes.*;
 public class Inicio extends JPanel {
     private Titulo tituloPrincipal;
     private Titulo tituloDestacados;
+    private ArrayList<JPanel> elements;
+    private JPanel destacados;
 
     /**
      * Crea un panel de inicio con un título, un carrusel de juegos y una sección de juegos destacados.
@@ -34,7 +36,7 @@ public class Inicio extends JPanel {
         add(this.tituloPrincipal, BorderLayout.NORTH);
 
         // Crear los elementos del carrousel
-        ArrayList<JPanel> elements = new ArrayList<JPanel>();
+        this.elements = new ArrayList<JPanel>();
         DataManager dataManager = null;
 
         try {
@@ -59,11 +61,11 @@ public class Inicio extends JPanel {
 
 
         for (int n : randomNum) {
-            elements.add(new Juego((String) games.get(n).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
+            this.elements.add(new Juego((String) games.get(n).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
         }
 
         // Crear el carrousel
-        Carrousel carrousel = new Carrousel(elements, 5);
+        Carrousel carrousel = new Carrousel(this.elements, 5);
 
         JPanel contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -86,18 +88,18 @@ public class Inicio extends JPanel {
         contenido.add(this.tituloDestacados, c);
 
         FlowLayout fl = new FlowLayout();
-        JPanel destacados = new JPanel(fl);
+        this.destacados = new JPanel(fl);
 
         for (int i = 0; i < 3; i++) {
             JSONObject game = (JSONObject) games.get(i);
-            destacados.add(new Juego((String) game.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
+            this.destacados.add(new Juego((String) game.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
         }
 
         c.gridx = 0;
         c.gridy = 2;
         c.gridheight = 1;
         c.gridwidth = 1;
-        contenido.add(destacados, c);
+        contenido.add(this.destacados, c);
 
         add(contenido, BorderLayout.CENTER);
     }
@@ -111,6 +113,17 @@ public class Inicio extends JPanel {
         // Actualizar los textos de los títulos
         this.tituloPrincipal.setLabel(bundleText.getString("Texto_slogan"));
         this.tituloDestacados.setLabel(bundleText.getString("Texto_destacados"));
+
+        for (JPanel panel : this.elements) {
+            if (panel instanceof Juego)
+                ((Juego) panel).updateTexts(bundleText);
+        }
+
+        for (Component juego : this.destacados.getComponents()) {
+            if (juego instanceof Juego)
+                ((Juego) juego).updateTexts(bundleText);
+        }
+
         revalidate();
         repaint();
     }

@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 public class Juegos extends JPanel{
     private Titulo title;
     private String titleText;
+    private JPanel lista;
     
     /**
      * Crea un panel de juegos con el nombre de la lista especificada y configura sus propiedades y contenido.
@@ -46,7 +47,7 @@ public class Juegos extends JPanel{
         topMargin.setPreferredSize(new Dimension(1, 40));
         contenido.add(topMargin, BorderLayout.NORTH);
 
-        JPanel lista = new JPanel(new GridBagLayout());
+        this.lista = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(20, 10, 20, 10); // Espaciamiento entre elementos
 
@@ -66,7 +67,7 @@ public class Juegos extends JPanel{
         for (JSONObject juego : juegos) {
             c.gridx = col;
             c.gridy = row;
-            lista.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText), c);
+            this.lista.add(new Juego((String) juego.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText), c);
             col++;
             if (col == columns) {
                 col = 0;
@@ -86,6 +87,12 @@ public class Juegos extends JPanel{
      */
     public void updateTexts(ResourceBundle bundleText) {
         this.title.setLabel(bundleText.getString("Texto_" + this.titleText.toLowerCase()));
+        
+        for (Component juego : this.lista.getComponents()) {
+            if (juego instanceof Juego)
+                ((Juego) juego).updateTexts(bundleText);
+        }
+
         revalidate();
         repaint();
     }
