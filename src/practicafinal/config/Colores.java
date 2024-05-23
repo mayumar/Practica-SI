@@ -53,7 +53,22 @@ public class Colores {
     public static final Color bittersweet = new Color(255, 102, 102); //Rojo
 
     /**
-     * Cian fluorescente
+     * Cian fluorescente, representado por el color RGB (68, 229, 231)
      */
     public static final Color fluorencent_cyan = new Color(68, 229, 231); //Azul
+
+    /**
+     * Aquamarino, representado por el color RGB (112, 255, 172)
+     */
+    public static final Color aquamarine = new Color(112, 255, 172); //Verde claro
+
+    /**
+     * Amarillo Nápoles, representado por el color RGB (255, 226, 112)
+     */
+    public static final Color naples_yellow = new Color(255, 226, 112); //Amarillo claro
+
+    /**
+     * Rojo claro, representado por el color RGB
+     */
+    public static final Color light_red = new Color(255, 133, 133); //Rojo claro
 }

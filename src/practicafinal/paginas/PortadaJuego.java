@@ -255,19 +255,19 @@ public class PortadaJuego extends JPanel{
 
 
         if(calification < 5.0){
-            resume_reviews.setBackground(Colores.bittersweet);
+            resume_reviews.setBackground(Colores.light_red);
             JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayoritariamente negativas.<br/>Los jugadores han expresado insatisfacción con la experiencia ofrecida.</div></html>");
             linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
             linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(linea);
         }else if(calification < 8.0){
-            resume_reviews.setBackground(Colores.jonquil);
+            resume_reviews.setBackground(Colores.naples_yellow);
             JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado no se que con la experiencia ofrecida.</div></html>");
             linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
             linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(linea);
         }else{
-            resume_reviews.setBackground(Colores.spring_green);
+            resume_reviews.setBackground(Colores.aquamarine);
             JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mayormente positivas.<br/>Los jugadores han expresado satisfacción con la experiencia ofrecida.</div></html>");
             linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
             linea.setHorizontalAlignment(SwingConstants.CENTER);
@@ -292,7 +292,7 @@ public class PortadaJuego extends JPanel{
         for(Object reviewObject : reviewlist){
             JSONObject reviewJsonObject = (JSONObject) reviewObject;
 
-            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
 
             Long calificacion = (Long) reviewJsonObject.get("calificacion");
             Recuadro recuadro = new Recuadro(calificacion);
