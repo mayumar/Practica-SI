@@ -1,4 +1,4 @@
-package practicafinal.componentes;
+package practicafinal.config;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;

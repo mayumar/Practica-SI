@@ -1,6 +1,10 @@
 package practicafinal.componentes;
 
 import javax.swing.*;
+
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
+
 import java.awt.*;
 
 /**

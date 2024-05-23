@@ -8,6 +8,8 @@ package practicafinal.componentes;
 import javax.swing.*;
 
 import practicafinal.*;
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
 import practicafinal.paginas.Categorias;
 import practicafinal.paginas.Inicio;
 import practicafinal.paginas.Juegos;

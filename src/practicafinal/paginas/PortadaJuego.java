@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 
 import practicafinal.DataManager;
 import practicafinal.componentes.*;
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 
 import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;

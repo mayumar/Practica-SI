@@ -12,6 +12,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
+
 /**
  * La clase FormReview extiende de JPanel y representa la el formulario que el usuario utlizará para crear una
  * reseña de un juego.
