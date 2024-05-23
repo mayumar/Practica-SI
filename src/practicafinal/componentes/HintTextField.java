@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 /**
  * Un JTextField que muestra un texto de sugerencia (placeholder) cuando está vacío y no enfocado.
 */
-class HintTextField extends JTextField {
+public class HintTextField extends JTextField {
     private boolean showingHint;
 
     /**

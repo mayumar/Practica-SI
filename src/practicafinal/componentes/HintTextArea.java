@@ -8,7 +8,7 @@ import javax.swing.JTextArea;
 /**
  * Un JTextArea que muestra un texto de sugerencia (placeholder) cuando está vacío y no enfocado.
 */
-class HintTextArea extends JTextArea {
+public class HintTextArea extends JTextArea {
     private boolean showingHint;
 
     /**

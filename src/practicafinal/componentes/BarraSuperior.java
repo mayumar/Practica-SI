@@ -80,7 +80,7 @@ public class BarraSuperior extends JPanel {
         b_inicio.setBorder(Bordes.button_empty_border);
         b_inicio.setForeground(Colores.rising_black);
         b_inicio.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("inicio"), BorderLayout.CENTER, jf));
+        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("inicio"), BorderLayout.CENTER, jf));
         botones.add(b_inicio);
         
         b_juegos = new JButton(bundleText.getString("Texto_juegos"));
@@ -88,7 +88,7 @@ public class BarraSuperior extends JPanel {
         b_juegos.setBorder(Bordes.button_empty_border);
         b_juegos.setForeground(Colores.rising_black);
         b_juegos.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("juegos"), BorderLayout.CENTER, jf));
+        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("juegos"), BorderLayout.CENTER, jf));
         botones.add(b_juegos);
         
         b_categorias = new JButton(bundleText.getString("Texto_categorias"));
@@ -96,7 +96,7 @@ public class BarraSuperior extends JPanel {
         b_categorias.setBorder(Bordes.button_empty_border);
         b_categorias.setForeground(Colores.rising_black);
         b_categorias.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, views, views.get("categorias"), BorderLayout.CENTER, jf));
+        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("categorias"), BorderLayout.CENTER, jf));
         botones.add(b_categorias);
 
         return botones;
