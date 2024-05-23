@@ -155,6 +155,7 @@ public class PortadaJuego extends JPanel{
         b_tienda1.setContentAreaFilled(false);
         b_tienda1.setBorderPainted(false);
         b_tienda1.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 7;
         c.gridy = 1;
         c.gridheight = 1;
@@ -168,6 +169,7 @@ public class PortadaJuego extends JPanel{
         b_tienda2.setContentAreaFilled(false);
         b_tienda2.setBorderPainted(false);
         b_tienda2.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda2.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 8;
         c.gridy = 1;
         c.gridheight = 1;
@@ -181,6 +183,7 @@ public class PortadaJuego extends JPanel{
         b_tienda3.setContentAreaFilled(false);
         b_tienda3.setBorderPainted(false);
         b_tienda3.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda3.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 9;
         c.gridy = 1;
         c.gridheight = 1;
@@ -219,6 +222,7 @@ public class PortadaJuego extends JPanel{
         buttonReviews.setBackground(Colores.cadet_gray);
         buttonReviews.setBorder(Bordes.black_border);
         buttonReviews.setForeground(Colores.rising_black);
+        buttonReviews.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 7;
         c.gridy = 2;
         c.gridheight = 1;

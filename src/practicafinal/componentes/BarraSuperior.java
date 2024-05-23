@@ -19,7 +19,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * La clase Barra_superior extiende JPanel y representa la barra de navegación superior de la aplicación.
+ * La clase BarraSuperior extiende de JPanel y representa la barra de navegación superior de la aplicación.
  * Contiene botones para cambiar entre las diferentes vistas y una barra de búsqueda.
 */
 public class BarraSuperior extends JPanel {
