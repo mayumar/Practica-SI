@@ -30,10 +30,10 @@ public class Recuadro extends JPanel{
         setBounds(127, 158, 60, 47); // Ajustar el tamaño y posición del recuadro
     }
 
-    public Recuadro(int calificacionInt){
+    public Recuadro(Long calificacionLong){
         setLayout(new BorderLayout());
 
-        JLabel calificacion = new JLabel(Integer.toString(calificacionInt));
+        JLabel calificacion = new JLabel(Long.toString(calificacionLong));
         calificacion.setHorizontalAlignment(SwingConstants.CENTER);
         calificacion.setForeground(Colores.rising_black);
         add(calificacion, BorderLayout.CENTER);
@@ -42,9 +42,9 @@ public class Recuadro extends JPanel{
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        if(calificacionInt < 5){
+        if(calificacionLong < 5){
             setBackground(Colores.bittersweet);
-        }else if(calificacionInt < 8){
+        }else if(calificacionLong < 8){
             setBackground(Colores.jonquil);
         }else{
             setBackground(Colores.spring_green);

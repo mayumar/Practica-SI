@@ -2,6 +2,7 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import practicafinal.DataManager;
@@ -249,14 +250,34 @@ public class PortadaJuego extends JPanel{
     }
 
     private JPanel createReviews(){
-        JPanel reviews = new JPanel();
+        GridLayout gl = new GridLayout(0, 1);
+        //gl.setHgap(10);
+        JPanel reviews = new JPanel(gl);
 
-        try {
-            DataManager dataManager = new DataManager("src/data.json");
-        } catch (Exception e) {
-            e.printStackTrace();
+        JSONArray reviewlist = (JSONArray) game.get("reviews");
+
+        for(Object reviewObject : reviewlist){
+            JSONObject reviewJsonObject = (JSONObject) reviewObject;
+
+            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+
+            Long calificacion = (Long) reviewJsonObject.get("calificacion");
+            Recuadro recuadro = new Recuadro(calificacion);
+            linea.add(recuadro);
+
+            JPanel review = new JPanel(new GridLayout(1, 1));
+            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + (String) reviewJsonObject.get("comentario") + "</div></html>");
+            comentario.setHorizontalAlignment(SwingConstants.CENTER);
+            comentario.setForeground(Colores.rising_black);
+            review.add(comentario);
+            review.setBackground(Colores.platinum);
+            review.setForeground(Colores.rising_black);
+            review.setBorder(Bordes.black_border);
+            review.setPreferredSize(new Dimension(1150, 47));
+            linea.add(review);
+
+            reviews.add(linea);
         }
-
         
         return reviews;
     }
