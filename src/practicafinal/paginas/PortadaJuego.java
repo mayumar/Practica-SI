@@ -31,7 +31,7 @@ public class PortadaJuego extends JPanel{
         JPanel contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
-        c.insets = new Insets(10, 10, 10, 10);
+        c.insets = new Insets(20, 10, 10, 10);
 
         ArrayList<JPanel> elements = new ArrayList<JPanel>();
 
@@ -251,7 +251,7 @@ public class PortadaJuego extends JPanel{
 
     private JPanel createReviews(){
         GridLayout gl = new GridLayout(0, 1);
-        //gl.setHgap(10);
+        gl.setVgap(10);
         JPanel reviews = new JPanel(gl);
 
         JSONArray reviewlist = (JSONArray) game.get("reviews");
