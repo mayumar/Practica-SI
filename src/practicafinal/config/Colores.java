@@ -51,4 +51,9 @@ public class Colores {
      * Agridulce, representado por el color RGB (255, 102, 102).
      */
     public static final Color bittersweet = new Color(255, 102, 102); //Rojo
+
+    /**
+     * Cian fluorescente
+     */
+    public static final Color fluorencent_cyan = new Color(68, 229, 231); //Azul
 }

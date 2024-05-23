@@ -1,9 +1,10 @@
 package practicafinal.componentes;
 
-import java.awt.Color;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import javax.swing.JTextField;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+import practicafinal.config.Colores;
 
 /**
  * Un JTextField que muestra un texto de sugerencia (placeholder) cuando está vacío y no enfocado.
@@ -19,14 +20,15 @@ public class HintTextField extends JTextField {
     public HintTextField(final String hint) {
         super(hint);
         this.showingHint = true;
-        super.setForeground(Color.GRAY);
+        super.setForeground(Colores.dim_gray);
+        super.setMargin(new Insets(10, 10, 10, 10));
         
         this.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
                 if (getText().isEmpty()) {
                     setText("");
-                    setForeground(Color.BLACK);
+                    setForeground(Colores.rising_black);
                     showingHint = false;
                 }
             }
@@ -35,7 +37,7 @@ public class HintTextField extends JTextField {
             public void focusLost(FocusEvent e) {
                 if (getText().isEmpty()) {
                     setText(hint);
-                    setForeground(Color.GRAY);
+                    setForeground(Colores.dim_gray);
                     showingHint = true;
                 }
             }

@@ -28,11 +28,9 @@ public class Recuadro extends JPanel{
 
         setBorder(Bordes.black_border); // Crear un borde negro
 
-        setCursor(new Cursor(Cursor.HAND_CURSOR));
-
         if(calificacionDouble < 5.0){
             setBackground(Colores.bittersweet);
-        }else if(calificacionDouble < 8.0){
+        }else if(calificacionDouble < 7.0){
             setBackground(Colores.jonquil);
         }else{
             setBackground(Colores.spring_green);
@@ -57,11 +55,9 @@ public class Recuadro extends JPanel{
 
         setBorder(Bordes.black_border); // Crear un borde negro
 
-        setCursor(new Cursor(Cursor.HAND_CURSOR));
-
         if(calificacionLong < 5){
             setBackground(Colores.bittersweet);
-        }else if(calificacionLong < 8){
+        }else if(calificacionLong < 7){
             setBackground(Colores.jonquil);
         }else{
             setBackground(Colores.spring_green);

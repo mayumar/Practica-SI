@@ -149,14 +149,13 @@ public class PortadaJuego extends JPanel{
         /* Tiendas                                  */
         /********************************************/
 
-        ImageIcon idioma = new ImageIcon("src/images/idioma.png");
-
-        JButton b_tienda1 = new JButton(idioma);
+        ImageIcon steam = new ImageIcon("src/images/steam.png");
+        JButton b_tienda1 = new JButton(steam);
         b_tienda1.setBorder(Bordes.button_empty_border);
         b_tienda1.setOpaque(false);
         b_tienda1.setContentAreaFilled(false);
         b_tienda1.setBorderPainted(false);
-        b_tienda1.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda1.setPreferredSize(new Dimension(steam.getIconWidth() + 5, info.getHeight()));
         b_tienda1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 7;
         c.gridy = 1;
@@ -165,12 +164,13 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.1;
         informacion.add(b_tienda1, c);
         
-        JButton b_tienda2 = new JButton(idioma);
+        ImageIcon epic = new ImageIcon("src/images/epic.png");
+        JButton b_tienda2 = new JButton(epic);
         b_tienda2.setBorder(Bordes.button_empty_border);
         b_tienda2.setOpaque(false);
         b_tienda2.setContentAreaFilled(false);
         b_tienda2.setBorderPainted(false);
-        b_tienda2.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda2.setPreferredSize(new Dimension(epic.getIconWidth() + 5, info.getHeight()));
         b_tienda2.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 8;
         c.gridy = 1;
@@ -179,12 +179,13 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.1;
         informacion.add(b_tienda2, c);
         
-        JButton b_tienda3 = new JButton(idioma);
+        ImageIcon ps = new ImageIcon("src/images/ps.png");
+        JButton b_tienda3 = new JButton(ps);
         b_tienda3.setBorder(Bordes.button_empty_border);
         b_tienda3.setOpaque(false);
         b_tienda3.setContentAreaFilled(false);
         b_tienda3.setBorderPainted(false);
-        b_tienda3.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, info.getHeight()));
+        b_tienda3.setPreferredSize(new Dimension(ps.getIconWidth() + 5, info.getHeight()));
         b_tienda3.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 9;
         c.gridy = 1;

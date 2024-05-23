@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
+import practicafinal.config.Bordes;
+import practicafinal.config.Colores;
+
 /**
  * La clase RatingButton extiendo de JButton y representa un botón que usará el usuario para establecer una calificacion.
 */
@@ -24,12 +27,13 @@ public class RatingButton extends JButton {
         setPreferredSize(new Dimension(41, 50));
 
         if (calification < 5) {
-            setBackground(Color.RED);
+            setBackground(Colores.bittersweet);
         } else if (calification < 7) {
-            setBackground(Color.YELLOW);
+            setBackground(Colores.jonquil);
         } else {
-            setBackground(Color.GREEN);
+            setBackground(Colores.spring_green);
         }
+        setBorder(Bordes.black_border);
         
         addActionListener(new ActionListener() {
             @Override
@@ -39,7 +43,7 @@ public class RatingButton extends JButton {
                     selectedButton.setBackground(getOriginalColor(selectedButton));
                 
                 // Seleccionar este botón
-                setBackground(Color.CYAN);
+                setBackground(Colores.fluorencent_cyan);
                 selectedButton = RatingButton.this;
             }
         });
@@ -50,11 +54,11 @@ public class RatingButton extends JButton {
         int calification = Integer.parseInt(button.getText());
 
         if (calification < 5) {
-            return Color.RED;
+            return Colores.bittersweet;
         } else if (calification < 7) {
-            return Color.YELLOW;
+            return Colores.jonquil;
         } else {
-            return Color.GREEN;
+            return Colores.spring_green;
         }
     }
 }

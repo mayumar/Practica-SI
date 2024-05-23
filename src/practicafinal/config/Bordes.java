@@ -14,6 +14,11 @@ public class Bordes {
     public static final Border gray_border = BorderFactory.createLineBorder(Colores.dim_gray, 2);
 
     /**
+     * Borde de color gris medio con un grosor de 1 píxel.
+    */
+    public static final Border thin_gray_border = BorderFactory.createLineBorder(Colores.dim_gray, 1);
+
+    /**
      * Borde vacío con 10 píxeles de espacio en la parte superior e inferior y 30 píxeles de espacio
      * en los lados izquierdo y derecho.
     */

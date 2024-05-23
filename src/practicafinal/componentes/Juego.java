@@ -68,7 +68,9 @@ public class Juego extends JPanel {
         
         // Añadir el recuadro al JLayeredPane en la capa superior (PALETTE_LAYER)
         Double calificacionDouble = (Double) game.get("calificacion");
-        layeredPane.add(new Recuadro(calificacionDouble), JLayeredPane.PALETTE_LAYER);
+        Recuadro recuadro = new Recuadro(calificacionDouble);
+        recuadro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        layeredPane.add(recuadro, JLayeredPane.PALETTE_LAYER);
 
         // Añade el JLayeredPane al JPanel
         setLayout(new BorderLayout());

@@ -31,12 +31,14 @@ public class Review extends JPanel{
         HintTextField nameInput = new HintTextField("Nombre");
         nameInput.setPreferredSize(new Dimension(701, 53));
         nameInput.setFont(new Font("Arial", Font.BOLD, 16));
+        nameInput.setBorder(Bordes.gray_border);
         gbc.gridy = 0;
         formReview.add(nameInput, gbc);
 
         HintTextField apellidosInput = new HintTextField("Apellidos");
         apellidosInput.setPreferredSize(new Dimension(701, 53));
         apellidosInput.setFont(new Font("Arial", Font.BOLD, 16));
+        apellidosInput.setBorder(Bordes.gray_border);
         gbc.gridy = 1;
         formReview.add(apellidosInput, gbc);
 
@@ -44,6 +46,7 @@ public class Review extends JPanel{
         reviewArea.setFont(new Font("Arial", Font.BOLD, 16));
         reviewArea.setLineWrap(true);
         reviewArea.setWrapStyleWord(true);
+        reviewArea.setBorder(Bordes.thin_gray_border);
         JScrollPane reviewScrollPane = new JScrollPane(reviewArea);
         reviewScrollPane.setPreferredSize(new Dimension(701, 150));
         gbc.gridy = 2;
@@ -51,7 +54,9 @@ public class Review extends JPanel{
         formReview.add(reviewScrollPane, gbc);
 
         // Ratings buttons
-        JPanel ratingPanel = new JPanel(new GridLayout());
+        GridLayout gl = new GridLayout();
+        gl.setHgap(10);
+        JPanel ratingPanel = new JPanel(gl);
         
         for (int i = 0; i <= 10; i++)
             ratingPanel.add(new RatingButton(i));
