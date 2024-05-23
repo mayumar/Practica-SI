@@ -260,9 +260,9 @@ public class PortadaJuego extends JPanel{
             linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
             linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(linea);
-        }else if(calification < 8.0){
+        }else if(calification < 7.0){
             resume_reviews.setBackground(Colores.naples_yellow);
-            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado no se que con la experiencia ofrecida.</div></html>");
+            JLabel linea = new JLabel("<html><div style='text-align: center;'>Las reseñas de usuarios son mixtas.<br/>Los jugadores han expresado opiniones diversas sobre la experiencia ofrecida</div></html>");
             linea.setFont(new Font(linea.getFont().getFontName(), Font.BOLD, 9));
             linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(linea);
