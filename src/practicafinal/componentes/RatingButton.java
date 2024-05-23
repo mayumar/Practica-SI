@@ -11,7 +11,7 @@ import javax.swing.JButton;
  * La clase RatingButton extiendo de JButton y representa un botón que usará el usuario para establecer una calificacion.
 */
 public class RatingButton extends JButton {
-    private static RatingButton selectedButton = null; // Referencia al botón seleccionado actualmente
+    public static RatingButton selectedButton = null; // Referencia al botón seleccionado actualmente
     
     /**
      * Crea un nuevo RatingButton con la calificación especificada.

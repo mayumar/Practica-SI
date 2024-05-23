@@ -2,6 +2,8 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 
 import practicafinal.componentes.*;
@@ -34,11 +36,11 @@ public class Review extends JPanel{
         gbc.gridy = 0;
         formReview.add(nameInput, gbc);
 
-        HintTextField apellidosInput = new HintTextField("Apellidos");
-        apellidosInput.setPreferredSize(new Dimension(701, 53));
-        apellidosInput.setFont(new Font("Arial", Font.BOLD, 16));
+        HintTextField surnamesInput = new HintTextField("Apellidos");
+        surnamesInput.setPreferredSize(new Dimension(701, 53));
+        surnamesInput.setFont(new Font("Arial", Font.BOLD, 16));
         gbc.gridy = 1;
-        formReview.add(apellidosInput, gbc);
+        formReview.add(surnamesInput, gbc);
 
         HintTextArea reviewArea = new HintTextArea("Deja tu reseña", 5, 50);
         reviewArea.setFont(new Font("Arial", Font.BOLD, 16));
@@ -66,6 +68,20 @@ public class Review extends JPanel{
         sendButton.setBorder(Bordes.black_border);
         sendButton.setForeground(Colores.rising_black);
         sendButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (nameInput.getText().equals("") || 
+                    surnamesInput.getText().equals("") || 
+                    reviewArea.getText().equals("") ||
+                    RatingButton.selectedButton == null)
+                    JOptionPane.showMessageDialog(formReview, "No se han rellenado todos los campos del formulario", "Error", JOptionPane.ERROR_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(formReview, "Tu review se ha enviado correctamente", "Enviado", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
         formReview.add(sendButton, gbc);
 
         return formReview;

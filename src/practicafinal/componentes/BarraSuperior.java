@@ -191,7 +191,8 @@ public class BarraSuperior extends JPanel {
         c.gridy = 0;
         c.gridheight = 1;
         c.gridwidth = 1;
-        JTextField buscar = new JTextField(15);
+        HintTextField buscar = new HintTextField("Buscar");
+        buscar.setColumns(15);
         buscar.setBorder(Bordes.gray_border);
         busqueda.add(buscar, c);
         
