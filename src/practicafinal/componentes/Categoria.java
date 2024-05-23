@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelGameListener;
 import practicafinal.paginas.Juegos;
 
 /**

@@ -9,6 +9,7 @@ import practicafinal.DataManager;
 import practicafinal.componentes.*;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelGameListener;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -9,6 +9,7 @@ import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelGameListener;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
