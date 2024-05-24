@@ -26,6 +26,18 @@ public class PracticaFinal {
         JScrollPane scrollPane = new JScrollPane();
         jf.add(scrollPane);
 
+        // Ajustar la sensibilidad del scroll
+        JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
+        JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
+
+        int unitIncrement = 16; // Incremento de unidad en píxeles
+        verticalScrollBar.setUnitIncrement(unitIncrement);
+        horizontalScrollBar.setUnitIncrement(unitIncrement);
+
+        int blockIncrement = 64; // Incremento de bloque en píxeles
+        verticalScrollBar.setBlockIncrement(blockIncrement);
+        horizontalScrollBar.setBlockIncrement(blockIncrement);
+
         JPanel mainPanel = new JPanel(new BorderLayout());
         scrollPane.setViewportView(mainPanel); // Establecer el JScrollPane como vista del mainPanel
 
