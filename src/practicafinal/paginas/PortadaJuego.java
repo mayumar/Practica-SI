@@ -263,19 +263,19 @@ public class PortadaJuego extends JPanel{
 
         if(calification < 5.0){
             resume_reviews.setBackground(Colores.light_red);
-            this.linea = new JLabel(bundleText.getString("Texto_mayormente_negativas"));
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
         }else if(calification < 7.0){
             resume_reviews.setBackground(Colores.naples_yellow);
-            this.linea = new JLabel(bundleText.getString("Texto_mixtas"));
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mixtas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
         }else{
             resume_reviews.setBackground(Colores.aquamarine);
-            this.linea = new JLabel(bundleText.getString("Texto_mayormente_positivas"));
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
@@ -327,11 +327,11 @@ public class PortadaJuego extends JPanel{
         this.infoLabel.setText("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         
         if (this.calification < 5.0)
-            this.linea.setText(bundleText.getString("Texto_mayormente_negativas"));
+            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
         else if (this.calification < 7.0)
-            this.linea.setText(bundleText.getString("Texto_mixtas"));
+            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mixtas") + "</div></html>");
         else
-            this.linea.setText(bundleText.getString("Texto_mayormente_positivas"));
+            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
 
         this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
 

@@ -91,7 +91,6 @@ public class Review extends JPanel{
         this.sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: NO SE COMO ACTUALIZAR ESTE TEXTO
                 if (nameInput.getText().equals("") ||
                     surnamesInput.getText().equals("") ||
                     reviewArea.getText().equals("") ||

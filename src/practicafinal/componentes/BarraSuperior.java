@@ -36,6 +36,7 @@ public class BarraSuperior extends JPanel {
     private JPopupMenu menuIdiomas;
     private JMenuItem itemEspanol;
     private JMenuItem itemIngles;
+    private HintTextField buscar;
 
     /**
      * Crea una barra de navegación superior con los paneles y el marco especificados.
@@ -201,10 +202,10 @@ public class BarraSuperior extends JPanel {
         c.gridy = 0;
         c.gridheight = 1;
         c.gridwidth = 1;
-        HintTextField buscar = new HintTextField("Buscar");
-        buscar.setColumns(15);
-        buscar.setBorder(Bordes.gray_border);
-        busqueda.add(buscar, c);
+        this.buscar = new HintTextField(inter.getBundle().getString("Texto_buscar"));
+        this.buscar.setColumns(15);
+        this.buscar.setBorder(Bordes.gray_border);
+        busqueda.add(this.buscar, c);
         
         ImageIcon icon = new ImageIcon("src/images/buscar.png");
         c.gridx = 2;
@@ -227,11 +228,12 @@ public class BarraSuperior extends JPanel {
      * @param bundleText Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
     */
     private void updateTexts(ResourceBundle bundleText) {
-        b_inicio.setText(bundleText.getString("Texto_inicio"));
-        b_juegos.setText(bundleText.getString("Texto_juegos"));
-        b_categorias.setText(bundleText.getString("Texto_categorias"));
-        itemEspanol.setText(bundleText.getString("Texto_espanol"));
-        itemIngles.setText(bundleText.getString("Texto_ingles"));
+        this.b_inicio.setText(bundleText.getString("Texto_inicio"));
+        this.b_juegos.setText(bundleText.getString("Texto_juegos"));
+        this.b_categorias.setText(bundleText.getString("Texto_categorias"));
+        this.itemEspanol.setText(bundleText.getString("Texto_espanol"));
+        this.itemIngles.setText(bundleText.getString("Texto_ingles"));
+        this.buscar.setText(bundleText.getString("Texto_buscar"));
         revalidate();
         repaint();
     }
