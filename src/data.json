@@ -7,19 +7,19 @@
 			"descripcion": "Texto_descripcion_Doom",
 			"reviews": [
 				{
-                    "comentario": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
-                    "calificacion": 8
+					"comentario": "Texto_comentario1_doom",
+					"calificacion": 8
                 },
                 {
-                    "comentario": "El exoesqueleto añade una capa de dinamismo al combate, pero la historia puede sentirse un poco genérica. Aún así, ofrece una experiencia sólida para los fanáticos de los juegos de disparos.",
-                    "calificacion": 7
+					"comentario": "Texto_comentario2_doom",
+					"calificacion": 7
                 },
                 {
-                    "comentario": "El multijugador es el punto fuerte de este juego. Acción rápida, mapas bien diseñados y una variedad de modos de juego mantienen la diversión durante horas.",
+                    "comentario": "Texto_comentario3_doom",
                     "calificacion": 9
                 },
                 {
-                    "comentario": "Si bien ofrece una experiencia entretenida, 'Doom Eternal' no logra destacar significativamente dentro de la serie 'Doom'. La innovación es limitada, pero sigue siendo un título competente en su género.",
+                    "comentario": "Texto_comentario4_doom",
                     "calificacion": 6
                 }
 			]
@@ -30,19 +30,19 @@
 			"calificacion": 8.2,
 			"descripcion": "Texto_descripcion_CS2",
 			"reviews": [
-            	{
-                	"comentario": "La secuela de Counter-Strike sigue siendo un punto de referencia en los juegos de disparos multijugador. Su enfoque en la estrategia y el trabajo en equipo lo convierte en una experiencia inolvidable para los jugadores.",
-                    "calificacion": 8
-                },
-                {
-                    "comentario": "Counter-Strike 2 mantiene la esencia de la serie con partidas emocionantes y una comunidad activa de jugadores. Sin embargo, podría beneficiarse de más innovación para destacarse entre la competencia moderna.",
-                    "calificacion": 7
-                },
-                {
-                    "comentario": "A pesar de su continuismo, Counter-Strike 2 ofrece una experiencia sólida y adictiva para los amantes de los juegos de disparos. Su enfoque en la estrategia y la habilidad individual lo convierten en un clásico instantáneo.",
-                    "calificacion": 9
-                }
-            ]
+				{
+					"comentario": "Texto_comentario1_CS2",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_CS2",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_CS2",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Splatoon",
@@ -50,19 +50,19 @@
 			"calificacion": 8.1,
 			"descripcion": "Texto_descripcion_Splatoon",
 			"reviews": [
-                {
-                    "comentario": "Splatoon ofrece una experiencia única en el género de los shooters con su mecánica de tinta y combate en equipo. Es divertido, fresco y perfecto para jugadores de todas las edades.",
-                    "calificacion": 8
-                },
-                {
-                    "comentario": "Aunque innovador, Splatoon puede carecer de profundidad en comparación con otros juegos de disparos. Sin embargo, su estilo único lo hace destacar en el catálogo de la Wii U.",
-                    "calificacion": 7
-                },
-                {
-                    "comentario": "Splatoon es una joya oculta en la biblioteca de la Wii U. Su jugabilidad fresca y su estilo visual vibrante lo convierten en una experiencia única que ningún fanático de los juegos de disparos debería perderse.",
-                    "calificacion": 9
-                }
-            ]
+				{
+					"comentario": "Texto_comentario1_Splatoon",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_Splatoon",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_Splatoon",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Valorant",
@@ -70,19 +70,19 @@
 			"calificacion": 5.0,
 			"descripcion": "Texto_descripcion_Valorant",
 			"reviews": [
-                {
-                    "comentario": "Valorant ofrece un enfoque fresco y estratégico en el género de los shooters. Sin embargo, su curva de aprendizaje empinada y su estilo de arte pueden no ser para todos los gustos.",
-                    "calificacion": 6
-                },
-                {
-                    "comentario": "El juego tiene potencial, pero necesita más contenido y equilibrio para competir con otros títulos establecidos en el género de los FPS.",
-                    "calificacion": 4
-                },
-                {
-                    "comentario": "Valorant muestra promesas con su mezcla única de mecánicas tácticas y habilidades de personajes. Sin embargo, su falta de variedad de mapas y modos puede limitar su atractivo a largo plazo.",
-                    "calificacion": 5
-                }
-            ]
+				{
+					"comentario": "Texto_comentario1_Valorant",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario2_Valorant",
+					"calificacion": 4
+				},
+				{
+					"comentario": "Texto_comentario3_Valorant",
+					"calificacion": 5
+				}
+			]
 		},
 		{
 			"nombre": "COD: Advance warfare",
@@ -91,15 +91,15 @@
 			"descripcion": "Texto_descripcion_COD",
 			"reviews": [
 				{
-					"comentario": "Una experiencia de combate futurista emocionante que lleva la franquicia a nuevos horizontes. Gráficos impresionantes y una jugabilidad adictiva.",
+					"comentario": "Texto_comentario1_COD",
 					"calificacion": 8
 				},
 				{
-					"comentario": "La campaña es entretenida, pero lo mejor es el multijugador competitivo lleno de acción.",
+					"comentario": "Texto_comentario2_COD",
 					"calificacion": 8
 				},
 				{
-					"comentario": "Excelente narrativa y una reinvención exitosa de la fórmula Call of Duty.",
+					"comentario": "Texto_comentario3_COD",
 					"calificacion": 9
 				}
 			]
@@ -111,15 +111,15 @@
 			"descripcion": "Texto_descripcion_Borderlands",
 			"reviews": [
 				{
-					"comentario": "Un mundo abierto lleno de humor y acción constante. La experiencia cooperativa es simplemente genial.",
+					"comentario": "Texto_comentario1_Borderlands",
 					"calificacion": 7
 				},
 				{
-					"comentario": "Una gran combinación de disparos y RPG con un estilo visual único.",
+					"comentario": "Texto_comentario2_Borderlands",
 					"calificacion": 8
 				},
 				{
-					"comentario": "Viciante y divertido, pero puede volverse repetitivo después de un tiempo.",
+					"comentario": "Texto_comentario3_Borderlands",
 					"calificacion": 7
 				}
 			]
@@ -131,15 +131,15 @@
 			"descripcion": "Texto_descripcion_Halo",
 			"reviews": [
 				{
-					"comentario": "Una saga legendaria que definió el género FPS en consolas. La historia y el multijugador siguen siendo excelentes.",
+					"comentario": "Texto_comentario1_Halo",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Aunque algunos títulos recientes han sido decepcionantes, Halo sigue siendo una franquicia icónica.",
+					"comentario": "Texto_comentario2_Halo",
 					"calificacion": 7
 				},
 				{
-					"comentario": "Jugabilidad sólida y una narrativa emocionante, pero le falta innovación en las últimas entregas.",
+					"comentario": "Texto_comentario3_Halo",
 					"calificacion": 8
 				}
 			]
@@ -151,15 +151,15 @@
 			"descripcion": "Texto_descripcion_Quake",
 			"reviews": [
 				{
-					"comentario": "Un clásico atemporal que sentó las bases del género FPS. Jugabilidad adictiva y diseño de niveles desafiante.",
+					"comentario": "Texto_comentario1_Quake",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Gráficos anticuados pero una experiencia de juego sólida que sigue siendo divertida hoy en día.",
+					"comentario": "Texto_comentario2_Quake",
 					"calificacion": 7
 				},
 				{
-					"comentario": "Pionero en su época, pero algunos aspectos no han envejecido bien. Aún así, es un juego imprescindible para los fanáticos de FPS.",
+					"comentario": "Texto_comentario3_Quake",
 					"calificacion": 8
 				}
 			]
@@ -171,15 +171,15 @@
 			"descripcion": "Texto_descripcion_Helldivers",
 			"reviews": [
 				{
-					"comentario": "Una secuela superior que mejora en todos los aspectos. El modo cooperativo es una locura absoluta.",
+					"comentario": "Texto_comentario1_Helldivers",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Excelente juego para jugar con amigos, con una gran variedad de misiones y desafíos.",
+					"comentario": "Texto_comentario2_Helldivers",
 					"calificacion": 8
 				},
 				{
-					"comentario": "Puede ser frustrante en ocasiones, pero la satisfacción de superar los desafíos en equipo es enorme.",
+					"comentario": "Texto_comentario3_Helldivers",
 					"calificacion": 8
 				}
 			]
@@ -191,19 +191,19 @@
 			"descripcion": "Texto_descripcion_BTF1",
 			"reviews": [
 				{
-					"comentario": "Una representación impresionante y auténtica de la Primera Guerra Mundial. El modo multijugador es una locura absoluta.",
+					"comentario": "Texto_comentario1_Battlefield",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Gráficos sobresalientes y una jugabilidad sólida, pero la campaña es un poco débil.",
+					"comentario": "Texto_comentario2_Battlefield",
 					"calificacion": 8
 				},
 				{
-					"comentario": "Uno de los mejores títulos de la franquicia Battlefield, con combates intensos y un gran valor de producción.",
+					"comentario": "Texto_comentario3_Battlefield",
 					"calificacion": 9
 				}
 			]
-		}
+		}		
 	],
 	"Mundo abierto": [
 		{
@@ -213,60 +213,100 @@
 			"descripcion": "Texto_descripcion_RDR2",
 			"reviews": [
 				{
-					"comentario": "Red Dead Redemption 2 es una experiencia de juego inmersiva como ninguna otra. Desde los impresionantes paisajes hasta la compleja narrativa y los personajes memorables, este juego lo tiene todo. Cada detalle, desde la forma en que el personaje interactúa con el mundo hasta las misiones secundarias, está meticulosamente diseñado. Una obra maestra del género que ofrece horas interminables de diversión y exploración.",
+					"comentario": "Texto_comentario1_RDR2",
 					"calificacion": 10
 				},
 				{
-					"comentario": "Red Dead Redemption 2 logra crear un mundo que se siente vivo y auténtico. Los gráficos son impresionantes, pero lo que realmente destaca es la atención al detalle en cada rincón del mapa. Desde la caza hasta los encuentros aleatorios, siempre hay algo que hacer. La historia es emocionante y los personajes son increíblemente bien desarrollados. Sin duda, uno de los mejores juegos de mundo abierto que he jugado.",
+					"comentario": "Texto_comentario2_RDR2",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Red Dead Redemption 2 es más que un simple juego, es una experiencia épica que te sumerge por completo en el Salvaje Oeste. La atención al detalle es asombrosa, desde la física del caballo hasta las conversaciones de los NPC. La historia es emocionante y te mantiene enganchado desde el principio hasta el final. No puedo recomendar este juego lo suficiente para aquellos que buscan una aventura inolvidable.",
+					"comentario": "Texto_comentario3_RDR2",
 					"calificacion": 9
 				}
 			]
-		},
+		},		
 		{
 			"nombre": "Elden Ring",
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
 			"calificacion": 9.0,
 			"descripcion": "Texto_descripcion_Doom",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Elden_Ring",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_Elden_Ring",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_Elden_Ring",
+					"calificacion": 10
+				}
+			]
 		},
 		{
 			"nombre": "Stardew Valley",
 			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
 			"calificacion": 8.9,
 			"descripcion": "Texto_descripcion_Doom",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Stardew",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_Stardew",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_Stardew",
+					"calificacion": 10
+				}
+			]
 		},
 		{
 			"nombre": "Forza Horizon 5",
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
 			"calificacion": 5.0,
 			"descripcion": "Texto_descripcion_Doom",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Forza_Horizon",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario2_Forza_Horizon",
+					"calificacion": 5
+				},
+				{
+					"comentario": "Texto_comentario3_Forza_Horizon",
+					"calificacion": 7
+				}
+			]
 		},
 		{
+			"id": "the_legend_of_zelda_breath_of_the_wild",
 			"nombre": "The Legend of Zelda: Breath of the Wild",
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
 			"calificacion": 9.0,
 			"descripcion": "Texto_descripcion_Zelda",
 			"reviews": [
 				{
-					"comentario": "El mundo está muy vivo y las mecánicas de combate son increíbles.",
+					"comentario": "Texto_comentario1_zelda",
 					"calificacion": 8
 				},
 				{
-					"comentario": "Si bien Breath of the Wild ofrece una experiencia de juego increíblemente vasta y emocionante, algunos aspectos, como la durabilidad de las armas, pueden resultar un poco frustrantes para algunos jugadores.",
+					"comentario": "Texto_comentario2_zelda",
 					"calificacion": 7
 				},
 				{
-					"comentario": "La mejor experiencia de mundo abierto que he tenido en años. Muy buen juego",
+					"comentario": "Texto_comentario3_zelda",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Es un buen juego, pero demasiado largo a mi parecer, debería durar menos de 50 horas.",
+					"comentario": "Texto_comentario4_zelda",
 					"calificacion": 6
 				}
 			]
