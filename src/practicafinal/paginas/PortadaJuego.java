@@ -29,7 +29,7 @@ public class PortadaJuego extends JPanel{
     private Double calification;
     private JButton buttonReviews;
     private JSONArray reviewlist;
-    private JPanel review;
+    private JPanel reviews;
 
     /**
      * Crea una instancia de PortadaJuego que muestra la portada de un juego específico.
@@ -87,7 +87,7 @@ public class PortadaJuego extends JPanel{
         c.gridwidth = 1;
         contenido.add(informacion, c);
 
-        JPanel reviews = createReviews(bundleText);
+        this.reviews = createReviews(bundleText);
 
         c.gridx = 0;
         c.gridy = 1;
@@ -305,16 +305,16 @@ public class PortadaJuego extends JPanel{
             Recuadro recuadro = new Recuadro(calificacion);
             linea.add(recuadro);
 
-            this.review = new JPanel(new GridLayout(1, 1));
+            JPanel review = new JPanel(new GridLayout(1, 1));
             JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
             comentario.setHorizontalAlignment(SwingConstants.CENTER);
             comentario.setForeground(Colores.rising_black);
-            this.review.add(comentario);
-            this.review.setBackground(Colores.platinum);
-            this.review.setForeground(Colores.rising_black);
-            this.review.setBorder(Bordes.black_border);
-            this.review.setPreferredSize(new Dimension(1150, 47));
-            linea.add(this.review);
+            review.add(comentario);
+            review.setBackground(Colores.platinum);
+            review.setForeground(Colores.rising_black);
+            review.setBorder(Bordes.black_border);
+            review.setPreferredSize(new Dimension(1150, 47));
+            linea.add(review);
 
             reviews.add(linea);
         }
@@ -335,15 +335,30 @@ public class PortadaJuego extends JPanel{
 
         this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
 
-        // TODO: ESTO NO FURULA :(
-        // for (Object comp : this.review.getComponents()) {
-        //     if (comp instanceof JLabel) {
-        //         for (Object reviewObject : this.reviewlist) {
-        //             JSONObject reviewJsonObject = (JSONObject) reviewObject;
-        //             ((JLabel) comp).setText("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
-        //         }
-        //     }
-        // }
+        this.reviews.removeAll();
+
+        for(Object reviewObject : this.reviewlist){
+            JSONObject reviewJsonObject = (JSONObject) reviewObject;
+
+            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
+
+            Long calificacion = (Long) reviewJsonObject.get("calificacion");
+            Recuadro recuadro = new Recuadro(calificacion);
+            linea.add(recuadro);
+
+            JPanel review = new JPanel(new GridLayout(1, 1));
+            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
+            comentario.setHorizontalAlignment(SwingConstants.CENTER);
+            comentario.setForeground(Colores.rising_black);
+            review.add(comentario);
+            review.setBackground(Colores.platinum);
+            review.setForeground(Colores.rising_black);
+            review.setBorder(Bordes.black_border);
+            review.setPreferredSize(new Dimension(1150, 47));
+            linea.add(review);
+
+            this.reviews.add(linea);
+        }
 
         revalidate();
         repaint();
