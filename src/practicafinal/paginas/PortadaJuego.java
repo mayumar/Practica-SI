@@ -305,16 +305,16 @@ public class PortadaJuego extends JPanel{
             Recuadro recuadro = new Recuadro(calificacion);
             linea.add(recuadro);
 
-            JPanel review = new JPanel(new GridLayout(1, 1));
+            this.review = new JPanel(new GridLayout(1, 1));
             JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
             comentario.setHorizontalAlignment(SwingConstants.CENTER);
             comentario.setForeground(Colores.rising_black);
-            review.add(comentario);
-            review.setBackground(Colores.platinum);
-            review.setForeground(Colores.rising_black);
-            review.setBorder(Bordes.black_border);
-            review.setPreferredSize(new Dimension(1150, 47));
-            linea.add(review);
+            this.review.add(comentario);
+            this.review.setBackground(Colores.platinum);
+            this.review.setForeground(Colores.rising_black);
+            this.review.setBorder(Bordes.black_border);
+            this.review.setPreferredSize(new Dimension(1150, 47));
+            linea.add(this.review);
 
             reviews.add(linea);
         }
