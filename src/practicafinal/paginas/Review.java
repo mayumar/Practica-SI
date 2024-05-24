@@ -18,11 +18,18 @@ public class Review extends JPanel{
     private HintTextArea reviewArea;
     private JButton sendButton;
     private Titulo title;
+    private String textoMsgError;
+    private String textoMsgReviewCorrecta;
+    private String textoEnviado;
 
     /**
      * Crea una instancia de Review. Este panel utiliza un BorderLayout y contiene un título en la parte superior.
     */
     public Review(ResourceBundle bundleText){
+        this.textoMsgError = bundleText.getString("Texto_msg_error");
+        this.textoMsgReviewCorrecta = bundleText.getString("Texto_msg_review_correcta");
+        this.textoEnviado = bundleText.getString("Texto_enviado");
+
         setLayout(new BorderLayout());
         this.title = new Titulo(bundleText.getString("Texto_escribir_review"), false);
         add(this.title, BorderLayout.NORTH);
@@ -85,13 +92,13 @@ public class Review extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: NO SE COMO ACTUALIZAR ESTE TEXTO
-                if (nameInput.getText().equals("") || 
-                    surnamesInput.getText().equals("") || 
+                if (nameInput.getText().equals("") ||
+                    surnamesInput.getText().equals("") ||
                     reviewArea.getText().equals("") ||
                     RatingButton.selectedButton == null)
-                    JOptionPane.showMessageDialog(formReview, bundleText.getString("Texto_msg_error"), "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(formReview, textoMsgError, "Error", JOptionPane.ERROR_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(formReview, bundleText.getString("Texto_msg_review_correcta"), bundleText.getString("Texto_enviado"), JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(formReview, textoMsgReviewCorrecta, textoEnviado, JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
@@ -106,5 +113,8 @@ public class Review extends JPanel{
         this.surnamesInput.setText(bundleText.getString("Texto_apellidos"));
         this.reviewArea.setText(bundleText.getString("Texto_escribir_review"));
         this.sendButton.setText(bundleText.getString("Texto_enviar"));
+        this.textoMsgError = bundleText.getString("Texto_msg_error");
+        this.textoMsgReviewCorrecta = bundleText.getString("Texto_msg_review_correcta");
+        this.textoEnviado = bundleText.getString("Texto_enviado");
     }
 }
