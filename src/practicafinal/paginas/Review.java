@@ -13,16 +13,23 @@ import practicafinal.config.*;
  * La clase Review representa un panel en el que los usuarios pueden dejar sus reseñas.
 */
 public class Review extends JPanel{
+    private HintTextField nameInput;
+    private HintTextField surnamesInput;
+    private HintTextArea reviewArea;
+    private JButton sendButton;
+    private Titulo title;
+
     /**
      * Crea una instancia de Review. Este panel utiliza un BorderLayout y contiene un título en la parte superior.
     */
     public Review(ResourceBundle bundleText){
         setLayout(new BorderLayout());
-        add(new Titulo(bundleText.getString("Texto_review"), false), BorderLayout.NORTH);
-        add(createFormReview());
+        this.title = new Titulo(bundleText.getString("Texto_escribir_review"), false);
+        add(this.title, BorderLayout.NORTH);
+        add(createFormReview(bundleText));
     }
 
-    private JPanel createFormReview(){
+    private JPanel createFormReview(ResourceBundle bundleText){
         JPanel formReview = new JPanel(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -30,26 +37,26 @@ public class Review extends JPanel{
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
 
-        HintTextField nameInput = new HintTextField("Nombre");
-        nameInput.setPreferredSize(new Dimension(701, 53));
-        nameInput.setFont(new Font("Arial", Font.BOLD, 16));
-        nameInput.setBorder(Bordes.gray_border);
+        this.nameInput = new HintTextField(bundleText.getString("Texto_nombre"));
+        this.nameInput.setPreferredSize(new Dimension(701, 53));
+        this.nameInput.setFont(new Font("Arial", Font.BOLD, 16));
+        this.nameInput.setBorder(Bordes.gray_border);
         gbc.gridy = 0;
-        formReview.add(nameInput, gbc);
+        formReview.add(this.nameInput, gbc);
 
-        HintTextField surnamesInput = new HintTextField("Apellidos");
-        surnamesInput.setPreferredSize(new Dimension(701, 53));
-        surnamesInput.setFont(new Font("Arial", Font.BOLD, 16));
-        surnamesInput.setBorder(Bordes.gray_border);
+        this.surnamesInput = new HintTextField(bundleText.getString("Texto_apellidos"));
+        this.surnamesInput.setPreferredSize(new Dimension(701, 53));
+        this.surnamesInput.setFont(new Font("Arial", Font.BOLD, 16));
+        this.surnamesInput.setBorder(Bordes.gray_border);
         gbc.gridy = 1;
-        formReview.add(surnamesInput, gbc);
+        formReview.add(this.surnamesInput, gbc);
 
-        HintTextArea reviewArea = new HintTextArea("Deja tu reseña", 5, 50);
-        reviewArea.setFont(new Font("Arial", Font.BOLD, 16));
-        reviewArea.setLineWrap(true);
-        reviewArea.setWrapStyleWord(true);
-        reviewArea.setBorder(Bordes.thin_gray_border);
-        JScrollPane reviewScrollPane = new JScrollPane(reviewArea);
+        this.reviewArea = new HintTextArea(bundleText.getString("Texto_escribir_review"), 5, 50);
+        this.reviewArea.setFont(new Font("Arial", Font.BOLD, 16));
+        this.reviewArea.setLineWrap(true);
+        this.reviewArea.setWrapStyleWord(true);
+        this.reviewArea.setBorder(Bordes.thin_gray_border);
+        JScrollPane reviewScrollPane = new JScrollPane(this.reviewArea);
         reviewScrollPane.setPreferredSize(new Dimension(701, 150));
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
@@ -67,28 +74,37 @@ public class Review extends JPanel{
         formReview.add(ratingPanel, gbc);
 
         gbc.gridy = 4;
-        JButton sendButton = new JButton("Enviar");
-        sendButton.setPreferredSize(new Dimension(570, 54));
-        sendButton.setBackground(Colores.cadet_gray);
-        sendButton.setBorder(Bordes.black_border);
-        sendButton.setForeground(Colores.rising_black);
-        sendButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        this.sendButton = new JButton(bundleText.getString("Texto_enviar"));
+        this.sendButton.setPreferredSize(new Dimension(570, 54));
+        this.sendButton.setBackground(Colores.cadet_gray);
+        this.sendButton.setBorder(Bordes.black_border);
+        this.sendButton.setForeground(Colores.rising_black);
+        this.sendButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        sendButton.addActionListener(new ActionListener() {
+        this.sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // TODO: NO SE COMO ACTUALIZAR ESTE TEXTO
                 if (nameInput.getText().equals("") || 
                     surnamesInput.getText().equals("") || 
                     reviewArea.getText().equals("") ||
                     RatingButton.selectedButton == null)
-                    JOptionPane.showMessageDialog(formReview, "No se han rellenado todos los campos del formulario", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(formReview, bundleText.getString("Texto_msg_error"), "Error", JOptionPane.ERROR_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(formReview, "Tu review se ha enviado correctamente", "Enviado", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(formReview, bundleText.getString("Texto_msg_review_correcta"), bundleText.getString("Texto_enviado"), JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
-        formReview.add(sendButton, gbc);
+        formReview.add(this.sendButton, gbc);
 
         return formReview;
+    }
+
+    public void updateTexts(ResourceBundle bundleText) {
+        this.title.setLabel(bundleText.getString("Texto_escribir_review"));
+        this.nameInput.setText(bundleText.getString("Texto_nombre"));
+        this.surnamesInput.setText(bundleText.getString("Texto_apellidos"));
+        this.reviewArea.setText(bundleText.getString("Texto_escribir_review"));
+        this.sendButton.setText(bundleText.getString("Texto_enviar"));
     }
 }

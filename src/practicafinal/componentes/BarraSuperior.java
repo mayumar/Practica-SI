@@ -14,6 +14,7 @@ import practicafinal.eventos.FocusPanelButtonListener;
 import practicafinal.paginas.Categorias;
 import practicafinal.paginas.Inicio;
 import practicafinal.paginas.Juegos;
+import practicafinal.paginas.Review;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -154,11 +155,15 @@ public class BarraSuperior extends JPanel {
                 Inicio inicio = (Inicio) views.get("inicio");
                 Juegos juegos = (Juegos) views.get("juegos");
                 Categorias categorias = (Categorias) views.get("categorias");
+                Review review = (Review) views.get("review");
 
                 updateTexts(inter.getBundle());
                 inicio.updateTexts(inter.getBundle());
                 juegos.updateTexts(inter.getBundle());
                 categorias.updateTexts(inter.getBundle());
+
+                if (review != null)
+                    review.updateTexts(inter.getBundle());
                 
                 revalidate();
                 repaint();
@@ -175,11 +180,16 @@ public class BarraSuperior extends JPanel {
                 Inicio inicio = (Inicio) views.get("inicio");
                 Juegos juegos = (Juegos) views.get("juegos");
                 Categorias categorias = (Categorias) views.get("categorias");
+                Review review = (Review) views.get("review");
 
                 updateTexts(inter.getBundle());                
                 inicio.updateTexts(inter.getBundle());
                 juegos.updateTexts(inter.getBundle());
                 categorias.updateTexts(inter.getBundle());
+
+                if (review != null)
+                    review.updateTexts(inter.getBundle());
+
                 revalidate();
                 repaint();
             }
