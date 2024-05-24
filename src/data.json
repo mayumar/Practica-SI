@@ -5,6 +5,8 @@
 			"imagen": "src/images/juegos/fps/p_doom.png",
 			"calificacion": 8.8,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "20-03-2020",
+			"desarrollador": "id Software, Panic Button",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_doom",
@@ -29,6 +31,8 @@
 			"imagen": "src/images/juegos/fps/p_cs2.png",
 			"calificacion": 8.2,
 			"descripcion": "Texto_descripcion_CS2",
+			"fecha_lanzamiento": "27-09-2023",
+			"desarrollador": "Valve Corporation",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_CS2",
@@ -49,6 +53,8 @@
 			"imagen": "src/images/juegos/fps/p_splatoon.png",
 			"calificacion": 8.1,
 			"descripcion": "Texto_descripcion_Splatoon",
+			"fecha_lanzamiento": "07-05-2015",
+			"desarrollador": "Nintendo Entertainment Analysis and Development",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Splatoon",
@@ -69,6 +75,8 @@
 			"imagen": "src/images/juegos/fps/p_valorant.png",
 			"calificacion": 5.0,
 			"descripcion": "Texto_descripcion_Valorant",
+			"fecha_lanzamiento": "02-05-2020",
+			"desarrollador": "Riot Games",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Valorant",
@@ -89,6 +97,8 @@
 			"imagen": "src/images/juegos/fps/p_cod.png",
 			"calificacion": 9.0,
 			"descripcion": "Texto_descripcion_COD",
+			"fecha_lanzamiento": "03-11-2014",
+			"desarrollador": "Sledgehammer Games, Raven Software, High Moon Studios",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_COD",
@@ -109,6 +119,8 @@
 			"imagen": "src/images/juegos/fps/p_borderlands.png",
 			"calificacion": 6.5,
 			"descripcion": "Texto_descripcion_Borderlands",
+			"fecha_lanzamiento": "20-10-2009",
+			"desarrollador": "Gearbox Software",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Borderlands",
@@ -125,10 +137,12 @@
 			]
 		},
 		{
-			"nombre": "Halo",
+			"nombre": "Halo: The Master Chief Collection",
 			"imagen": "src/images/juegos/fps/p_halo.png",
 			"calificacion": 4.0,
 			"descripcion": "Texto_descripcion_Halo",
+			"fecha_lanzamiento": "11-11-2014",
+			"desarrollador": "Bungie Studios, 343 Industries, Saber Interactive, etc.",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Halo",
@@ -145,10 +159,12 @@
 			]
 		},
 		{
-			"nombre": "Quake",
+			"nombre": "Quake II",
 			"imagen": "src/images/juegos/fps/p_quake.png",
 			"calificacion": 7.5,
 			"descripcion": "Texto_descripcion_Quake",
+			"fecha_lanzamiento": "30-11-1997",
+			"desarrollador": "id Software, Nightdive Studios, MachineGames, etc.",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Quake",
@@ -165,10 +181,12 @@
 			]
 		},
 		{
-			"nombre": "Helldivers 2",
+			"nombre": "Helldivers II",
 			"imagen": "src/images/juegos/fps/p_helldivers.png",
 			"calificacion": 8.9,
 			"descripcion": "Texto_descripcion_Helldivers",
+			"fecha_lanzamiento": "08-02-2024",
+			"desarrollador": "Arrowhead Game Studios",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Helldivers",
@@ -189,6 +207,8 @@
 			"imagen": "src/images/juegos/fps/p_battlefield.png",
 			"calificacion": 8.5,
 			"descripcion": "Texto_descripcion_BTF1",
+			"fecha_lanzamiento": "30-08-2016",
+			"desarrollador": "DICE",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Battlefield",
@@ -211,6 +231,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/read.png",
 			"calificacion": 9.7,
 			"descripcion": "Texto_descripcion_RDR2",
+			"fecha_lanzamiento": "26-10-2018",
+			"desarrollador": "Rockstar Games",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_RDR2",
@@ -231,6 +253,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
 			"calificacion": 9.0,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "25-02-2022",
+			"desarrollador": "FromSoftware",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Elden_Ring",
@@ -251,6 +275,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
 			"calificacion": 8.9,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "26-02-2016",
+			"desarrollador": "The Secret Police Limited, ConcernedApe LLC, ConcernedApe",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Stardew",
@@ -271,6 +297,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
 			"calificacion": 5.0,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "01-11-2021",
+			"desarrollador": "Playground Games",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_Forza_Horizon",
@@ -287,11 +315,12 @@
 			]
 		},
 		{
-			"id": "the_legend_of_zelda_breath_of_the_wild",
 			"nombre": "The Legend of Zelda: Breath of the Wild",
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
 			"calificacion": 9.0,
 			"descripcion": "Texto_descripcion_Zelda",
+			"fecha_lanzamiento": "03-03-2017",
+			"desarrollador": "Nintendo Entertainment Planning & Development",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_zelda",
@@ -316,6 +345,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/sea.png",
 			"calificacion": 8.0,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "20-03-2018",
+			"desarrollador": "Rare",
 			"reviews": []
 		},
 		{
@@ -323,6 +354,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/witcher.png",
 			"calificacion": 8.5,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "18-05-2015",
+			"desarrollador": "CD Projekt RED, CD Projekt",
 			"reviews": []
 		},
 		{
@@ -330,6 +363,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/palword.png",
 			"calificacion": 7.5,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "19-01-2024",
+			"desarrollador": "Pocket Pair, Inc.",
 			"reviews": []
 		},
 		{
@@ -337,6 +372,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
 			"calificacion": 4.0,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "23-10-2018",
+			"desarrollador": "Bethesda Game Studios, Bethesda Game Studios Austin, Bethesda Studios Montréal Inc.",
 			"reviews": []
 		},
 		{
@@ -344,6 +381,8 @@
 			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
 			"calificacion": 5.0,
 			"descripcion": "Texto_descripcion_Doom",
+			"fecha_lanzamiento": "22-03-2019",
+			"desarrollador": "FromSoftware",
 			"reviews": []
 		}
 	],

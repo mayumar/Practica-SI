@@ -137,7 +137,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel info = new JPanel(new GridLayout(0,1));
-        this.infoLabel = new JLabel("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": ()<br/>" + bundleText.getString("Texto_desarrollador") + ": ()<div/></html>");
+        this.infoLabel = new JLabel("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         this.infoLabel.setForeground(Colores.rising_black);
         info.add(this.infoLabel);
         
@@ -324,7 +324,7 @@ public class PortadaJuego extends JPanel{
 
     public void updateTexts(ResourceBundle bundleText) {
         this.descripcionLabel.setText("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
-        this.infoLabel.setText("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": ()<br/>" + bundleText.getString("Texto_desarrollador") + ": ()<div/></html>");
+        this.infoLabel.setText("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         
         if (this.calification < 5.0)
             this.linea.setText(bundleText.getString("Texto_mayormente_negativas"));
@@ -336,14 +336,14 @@ public class PortadaJuego extends JPanel{
         this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
 
         // TODO: ESTO NO FURULA :(
-        for (Object comp : this.review.getComponents()) {
-            if (comp instanceof JLabel) {
-                for (Object reviewObject : this.reviewlist) {
-                    JSONObject reviewJsonObject = (JSONObject) reviewObject;
-                    ((JLabel) comp).setText("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
-                }
-            }
-        }
+        // for (Object comp : this.review.getComponents()) {
+        //     if (comp instanceof JLabel) {
+        //         for (Object reviewObject : this.reviewlist) {
+        //             JSONObject reviewJsonObject = (JSONObject) reviewObject;
+        //             ((JLabel) comp).setText("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
+        //         }
+        //     }
+        // }
 
         revalidate();
         repaint();
