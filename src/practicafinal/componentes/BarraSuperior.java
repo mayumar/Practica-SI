@@ -150,7 +150,6 @@ public class BarraSuperior extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Acción para cambiar a Español
-                System.out.println("Español seleccionado");
                 inter.setCurrentLocale(new Locale("es", "ES"));
 
                 Inicio inicio = (Inicio) views.get("inicio");
@@ -175,7 +174,6 @@ public class BarraSuperior extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Acción para cambiar a Inglés
-                System.out.println("Inglés seleccionado");
                 inter.setCurrentLocale(new Locale("en", "GB"));
 
                 Inicio inicio = (Inicio) views.get("inicio");
