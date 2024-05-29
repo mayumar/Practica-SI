@@ -112,9 +112,11 @@ public class DataManager {
         
         for (Object review : gameReviews) {
             JSONObject reviewJSON = (JSONObject) review;
-            sum += (double) reviewJSON.get("calificacion");
+            sum += (long) reviewJSON.get("calificacion");
         }
 
-        return sum / gameReviews.size();
+        double mean = sum / gameReviews.size();
+
+        return Math.round(mean * 100.0) / 100.0;
     }
 }

@@ -212,7 +212,7 @@ public class PortadaJuego extends JPanel{
         c.gridheight = 1;
         c.gridwidth = 1;
         c.weightx = 0.2;
-        this.calification = (Double) this.game.get("calificacion");
+        this.calification = DataManager.getRateMean(game);
         Recuadro recuadro = new Recuadro(this.calification);
         informacion.add(recuadro, c);
 
