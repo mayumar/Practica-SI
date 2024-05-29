@@ -3,6 +3,17 @@
 		{
 			"nombre": "Doom Eternal",
 			"imagen": "src/images/juegos/fps/p_doom.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/Doom_Eternal/im2.jpeg"
+				},
+				{
+					"ruta": "src/images/juegos/fps/im3.jpeg"
+				},
+				{
+					"ruta": "src/images/juegos/fps/indice.jpeg"
+				}
+			],
 			"descripcion": "Texto_descripcion_Doom",
 			"fecha_lanzamiento": "20-03-2020",
 			"desarrollador": "id Software, Panic Button",
@@ -28,6 +39,17 @@
 		{
 			"nombre": "Counter Strike 2",
 			"imagen": "src/images/juegos/fps/p_cs2.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_CS2",
 			"fecha_lanzamiento": "27-09-2023",
 			"desarrollador": "Valve Corporation",
@@ -49,6 +71,17 @@
 		{
 			"nombre": "Splatoon",
 			"imagen": "src/images/juegos/fps/p_splatoon.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Splatoon",
 			"fecha_lanzamiento": "07-05-2015",
 			"desarrollador": "Nintendo Entertainment Analysis and Development",
@@ -70,6 +103,17 @@
 		{
 			"nombre": "Valorant",
 			"imagen": "src/images/juegos/fps/p_valorant.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Valorant",
 			"fecha_lanzamiento": "02-05-2020",
 			"desarrollador": "Riot Games",
@@ -91,6 +135,17 @@
 		{
 			"nombre": "COD: Advance warfare",
 			"imagen": "src/images/juegos/fps/p_cod.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_COD",
 			"fecha_lanzamiento": "03-11-2014",
 			"desarrollador": "Sledgehammer Games, Raven Software, High Moon Studios",
@@ -112,6 +167,17 @@
 		{
 			"nombre": "Borderlands",
 			"imagen": "src/images/juegos/fps/p_borderlands.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Borderlands",
 			"fecha_lanzamiento": "20-10-2009",
 			"desarrollador": "Gearbox Software",
@@ -133,6 +199,17 @@
 		{
 			"nombre": "Halo: The Master Chief Collection",
 			"imagen": "src/images/juegos/fps/p_halo.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Halo",
 			"fecha_lanzamiento": "11-11-2014",
 			"desarrollador": "Bungie Studios, 343 Industries, Saber Interactive, etc.",
@@ -154,6 +231,17 @@
 		{
 			"nombre": "Quake II",
 			"imagen": "src/images/juegos/fps/p_quake.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Quake",
 			"fecha_lanzamiento": "30-11-1997",
 			"desarrollador": "id Software, Nightdive Studios, MachineGames, etc.",
@@ -175,6 +263,17 @@
 		{
 			"nombre": "Helldivers II",
 			"imagen": "src/images/juegos/fps/p_helldivers.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_Helldivers",
 			"fecha_lanzamiento": "08-02-2024",
 			"desarrollador": "Arrowhead Game Studios",
@@ -196,6 +295,17 @@
 		{
 			"nombre": "Battlefield 1",
 			"imagen": "src/images/juegos/fps/p_battlefield.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				},
+				{
+					"ruta": "src/images/juegos/fps/"
+				}
+			],
 			"descripcion": "Texto_descripcion_BTF1",
 			"fecha_lanzamiento": "30-08-2016",
 			"desarrollador": "DICE",
@@ -219,6 +329,17 @@
 		{
 			"nombre": "Read Dead Redemption 2",
 			"imagen": "src/images/juegos/mundo_abierto/read.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_RDR2",
 			"fecha_lanzamiento": "26-10-2018",
 			"desarrollador": "Rockstar Games",
@@ -240,6 +361,17 @@
 		{
 			"nombre": "Elden Ring",
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Doom",
 			"fecha_lanzamiento": "25-02-2022",
 			"desarrollador": "FromSoftware",
@@ -261,6 +393,17 @@
 		{
 			"nombre": "Stardew Valley",
 			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Stardew",
 			"fecha_lanzamiento": "26-02-2016",
 			"desarrollador": "The Secret Police Limited, ConcernedApe LLC, ConcernedApe",
@@ -282,6 +425,17 @@
 		{
 			"nombre": "Forza Horizon 5",
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_FH5",
 			"fecha_lanzamiento": "01-11-2021",
 			"desarrollador": "Playground Games",
@@ -303,6 +457,17 @@
 		{
 			"nombre": "The Legend of Zelda: Breath of the Wild",
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Zelda",
 			"fecha_lanzamiento": "03-03-2017",
 			"desarrollador": "Nintendo Entertainment Planning & Development",
@@ -328,6 +493,17 @@
 		{
 			"nombre": "Sea of Thieves",
 			"imagen": "src/images/juegos/mundo_abierto/sea.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_SOT",
 			"fecha_lanzamiento": "20-03-2018",
 			"desarrollador": "Rare",
@@ -353,6 +529,17 @@
 		{
 			"nombre": "The Witcher: Wild hunt",
 			"imagen": "src/images/juegos/mundo_abierto/witcher.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Witcher",
 			"fecha_lanzamiento": "18-05-2015",
 			"desarrollador": "CD Projekt RED, CD Projekt",
@@ -374,6 +561,17 @@
 		{
 			"nombre": "Palword",
 			"imagen": "src/images/juegos/mundo_abierto/palword.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Palworld",
 			"fecha_lanzamiento": "19-01-2024",
 			"desarrollador": "Pocket Pair, Inc.",
@@ -399,6 +597,17 @@
 		{
 			"nombre": "Fallout 76",
 			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_F76",
 			"fecha_lanzamiento": "23-10-2018",
 			"desarrollador": "Bethesda Game Studios, Bethesda Game Studios Austin, Bethesda Studios Montréal Inc.",
@@ -424,6 +633,17 @@
 		{
 			"nombre": "Sekiro",
 			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				},
+				{
+					"ruta": "src/images/juegos/mundo_abierto"
+				}
+			],
 			"descripcion": "Texto_descripcion_Sekiro",
 			"fecha_lanzamiento": "22-03-2019",
 			"desarrollador": "FromSoftware",
@@ -451,6 +671,17 @@
 		{
 			"nombre": "Outlast",
 			"imagen": "src/images/juegos/terror/outlast.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Outlast",
 			"fecha_lanzamiento": "04-09-2013",
 			"desarrollador": "Red Barrels",
@@ -476,6 +707,17 @@
 		{
 			"nombre": "Amnesia: The Dark Descent",
 			"imagen": "src/images/juegos/terror/amnesia.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Amnesia",
 			"fecha_lanzamiento": "08-09-2010",
 			"desarrollador": "Frictional Games",
@@ -501,6 +743,17 @@
 		{
 			"nombre": "Resident Evil 7: Biohazard",
 			"imagen": "src/images/juegos/terror/re7.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Resident_Evil_7",
 			"fecha_lanzamiento": "24-01-2017",
 			"desarrollador": "Capcom",
@@ -526,6 +779,17 @@
 		{
 			"nombre": "Silent Hill 2",
 			"imagen": "src/images/juegos/terror/sh2.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Silent_Hill_2",
 			"fecha_lanzamiento": "24-09-2001",
 			"desarrollador": "Konami Computer Entertainment Tokyo",
@@ -551,6 +815,17 @@
 		{
 			"nombre": "Dead Space",
 			"imagen": "src/images/juegos/terror/dead_space.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Dead_Space",
 			"fecha_lanzamiento": "13-10-2008",
 			"desarrollador": "EA Redwood Shores",
@@ -576,6 +851,17 @@
 		{
 			"nombre": "The Evil Within",
 			"imagen": "src/images/juegos/terror/evil_within.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_The_Evil_Within",
 			"fecha_lanzamiento": "14-10-2014",
 			"desarrollador": "Tango Gameworks",
@@ -601,6 +887,17 @@
 		{
 			"nombre": "Alien: Isolation",
 			"imagen": "src/images/juegos/terror/alien_isolation.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Alien_Isolation",
 			"fecha_lanzamiento": "06-10-2014",
 			"desarrollador": "Creative Assembly",
@@ -626,6 +923,17 @@
 		{
 			"nombre": "Layers of Fear",
 			"imagen": "src/images/juegos/terror/layers_of_fear.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Layers_of_Fear",
 			"fecha_lanzamiento": "16-02-2016", 
 			"desarrollador": "Bloober Team",
@@ -651,6 +959,17 @@
 		{
 			"nombre": "Phasmophobia",
 			"imagen": "src/images/juegos/terror/phasmophobia.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"descripcion": "Texto_descripcion_Phasmophobia",
 			"fecha_lanzamiento": "18-09-2020",
 			"desarrollador": "Kinetic Games",
@@ -676,6 +995,17 @@
 		{
 			"nombre": "Fatal Frame II: Crimson Butterfly",
 			"imagen": "src/images/juegos/terror/fatal_frame_2.png", 
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				},
+				{
+					"ruta": "src/images/juegos/terror"
+				}
+			],
 			"calificacion": 8.9,
 			"descripcion": "Texto_descripcion_Fatal_Frame_2",
 			"fecha_lanzamiento": "26-11-2003",
@@ -704,6 +1034,17 @@
 		{
 			"nombre": "Celeste",
 			"imagen": "src/images/juegos/indie/celeste.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Celeste",
 			"fecha_lanzamiento": "28-01-2018",
 			"desarrollador": "Matt Makes Games, Extremely OK Games, Ltd.",
@@ -729,6 +1070,17 @@
 		{
 			"nombre": "Project Zomboid",
 			"imagen": "src/images/juegos/indie/project_zomboid.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Project_Zomboid",
 			"fecha_lanzamiento": "08-11-2013",
 			"desarrollador": "The Indie Stone",
@@ -754,6 +1106,17 @@
 		{
 			"nombre": "Stray",
 			"imagen": "src/images/juegos/indie/stray.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Stray",
 			"fecha_lanzamiento": "19-07-2022",
 			"desarrollador": "BlueTwelve Studio",
@@ -779,6 +1142,17 @@
 		{
 			"nombre": "Hades",
 			"imagen": "src/images/juegos/indie/hades.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Hades",
 			"fecha_lanzamiento": "17-09-2020",
 			"desarrollador": "Supergiant Games",
@@ -804,6 +1178,17 @@
 		{
 			"nombre": "Vampire Survivors",
 			"imagen": "src/images/juegos/indie/vampire_survivors.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Vampire_Survivors", 
 			"fecha_lanzamiento": "17-12-2021",
 			"desarrollador": "Luca Galante",
@@ -829,6 +1214,17 @@
 		{
 			"nombre": "The Witness",
 			"imagen": "src/images/juegos/indie/the_witness.png", 
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"calificacion": 8.6,
 			"descripcion": "Texto_descripcion_The_Witness",
 			"fecha_lanzamiento": "26-01-2016",
@@ -855,6 +1251,17 @@
 		{
 			"nombre": "Journey",
 			"imagen": "src/images/juegos/indie/journey.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Journey",
 			"fecha_lanzamiento": "13-03-2012",
 			"desarrollador": "Thatgamecompany, Tricky Pixels",
@@ -880,6 +1287,17 @@
 		{
 			"nombre": "Terraria",
 			"imagen": "src/images/juegos/indie/terraria.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Terraria",
 			"fecha_lanzamiento": "16-05-2011",
 			"desarrollador": "Re-Logic",
@@ -905,6 +1323,17 @@
 		{
 			"nombre": "Papers, Please",
 			"imagen": "src/images/juegos/indie/papers_please.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Papers_Please",
 			"fecha_lanzamiento": "08-08-2013",
 			"desarrollador": "3909 LLC",
@@ -930,6 +1359,17 @@
 		{
 			"nombre": "Into the Breach",
 			"imagen": "src/images/juegos/indie/into_the_breach.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				},
+				{
+					"ruta": "src/images/juegos/indie"
+				}
+			],
 			"descripcion": "Texto_descripcion_Into_the_Breach",
 			"fecha_lanzamiento": "27-02-2018",
 			"desarrollador": "Subset Games",
@@ -957,6 +1397,17 @@
 		{
 			"nombre": "The Long Dark",
 			"imagen": "src/images/juegos/supervivencia/the_long_dark.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_The_Long_Dark", 
 			"fecha_lanzamiento": "01-08-2017",
 			"desarrollador": "Hinterland Studio Inc.",
@@ -982,6 +1433,17 @@
 		{
 			"nombre": "Rust",
 			"imagen": "src/images/juegos/supervivencia/rust.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_Rust",
 			"fecha_lanzamiento": "08-02-2018",
 			"desarrollador": "Facepunch Studios",
@@ -1007,6 +1469,17 @@
 		{
 			"nombre": "Don't Starve",
 			"imagen": "src/images/juegos/supervivencia/dont_starve.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_Dont_Starve",
 			"fecha_lanzamiento": "23-04-2013", 
 			"desarrollador": "Klei Entertainment",
@@ -1032,6 +1505,17 @@
 		{
 			"nombre": "ARK: Survival Evolved",
 			"imagen": "src/images/juegos/supervivencia/ark.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_ARK",
 			"fecha_lanzamiento": "29-08-2017",
 			"desarrollador": "Studio Wildcard, Instinct Games, Efecto Estudio, Virtualities",
@@ -1057,6 +1541,17 @@
 		{
 			"nombre": "Subnautica",
 			"imagen": "src/images/juegos/supervivencia/subnautica.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_Subnautica",
 			"fecha_lanzamiento": "23-01-2018",
 			"desarrollador": "Unknown Worlds Entertainment",
@@ -1082,6 +1577,17 @@
 		{
 			"nombre": "DayZ",
 			"imagen": "src/images/juegos/supervivencia/dayz.png", 
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"calificacion": 7.2,
 			"descripcion": "Texto_descripcion_DayZ",
 			"fecha_lanzamiento": "16-12-2013",
@@ -1108,6 +1614,17 @@
 		{
 			"nombre": "Green Hell",
 			"imagen": "src/images/juegos/supervivencia/green_hell.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_Green_Hell",
 			"fecha_lanzamiento": "29-08-2019",
 			"desarrollador": "Creepy Jar",
@@ -1133,6 +1650,17 @@
 		{
 			"nombre": "7 Days to Die",
 			"imagen": "src/images/juegos/supervivencia/7_days_to_die.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_7DaysToDie",
 			"fecha_lanzamiento": "14-12-2013", 
 			"desarrollador": "The Fun Pimps Entertainment LLC",
@@ -1158,6 +1686,17 @@
 		{
 			"nombre": "The Forest",
 			"imagen": "src/images/juegos/supervivencia/the_forest.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_Forest", 
 			"fecha_lanzamiento": "30-04-2018",
 			"desarrollador": "Endnight Games Ltd",
@@ -1183,6 +1722,17 @@
 		{
 			"nombre": "SCUM",
 			"imagen": "src/images/juegos/supervivencia/scum.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				},
+				{
+					"ruta": "src/images/juegos/supervivencia"
+				}
+			],
 			"descripcion": "Texto_descripcion_SCUM",
 			"fecha_lanzamiento": "04-08-2022", 
 			"desarrollador": "Gamepires, Croteam",
@@ -1210,6 +1760,17 @@
 		{
 			"nombre": "Super Meat Boy",
 			"imagen": "src/images/juegos/plataformas/super_meat_boy.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Super_Meat_Boy",
 			"fecha_lanzamiento": "20-10-2010",
 			"desarrollador": "Team Meat",
@@ -1235,6 +1796,17 @@
 		{
 			"nombre": "Ori and the Blind Forest", 
 			"imagen": "src/images/juegos/plataformas/ori_and_the_blind_forest.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_ORI",
 			"fecha_lanzamiento": "11-03-2015",
 			"desarrollador": "Moon Studios",
@@ -1260,6 +1832,17 @@
 		{
 			"nombre": "Celeste",
 			"imagen": "src/images/juegos/plataformas/celeste.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Celeste", 
 			"fecha_lanzamiento": "25-01-2018",
 			"desarrollador": "Matt Makes Games Inc.",
@@ -1285,6 +1868,17 @@
 		{
 			"nombre": "Hollow Knight",
 			"imagen": "src/images/juegos/plataformas/hollow_knight.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_HN",
 			"fecha_lanzamiento": "24-02-2017",
 			"desarrollador": "Team Cherry",
@@ -1310,6 +1904,17 @@
 		{
 			"nombre": "Rayman Legends",
 			"imagen": "src/images/juegos/plataformas/rayman_legends.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Rayman",
 			"fecha_lanzamiento": "28-08-2013",
 			"desarrollador": "Ubisoft Montpellier",
@@ -1335,6 +1940,17 @@
 		{
 			"nombre": "Cuphead",
 			"imagen": "src/images/juegos/plataformas/cuphead.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Cuphead",
 			"fecha_lanzamiento": "29-09-2017",
 			"desarrollador": "Studio MDHR",
@@ -1360,6 +1976,17 @@
 		{
 			"nombre": "A Hat in Time",
 			"imagen": "src/images/juegos/plataformas/a_hat_in_time.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_AHat",
 			"fecha_lanzamiento": "05-10-2017",
 			"desarrollador": "Gears for Breakfast",
@@ -1385,6 +2012,17 @@
 		{
 			"nombre": "Shovel Knight",
 			"imagen": "src/images/juegos/plataformas/shovel_knight.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Shovel",
 			"fecha_lanzamiento": "03-04-2014",
 			"desarrollador": "Yacht Club Games",
@@ -1410,6 +2048,17 @@
 		{
 			"nombre": "Limbo",
 			"imagen": "src/images/juegos/plataformas/limbo.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Limbo",
 			"fecha_lanzamiento": "21-07-2010",
 			"desarrollador": "Playdead",
@@ -1435,6 +2084,17 @@
 		{
 			"nombre": "Fez",
 			"imagen": "src/images/juegos/plataformas/fez.png",
+			"capturas": [
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				},
+				{
+					"ruta": "src/images/juegos/plataformas"
+				}
+			],
 			"descripcion": "Texto_descripcion_Fez",
 			"fecha_lanzamiento": "13-04-2012",
 			"desarrollador": "Polytron Corporation",

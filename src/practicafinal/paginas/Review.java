@@ -2,14 +2,11 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
-import org.json.simple.JSONObject;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 
-import practicafinal.DataManager;
 import practicafinal.componentes.*;
 import practicafinal.config.*;
 
@@ -95,20 +92,13 @@ public class Review extends JPanel{
         this.sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String name = nameInput.getText();
-                String surnames = surnamesInput.getText();
-                String review = reviewArea.getText();
-
-                if (name.equals("") ||
-                    surnames.equals("") ||
-                    review.equals("") ||
+                if (nameInput.getText().equals("") ||
+                    surnamesInput.getText().equals("") ||
+                    reviewArea.getText().equals("") ||
                     RatingButton.selectedButton == null) {
                     JOptionPane.showMessageDialog(formReview, textoMsgError, "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-                // JSONObject review = new JSONObject();
-                
-                // DataManager.addReview(null, null);
                 
                 JOptionPane.showMessageDialog(formReview, textoMsgReviewCorrecta, textoEnviado, JOptionPane.INFORMATION_MESSAGE);
             }
