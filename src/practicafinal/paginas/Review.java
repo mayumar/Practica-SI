@@ -2,14 +2,12 @@ package practicafinal.paginas;
 
 import javax.swing.*;
 
-import org.json.simple.JSONObject;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import practicafinal.DataManager;
 import practicafinal.componentes.*;
 import practicafinal.config.*;
 
@@ -17,6 +15,9 @@ import practicafinal.config.*;
  * La clase Review representa un panel en el que los usuarios pueden dejar sus reseñas.
 */
 public class Review extends JPanel{
+    private JPanel parentPanel;
+    private String gameName;
+    private HashMap<String,JPanel> views;
     private HintTextField nameInput;
     private HintTextField surnamesInput;
     private HintTextArea reviewArea;
@@ -29,10 +30,14 @@ public class Review extends JPanel{
     /**
      * Crea una instancia de Review. Este panel utiliza un BorderLayout y contiene un título en la parte superior.
     */
-    public Review(ResourceBundle bundleText, String gameName){
+    public Review(ResourceBundle bundleText, String gameName, JPanel parentPanel, HashMap<String,JPanel> views){
         this.textoMsgError = bundleText.getString("Texto_msg_error");
         this.textoMsgReviewCorrecta = bundleText.getString("Texto_msg_review_correcta");
         this.textoEnviado = bundleText.getString("Texto_enviado");
+
+        this.gameName = gameName;
+        this.parentPanel = parentPanel;
+        this.views = views;
 
         setLayout(new BorderLayout());
         this.title = new Titulo(bundleText.getString("Texto_escribir_review"), false);
@@ -111,12 +116,30 @@ public class Review extends JPanel{
                 // DataManager.addReview(null, null);
                 
                 JOptionPane.showMessageDialog(formReview, textoMsgReviewCorrecta, textoEnviado, JOptionPane.INFORMATION_MESSAGE);
+
+                handleOkButtonClick();
             }
         });
 
         formReview.add(this.sendButton, gbc);
 
         return formReview;
+    }
+
+    private void handleOkButtonClick() {
+        this.setVisible(false);
+        this.parentPanel.remove(this);
+
+        JPanel gamePanel = this.views.get(this.gameName);
+        if (gamePanel != null) {
+            gamePanel.setVisible(true);
+            this.parentPanel.add(gamePanel, BorderLayout.CENTER);
+        } else {
+            System.err.println("Panel for game " + this.gameName + " not found.");
+        }
+
+        this.parentPanel.revalidate();
+        this.parentPanel.repaint();
     }
 
     public void updateTexts(ResourceBundle bundleText) {
