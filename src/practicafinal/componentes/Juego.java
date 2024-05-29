@@ -89,6 +89,12 @@ public class Juego extends JPanel {
         JButton juego = new JButton();
 
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
+
+        if (imagen.getIconWidth() != 207 && imagen.getIconHeight() != 224) {
+            Image reescaled = imagen.getImage().getScaledInstance(207, 224, Image.SCALE_SMOOTH);
+            imagen.setImage(reescaled);
+        }
+
         juego.setIcon(imagen);
 
         juego.setBorder(Bordes.black_border);

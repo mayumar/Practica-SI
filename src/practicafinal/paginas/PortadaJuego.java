@@ -63,12 +63,18 @@ public class PortadaJuego extends JPanel{
         // Panel para la imagen
         JPanel imagePanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon((String) this.game.get("imagen"));
-        JLabel imageLabel = new JLabel(imageIcon);
-        imagePanel.add(imageLabel);
+
         imagePanel.setPreferredSize(new Dimension(443, 275));
         imagePanel.setBorder(Bordes.black_border);
         imagePanel.setBackground(Colores.platinum);
-
+        
+        if (imageIcon.getIconWidth() != 443 && imageIcon.getIconHeight() != 275) {
+            Image reescaled = imageIcon.getImage().getScaledInstance(443, 275, Image.SCALE_SMOOTH);
+            imageIcon.setImage(reescaled);
+        }
+        
+        JLabel imageLabel = new JLabel(imageIcon);
+        imagePanel.add(imageLabel);
         elements.add(imagePanel);
 
         Carrousel carrousel = new Carrousel(elements, 1);
