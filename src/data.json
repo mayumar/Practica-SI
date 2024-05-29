@@ -347,7 +347,24 @@
 			"descripcion": "Texto_descripcion_SOT",
 			"fecha_lanzamiento": "20-03-2018",
 			"desarrollador": "Rare",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_SOT",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_SOT",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_SOT",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario4_SOT",
+					"calificacion": 6
+				}
+			]
 		},
 		{
 			"nombre": "The Witcher: Wild hunt",
@@ -356,7 +373,20 @@
 			"descripcion": "Texto_descripcion_Witcher",
 			"fecha_lanzamiento": "18-05-2015",
 			"desarrollador": "CD Projekt RED, CD Projekt",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Witcher",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_Witcher",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_Witcher",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Palword",
@@ -365,7 +395,24 @@
 			"descripcion": "Texto_descripcion_Palworld",
 			"fecha_lanzamiento": "19-01-2024",
 			"desarrollador": "Pocket Pair, Inc.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Palword",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario2_Palword",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_Palword",
+					"calificacion": 5
+				},
+				{
+					"comentario": "Texto_comentario4_Palword",
+					"calificacion": 0
+				}
+			]
 		},
 		{
 			"nombre": "Fallout 76",
@@ -374,7 +421,24 @@
 			"descripcion": "Texto_descripcion_F76",
 			"fecha_lanzamiento": "23-10-2018",
 			"desarrollador": "Bethesda Game Studios, Bethesda Game Studios Austin, Bethesda Studios Montréal Inc.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_F76",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_F76",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario3_F76",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_F76",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Sekiro",
@@ -383,7 +447,24 @@
 			"descripcion": "Texto_descripcion_Sekiro",
 			"fecha_lanzamiento": "22-03-2019",
 			"desarrollador": "FromSoftware",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_Sekiro",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_Sekiro",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_Sekiro",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_Sekiro",
+					"calificacion": 10
+				}
+			]
 		}
 	],
 	"Terror": [
@@ -394,7 +475,24 @@
 			"descripcion": "Texto_descripcion_Outlast",
 			"fecha_lanzamiento": "04-09-2013",
 			"desarrollador": "Red Barrels",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_outlast",
+					"calificacion": 6
+				},
+				{
+					"comentario": "Texto_comentario2_outlast",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_outlast",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario4_outlast",
+					"calificacion": 6
+				}
+			]
 		},
 		{
 			"nombre": "Amnesia: The Dark Descent",
@@ -403,7 +501,24 @@
 			"descripcion": "Texto_descripcion_Amnesia",
 			"fecha_lanzamiento": "08-09-2010",
 			"desarrollador": "Frictional Games",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_amnesia",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_amnesia",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_amnesia",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_amnesia",
+					"calificacion": 10
+				}
+			]
 		},
 		{
 			"nombre": "Resident Evil 7: Biohazard",
@@ -412,7 +527,24 @@
 			"descripcion": "Texto_descripcion_Resident_Evil_7",
 			"fecha_lanzamiento": "24-01-2017",
 			"desarrollador": "Capcom",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_re7",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_re7",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_re7",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_re7",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Silent Hill 2",
@@ -421,7 +553,24 @@
 			"descripcion": "Texto_descripcion_Silent_Hill_2",
 			"fecha_lanzamiento": "24-09-2001",
 			"desarrollador": "Konami Computer Entertainment Tokyo",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_sh2",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario2_sh2",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_sh2",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_sh2",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Dead Space",
@@ -430,7 +579,24 @@
 			"descripcion": "Texto_descripcion_Dead_Space",
 			"fecha_lanzamiento": "13-10-2008",
 			"desarrollador": "EA Redwood Shores",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_dead_space",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_dead_space",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_dead_space",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_dead_space",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "The Evil Within",
@@ -439,7 +605,24 @@
 			"descripcion": "Texto_descripcion_The_Evil_Within",
 			"fecha_lanzamiento": "14-10-2014",
 			"desarrollador": "Tango Gameworks",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_evil_within",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_evil_within",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_evil_within",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario4_evil_within",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Alien: Isolation",
@@ -448,7 +631,24 @@
 			"descripcion": "Texto_descripcion_Alien_Isolation",
 			"fecha_lanzamiento": "06-10-2014",
 			"desarrollador": "Creative Assembly",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_alien_isolation",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_alien_isolation",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_alien_isolation",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_alien_isolation",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Layers of Fear",
@@ -457,7 +657,24 @@
 			"descripcion": "Texto_descripcion_Layers_of_Fear",
 			"fecha_lanzamiento": "16-02-2016", 
 			"desarrollador": "Bloober Team",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_layers_of_fear",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_layers_of_fear",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_layers_of_fear",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_layers_of_fear",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Phasmophobia",
@@ -466,7 +683,24 @@
 			"descripcion": "Texto_descripcion_Phasmophobia",
 			"fecha_lanzamiento": "18-09-2020",
 			"desarrollador": "Kinetic Games",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_phasmophobia",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_phasmophobia",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_phasmophobia",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_phasmophobia",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Fatal Frame II: Crimson Butterfly",
@@ -474,8 +708,25 @@
 			"calificacion": 8.9,
 			"descripcion": "Texto_descripcion_Fatal_Frame_2",
 			"fecha_lanzamiento": "26-11-2003",
-			"desarrollador": "Tecmo",
-			"reviews": []
+				"desarrollador": "Tecmo",
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_fatal_frame_2",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_fatal_frame_2",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_fatal_frame_2",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_fatal_frame_2",
+					"calificacion": 9
+				}
+			]
 		}
 	],
 	"Indie": [
@@ -486,7 +737,24 @@
 			"descripcion": "Texto_descripcion_Celeste",
 			"fecha_lanzamiento": "28-01-2018",
 			"desarrollador": "Matt Makes Games, Extremely OK Games, Ltd.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_celeste",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_celeste",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_celeste",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario4_celeste",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Project Zomboid",
@@ -495,7 +763,24 @@
 			"descripcion": "Texto_descripcion_Project_Zomboid",
 			"fecha_lanzamiento": "08-11-2013",
 			"desarrollador": "The Indie Stone",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_project_zomboid",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_project_zomboid",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_project_zomboid",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_project_zomboid",
+					"calificacion": 7
+				}
+			]
 		},
 		{
 			"nombre": "Stray",
@@ -504,7 +789,24 @@
 			"descripcion": "Texto_descripcion_Stray",
 			"fecha_lanzamiento": "19-07-2022",
 			"desarrollador": "BlueTwelve Studio",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_stray",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_stray",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_stray",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_stray",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Hades",
@@ -513,7 +815,24 @@
 			"descripcion": "Texto_descripcion_Hades",
 			"fecha_lanzamiento": "17-09-2020",
 			"desarrollador": "Supergiant Games",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_hades",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_hades",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_hades",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_hades",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Vampire Survivors",
@@ -522,7 +841,24 @@
 			"descripcion": "Texto_descripcion_Vampire_Survivors", 
 			"fecha_lanzamiento": "17-12-2021",
 			"desarrollador": "Luca Galante",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_vampire_survivors",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_vampire_survivors",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_vampire_survivors",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_vampire_survivors",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "The Witness",
@@ -531,7 +867,24 @@
 			"descripcion": "Texto_descripcion_The_Witness",
 			"fecha_lanzamiento": "26-01-2016",
 			"desarrollador": "Thekla, Inc.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_the_witness",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_the_witness",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_the_witness",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_the_witness",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Journey",
@@ -540,7 +893,24 @@
 			"descripcion": "Texto_descripcion_Journey",
 			"fecha_lanzamiento": "13-03-2012",
 			"desarrollador": "Thatgamecompany, Tricky Pixels",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_journey",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_journey",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_journey",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_journey",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Terraria",
@@ -549,7 +919,24 @@
 			"descripcion": "Texto_descripcion_Terraria",
 			"fecha_lanzamiento": "16-05-2011",
 			"desarrollador": "Re-Logic",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_terraria",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_terraria",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_terraria",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_terraria",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Papers, Please",
@@ -558,7 +945,24 @@
 			"descripcion": "Texto_descripcion_Papers_Please",
 			"fecha_lanzamiento": "08-08-2013",
 			"desarrollador": "3909 LLC",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_papers_please",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_papers_please",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_papers_please",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_papers_please",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Into the Breach",
@@ -567,9 +971,26 @@
 			"descripcion": "Texto_descripcion_Into_the_Breach",
 			"fecha_lanzamiento": "27-02-2018",
 			"desarrollador": "Subset Games",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_into_the_breach",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_into_the_breach",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_into_the_breach",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_into_the_breach",
+					"calificacion": 8
+				}
+			]
 		}
-	],
+	],	
 	"Superviviencia": [
 		{
 			"nombre": "The Long Dark",
@@ -578,7 +999,24 @@
 			"descripcion": "Texto_descripcion_The_Long_Dark", 
 			"fecha_lanzamiento": "01-08-2017",
 			"desarrollador": "Hinterland Studio Inc.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_the_long_dark",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_the_long_dark",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_the_long_dark",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_the_long_dark",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Rust",
@@ -587,7 +1025,24 @@
 			"descripcion": "Texto_descripcion_Rust",
 			"fecha_lanzamiento": "08-02-2018",
 			"desarrollador": "Facepunch Studios",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_rust",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_rust",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_rust",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_rust",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Don't Starve",
@@ -596,7 +1051,24 @@
 			"descripcion": "Texto_descripcion_Dont_Starve",
 			"fecha_lanzamiento": "23-04-2013", 
 			"desarrollador": "Klei Entertainment",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_dont_starve",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_dont_starve",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_dont_starve",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_dont_starve",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "ARK: Survival Evolved",
@@ -605,7 +1077,24 @@
 			"descripcion": "Texto_descripcion_ARK",
 			"fecha_lanzamiento": "29-08-2017",
 			"desarrollador": "Studio Wildcard, Instinct Games, Efecto Estudio, Virtualities",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_ark",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_ark",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_ark",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_ark",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Subnautica",
@@ -614,7 +1103,24 @@
 			"descripcion": "Texto_descripcion_Subnautica",
 			"fecha_lanzamiento": "23-01-2018",
 			"desarrollador": "Unknown Worlds Entertainment",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_subnautica",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_subnautica",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_subnautica",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_subnautica",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "DayZ",
@@ -623,7 +1129,24 @@
 			"descripcion": "Texto_descripcion_DayZ",
 			"fecha_lanzamiento": "16-12-2013",
 			"desarrollador": "Bohemia Interactive",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_dayz",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_dayz",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_dayz",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario4_dayz",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Green Hell",
@@ -632,7 +1155,24 @@
 			"descripcion": "Texto_descripcion_Green_Hell",
 			"fecha_lanzamiento": "29-08-2019",
 			"desarrollador": "Creepy Jar",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_green_hell",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_green_hell",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_green_hell",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario4_green_hell",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "7 Days to Die",
@@ -641,7 +1181,24 @@
 			"descripcion": "Texto_descripcion_7DaysToDie",
 			"fecha_lanzamiento": "14-12-2013", 
 			"desarrollador": "The Fun Pimps Entertainment LLC",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_7_days_to_die",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_7_days_to_die",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario3_7_days_to_die",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_7_days_to_die",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "The Forest",
@@ -650,7 +1207,24 @@
 			"descripcion": "Texto_descripcion_Forest", 
 			"fecha_lanzamiento": "30-04-2018",
 			"desarrollador": "Endnight Games Ltd",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_the_forest",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_the_forest",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_the_forest",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_the_forest",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "SCUM",
@@ -659,9 +1233,26 @@
 			"descripcion": "Texto_descripcion_SCUM",
 			"fecha_lanzamiento": "04-08-2022", 
 			"desarrollador": "Gamepires, Croteam",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_scum",
+					"calificacion": 7
+				},
+				{
+					"comentario": "Texto_comentario2_scum",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_scum",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_scum",
+					"calificacion": 8
+				}
+			]
 		}
-	],
+	],	
 	"Plataformas": [
 		{
 			"nombre": "Super Meat Boy",
@@ -670,7 +1261,24 @@
 			"descripcion": "Texto_descripcion_Super_Meat_Boy",
 			"fecha_lanzamiento": "20-10-2010",
 			"desarrollador": "Team Meat",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_super_meat_boy",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_super_meat_boy",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_super_meat_boy",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_super_meat_boy",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Ori and the Blind Forest", 
@@ -679,7 +1287,24 @@
 			"descripcion": "Texto_descripcion_ORI",
 			"fecha_lanzamiento": "11-03-2015",
 			"desarrollador": "Moon Studios",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_ori",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_ori",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_ori",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_ori",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Celeste",
@@ -688,7 +1313,24 @@
 			"descripcion": "Texto_descripcion_Celeste", 
 			"fecha_lanzamiento": "25-01-2018",
 			"desarrollador": "Matt Makes Games Inc.",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_celeste",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_celeste",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_celeste",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_celeste",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Hollow Knight",
@@ -697,7 +1339,24 @@
 			"descripcion": "Texto_descripcion_HN",
 			"fecha_lanzamiento": "24-02-2017",
 			"desarrollador": "Team Cherry",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_hollow_knight",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_hollow_knight",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_hollow_knight",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_hollow_knight",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Rayman Legends",
@@ -706,7 +1365,24 @@
 			"descripcion": "Texto_descripcion_Rayman",
 			"fecha_lanzamiento": "28-08-2013",
 			"desarrollador": "Ubisoft Montpellier",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_rayman_legends",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_rayman_legends",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario3_rayman_legends",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_rayman_legends",
+					"calificacion": 10
+				}
+			]
 		},
 		{
 			"nombre": "Cuphead",
@@ -715,7 +1391,24 @@
 			"descripcion": "Texto_descripcion_Cuphead",
 			"fecha_lanzamiento": "29-09-2017",
 			"desarrollador": "Studio MDHR",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_cuphead",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_cuphead",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_cuphead",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_cuphead",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "A Hat in Time",
@@ -724,7 +1417,24 @@
 			"descripcion": "Texto_descripcion_AHat",
 			"fecha_lanzamiento": "05-10-2017",
 			"desarrollador": "Gears for Breakfast",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_a_hat_in_time",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_a_hat_in_time",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_a_hat_in_time",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_a_hat_in_time",
+					"calificacion": 8
+				}
+			]
 		},
 		{
 			"nombre": "Shovel Knight",
@@ -733,7 +1443,24 @@
 			"descripcion": "Texto_descripcion_Shovel",
 			"fecha_lanzamiento": "03-04-2014",
 			"desarrollador": "Yacht Club Games",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_shovel_knight",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_shovel_knight",
+					"calificacion": 10
+				},
+				{
+					"comentario": "Texto_comentario3_shovel_knight",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario4_shovel_knight",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Limbo",
@@ -742,7 +1469,24 @@
 			"descripcion": "Texto_descripcion_Limbo",
 			"fecha_lanzamiento": "21-07-2010",
 			"desarrollador": "Playdead",
-			"reviews": []  
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_limbo",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario2_limbo",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_limbo",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_limbo",
+					"calificacion": 9
+				}
+			]
 		},
 		{
 			"nombre": "Fez",
@@ -751,7 +1495,24 @@
 			"descripcion": "Texto_descripcion_Fez",
 			"fecha_lanzamiento": "13-04-2012",
 			"desarrollador": "Polytron Corporation",
-			"reviews": []
+			"reviews": [
+				{
+					"comentario": "Texto_comentario1_fez",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario2_fez",
+					"calificacion": 9
+				},
+				{
+					"comentario": "Texto_comentario3_fez",
+					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_fez",
+					"calificacion": 9
+				}
+			]
 		}
-	]
+	]	
 }
