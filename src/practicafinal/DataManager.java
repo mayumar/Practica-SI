@@ -110,7 +110,7 @@ public class DataManager {
      * Calcula la calificacion media de un juego dado
      * @param game El objeto JSON que representa un juego
      * @return La calificacion media del juego dado redondeada a dos decimas
-     */
+    */
     public static double getRateMean(JSONObject game) {
         JSONArray gameReviews = (JSONArray) game.get("reviews");
         double sum = 0.0;
