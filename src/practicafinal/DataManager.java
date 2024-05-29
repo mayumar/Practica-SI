@@ -105,4 +105,16 @@ public class DataManager {
 
         return game;
     }
+
+    public static double getRateMean(JSONObject game) {
+        JSONArray gameReviews = (JSONArray) game.get("reviews");
+        double sum = 0.0;
+        
+        for (Object review : gameReviews) {
+            JSONObject reviewJSON = (JSONObject) review;
+            sum += (double) reviewJSON.get("calificacion");
+        }
+
+        return sum / gameReviews.size();
+    }
 }
