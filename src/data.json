@@ -41,13 +41,13 @@
 			"imagen": "src/images/juegos/fps/p_cs2.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Counter_Strike_2/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Counter_Strike_2/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Counter_Strike_2/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_CS2",
@@ -73,13 +73,13 @@
 			"imagen": "src/images/juegos/fps/p_splatoon.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Splatoon/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Splatoon/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Splatoon/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Splatoon",
@@ -105,13 +105,13 @@
 			"imagen": "src/images/juegos/fps/p_valorant.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Valorant/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Valorant/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Valorant/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Valorant",
@@ -137,13 +137,13 @@
 			"imagen": "src/images/juegos/fps/p_cod.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/COD_Advance_warfare/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/COD_Advance_warfare/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/COD_Advance_warfare/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_COD",
@@ -169,13 +169,13 @@
 			"imagen": "src/images/juegos/fps/p_borderlands.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Borderlands/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Borderlands/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Borderlands/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Borderlands",
@@ -201,13 +201,13 @@
 			"imagen": "src/images/juegos/fps/p_halo.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Halo",
@@ -233,13 +233,13 @@
 			"imagen": "src/images/juegos/fps/p_quake.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Quake_II/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Quake_II/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Quake_II/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Quake",
@@ -265,13 +265,13 @@
 			"imagen": "src/images/juegos/fps/p_helldivers.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Helldivers_II/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Helldivers_II/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Helldivers_II/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Helldivers",
@@ -297,13 +297,13 @@
 			"imagen": "src/images/juegos/fps/p_battlefield.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Battlefield_1/indice.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Battlefield_1/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/"
+					"ruta": "src/images/juegos/fps/Battlefield_1/images.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_BTF1",
@@ -331,13 +331,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/read.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Read_Dead_Redemption_2/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Read_Dead_Redemption_2/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Read_Dead_Redemption_2/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_RDR2",
@@ -363,13 +363,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/elden.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Elden_Ring/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Elden_Ring/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Elden_Ring/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Doom",
@@ -395,13 +395,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Stardew_Valley/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Stardew_Valley/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Stardew_Valley/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Stardew",
@@ -427,13 +427,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/forza.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Forza_Horizon_5/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Forza_Horizon_5/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Forza_Horizon_5/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_FH5",
@@ -459,13 +459,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Legend_of_Zelda_Breath_of_the_Wild/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Legend_of_Zelda_Breath_of_the_Wild/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Legend_of_Zelda_Breath_of_the_Wild/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Zelda",
@@ -495,13 +495,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/sea.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sea_of_Thieves/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sea_of_Thieves/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sea_of_Thieves/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_SOT",
@@ -531,13 +531,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/witcher.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Witcher_Wild_hunt/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Witcher_Wild_hunt/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/The_Witcher_Wild_hunt/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Witcher",
@@ -563,13 +563,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/palword.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Palword/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Palword/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Palword/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Palworld",
@@ -599,13 +599,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Fallout_76/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Fallout_76/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Fallout_76/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_F76",
@@ -635,13 +635,13 @@
 			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sekiro/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sekiro/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/mundo_abierto"
+					"ruta": "src/images/juegos/mundo_abierto/Sekiro/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Sekiro",
