@@ -25,7 +25,7 @@ public class Review extends JPanel{
     /**
      * Crea una instancia de Review. Este panel utiliza un BorderLayout y contiene un título en la parte superior.
     */
-    public Review(ResourceBundle bundleText){
+    public Review(ResourceBundle bundleText, String gameName){
         this.textoMsgError = bundleText.getString("Texto_msg_error");
         this.textoMsgReviewCorrecta = bundleText.getString("Texto_msg_review_correcta");
         this.textoEnviado = bundleText.getString("Texto_enviado");

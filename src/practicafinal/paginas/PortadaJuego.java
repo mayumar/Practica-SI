@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
  * La clase PortadaJuego representa un panel que muestra la portada de un juego específico.
 */
 public class PortadaJuego extends JPanel{
+    private String gameName;
     private JSONObject game;
     private JPanel parentPanel;
     private HashMap<String,JPanel> views;
@@ -40,6 +41,7 @@ public class PortadaJuego extends JPanel{
      * @param bundleText  ResourceBundle que contiene los textos para internacionalización.
      */
     public PortadaJuego(String gameName, JPanel parentPanel, HashMap<String,JPanel> views, ResourceBundle bundleText){
+        this.gameName = gameName;
         this.parentPanel = parentPanel;
         this.views = views;
         setLayout(new BorderLayout());
@@ -245,10 +247,10 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.5;
         informacion.add(this.buttonReviews, c);
 
-        if(this.views.get("review") == null)
-            this.views.put("review", new Review(bundleText));
+        if(this.views.get("review" + this.gameName) == null)
+            this.views.put("review" + this.gameName, new Review(bundleText, this.gameName));
 
-        this.buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review"), BorderLayout.CENTER));
+        this.buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review" + this.gameName), BorderLayout.CENTER));
         
         return informacion;
     }
