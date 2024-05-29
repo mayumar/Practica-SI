@@ -124,4 +124,11 @@ public class DataManager {
 
         return Math.round(mean * 100.0) / 100.0;
     }
+
+    @SuppressWarnings("unchecked")
+    public static void addReview(JSONObject review, JSONObject game) {
+        JSONArray reviews = (JSONArray) game.get("reviews");
+        reviews.add(review);
+        game.replace("reviews", reviews);
+    }
 }

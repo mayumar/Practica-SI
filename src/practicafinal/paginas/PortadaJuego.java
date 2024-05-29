@@ -116,7 +116,6 @@ public class PortadaJuego extends JPanel{
         c.fill = GridBagConstraints.BOTH;
         c.insets = new Insets(5, 5, 5, 5);
 
-
         /********************************************/
         /* Descripcion del juego                    */
         /********************************************/
