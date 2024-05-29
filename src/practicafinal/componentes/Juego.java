@@ -90,10 +90,8 @@ public class Juego extends JPanel {
 
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
 
-        if (imagen.getIconWidth() != 207 && imagen.getIconHeight() != 224) {
-            Image reescaled = imagen.getImage().getScaledInstance(207, 224, Image.SCALE_SMOOTH);
-            imagen.setImage(reescaled);
-        }
+        Image reescaled = imagen.getImage().getScaledInstance(207, 224, Image.SCALE_SMOOTH);
+        imagen.setImage(reescaled);
 
         juego.setIcon(imagen);
 
