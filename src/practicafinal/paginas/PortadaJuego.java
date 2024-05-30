@@ -133,7 +133,7 @@ public class PortadaJuego extends JPanel{
         c.gridx = 0;
         c.gridy = 0;
         c.gridheight = 1;
-        c.gridwidth = 10;
+        c.gridwidth = 9;
         informacion.add(descripcion, c);
 
 
@@ -162,13 +162,14 @@ public class PortadaJuego extends JPanel{
         /* Tiendas                                  */
         /********************************************/
 
-        ImageIcon steam = new ImageIcon("src/images/steam.png");
-        JButton b_tienda1 = new JButton(steam);
+        ImageIcon game_store = new ImageIcon("src/images/game.png");
+        game_store.setImage(game_store.getImage().getScaledInstance(77, 27, Image.SCALE_SMOOTH));
+        JButton b_tienda1 = new JButton(game_store);
         b_tienda1.setBorder(Bordes.button_empty_border);
         b_tienda1.setOpaque(false);
         b_tienda1.setContentAreaFilled(false);
         b_tienda1.setBorderPainted(false);
-        b_tienda1.setPreferredSize(new Dimension(steam.getIconWidth() + 5, info.getHeight()));
+        b_tienda1.setPreferredSize(new Dimension(game_store.getIconWidth() + 5, info.getHeight()));
         b_tienda1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 7;
         c.gridy = 1;
@@ -177,13 +178,14 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.1;
         informacion.add(b_tienda1, c);
         
-        ImageIcon epic = new ImageIcon("src/images/epic.png");
-        JButton b_tienda2 = new JButton(epic);
+        ImageIcon amazon = new ImageIcon("src/images/amazon.png");
+        amazon.setImage(amazon.getImage().getScaledInstance(72, 40, Image.SCALE_SMOOTH));
+        JButton b_tienda2 = new JButton(amazon);
         b_tienda2.setBorder(Bordes.button_empty_border);
         b_tienda2.setOpaque(false);
         b_tienda2.setContentAreaFilled(false);
         b_tienda2.setBorderPainted(false);
-        b_tienda2.setPreferredSize(new Dimension(epic.getIconWidth() + 5, info.getHeight()));
+        b_tienda2.setPreferredSize(new Dimension(amazon.getIconWidth() + 5, info.getHeight()));
         b_tienda2.setCursor(new Cursor(Cursor.HAND_CURSOR));
         c.gridx = 8;
         c.gridy = 1;
@@ -191,21 +193,6 @@ public class PortadaJuego extends JPanel{
         c.gridwidth = 1;
         c.weightx = 0.1;
         informacion.add(b_tienda2, c);
-        
-        ImageIcon ps = new ImageIcon("src/images/ps.png");
-        JButton b_tienda3 = new JButton(ps);
-        b_tienda3.setBorder(Bordes.button_empty_border);
-        b_tienda3.setOpaque(false);
-        b_tienda3.setContentAreaFilled(false);
-        b_tienda3.setBorderPainted(false);
-        b_tienda3.setPreferredSize(new Dimension(ps.getIconWidth() + 5, info.getHeight()));
-        b_tienda3.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        c.gridx = 9;
-        c.gridy = 1;
-        c.gridheight = 1;
-        c.gridwidth = 1;
-        c.weightx = 0.1;
-        informacion.add(b_tienda3, c);
 
 
         /********************************************/
@@ -242,7 +229,7 @@ public class PortadaJuego extends JPanel{
         c.gridx = 7;
         c.gridy = 2;
         c.gridheight = 1;
-        c.gridwidth = 3;
+        c.gridwidth = 2;
         c.weightx = 0.5;
         informacion.add(this.buttonReviews, c);
 
