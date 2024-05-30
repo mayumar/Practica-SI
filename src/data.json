@@ -2,7 +2,7 @@
 	"FPS": [
 		{
 			"nombre": "Doom Eternal",
-			"imagen": "src/images/juegos/fps/p_doom.png",
+			"imagen": "src/images/juegos/fps/Doom_Eternal/p_doom.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Doom_Eternal/im2.jpeg"
@@ -38,7 +38,7 @@
 		},
 		{
 			"nombre": "Counter Strike 2",
-			"imagen": "src/images/juegos/fps/p_cs2.png",
+			"imagen": "src/images/juegos/fps/Counter_Strike_2/p_cs2.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Counter_Strike_2/im2.jpeg"
@@ -70,7 +70,7 @@
 		},
 		{
 			"nombre": "Splatoon",
-			"imagen": "src/images/juegos/fps/p_splatoon.png",
+			"imagen": "src/images/juegos/fps/Splatoon/p_splatoon.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Splatoon/im1.jpeg"
@@ -102,7 +102,7 @@
 		},
 		{
 			"nombre": "Valorant",
-			"imagen": "src/images/juegos/fps/p_valorant.png",
+			"imagen": "src/images/juegos/fps/Valorant/p_valorant.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Valorant/im2.jpeg"
@@ -134,7 +134,7 @@
 		},
 		{
 			"nombre": "COD: Advance warfare",
-			"imagen": "src/images/juegos/fps/p_cod.png",
+			"imagen": "src/images/juegos/fps/COD_Advance_warfare/p_cod.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/COD_Advance_warfare/im2.jpeg"
@@ -166,7 +166,7 @@
 		},
 		{
 			"nombre": "Borderlands",
-			"imagen": "src/images/juegos/fps/p_borderlands.png",
+			"imagen": "src/images/juegos/fps/Borderlands/p_borderlands.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Borderlands/im2.jpeg"
@@ -198,7 +198,7 @@
 		},
 		{
 			"nombre": "Halo: The Master Chief Collection",
-			"imagen": "src/images/juegos/fps/p_halo.png",
+			"imagen": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/p_halo.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im2.jpeg"
@@ -230,7 +230,7 @@
 		},
 		{
 			"nombre": "Quake II",
-			"imagen": "src/images/juegos/fps/p_quake.png",
+			"imagen": "src/images/juegos/fps/Quake_II/p_quake.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Quake_II/im2.jpeg"
@@ -262,7 +262,7 @@
 		},
 		{
 			"nombre": "Helldivers II",
-			"imagen": "src/images/juegos/fps/p_helldivers.png",
+			"imagen": "src/images/juegos/fps/Helldivers_II/p_helldivers.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Helldivers_II/im2.jpeg"
@@ -294,7 +294,7 @@
 		},
 		{
 			"nombre": "Battlefield 1",
-			"imagen": "src/images/juegos/fps/p_battlefield.png",
+			"imagen": "src/images/juegos/fps/Battlefield_1/p_battlefield.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/fps/Battlefield_1/indice.jpeg"
@@ -328,7 +328,7 @@
 	"Mundo abierto": [
 		{
 			"nombre": "Read Dead Redemption 2",
-			"imagen": "src/images/juegos/mundo_abierto/read.png",
+			"imagen": "src/images/juegos/mundo_abierto/Read_Dead_Redemption_2/read.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Read_Dead_Redemption_2/im1.jpeg"
@@ -360,7 +360,7 @@
 		},		
 		{
 			"nombre": "Elden Ring",
-			"imagen": "src/images/juegos/mundo_abierto/elden.png",
+			"imagen": "src/images/juegos/mundo_abierto/Elden_Ring/elden.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Elden_Ring/im1.jpeg"
@@ -392,7 +392,7 @@
 		},
 		{
 			"nombre": "Stardew Valley",
-			"imagen": "src/images/juegos/mundo_abierto/stardew.png",
+			"imagen": "src/images/juegos/mundo_abierto/Stardew_Valley/stardew.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Stardew_Valley/im1.jpeg"
@@ -424,7 +424,7 @@
 		},
 		{
 			"nombre": "Forza Horizon 5",
-			"imagen": "src/images/juegos/mundo_abierto/forza.png",
+			"imagen": "src/images/juegos/mundo_abierto/Forza_Horizon_5/forza.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Forza_Horizon_5/im1.jpeg"
@@ -456,7 +456,7 @@
 		},
 		{
 			"nombre": "The Legend of Zelda: Breath of the Wild",
-			"imagen": "src/images/juegos/mundo_abierto/zelda.png",
+			"imagen": "src/images/juegos/mundo_abierto/The_Legend_of_Zelda_Breath_of_the_Wild/zelda.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/The_Legend_of_Zelda_Breath_of_the_Wild/im1.jpeg"
@@ -492,7 +492,7 @@
 		},
 		{
 			"nombre": "Sea of Thieves",
-			"imagen": "src/images/juegos/mundo_abierto/sea.png",
+			"imagen": "src/images/juegos/mundo_abierto/Sea_of_Thieves/sea.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Sea_of_Thieves/im1.jpeg"
@@ -528,7 +528,7 @@
 		},
 		{
 			"nombre": "The Witcher: Wild hunt",
-			"imagen": "src/images/juegos/mundo_abierto/witcher.png",
+			"imagen": "src/images/juegos/mundo_abierto/The_Witcher_Wild_hunt/witcher.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/The_Witcher_Wild_hunt/im1.jpeg"
@@ -560,7 +560,7 @@
 		},
 		{
 			"nombre": "Palword",
-			"imagen": "src/images/juegos/mundo_abierto/palword.png",
+			"imagen": "src/images/juegos/mundo_abierto/Palword/palword.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Palword/im1.jpeg"
@@ -596,7 +596,7 @@
 		},
 		{
 			"nombre": "Fallout 76",
-			"imagen": "src/images/juegos/mundo_abierto/fallout.png",
+			"imagen": "src/images/juegos/mundo_abierto/Fallout_76/fallout.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Fallout_76/im1.jpeg"
@@ -632,7 +632,7 @@
 		},
 		{
 			"nombre": "Sekiro",
-			"imagen": "src/images/juegos/mundo_abierto/sekiro.png",
+			"imagen": "src/images/juegos/mundo_abierto/Sekiro/sekiro.png",
 			"capturas": [
 				{
 					"ruta": "src/images/juegos/mundo_abierto/Sekiro/im1.jpeg"
@@ -670,16 +670,16 @@
 	"Terror": [
 		{
 			"nombre": "Outlast",
-			"imagen": "src/images/juegos/terror/outlast.png",
+			"imagen": "src/images/juegos/terror/Outlast/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Outlast/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Outlast/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Outlast/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Outlast",
@@ -706,16 +706,16 @@
 		},
 		{
 			"nombre": "Amnesia: The Dark Descent",
-			"imagen": "src/images/juegos/terror/amnesia.png",
+			"imagen": "src/images/juegos/terror/Amnesia_The_Dark_Descent/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Amnesia_The_Dark_Descent/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Amnesia_The_Dark_Descent/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Amnesia_The_Dark_Descent/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Amnesia",
@@ -742,16 +742,16 @@
 		},
 		{
 			"nombre": "Resident Evil 7: Biohazard",
-			"imagen": "src/images/juegos/terror/re7.png",
+			"imagen": "src/images/juegos/terror/Resident_Evil_7_Biohazard/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Resident_Evil_7",
@@ -778,16 +778,16 @@
 		},
 		{
 			"nombre": "Silent Hill 2",
-			"imagen": "src/images/juegos/terror/sh2.png",
+			"imagen": "src/images/juegos/terror/Silent_Hill_2/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Silent_Hill_2/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Silent_Hill_2/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Silent_Hill_2/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Silent_Hill_2",
@@ -814,16 +814,16 @@
 		},
 		{
 			"nombre": "Dead Space",
-			"imagen": "src/images/juegos/terror/dead_space.png",
+			"imagen": "src/images/juegos/terror/Dead_Space/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Dead_Space/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Dead_Space/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Dead_Space/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Dead_Space",
@@ -850,16 +850,16 @@
 		},
 		{
 			"nombre": "The Evil Within",
-			"imagen": "src/images/juegos/terror/evil_within.png",
+			"imagen": "src/images/juegos/terror/The_Evil_Within/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/The_Evil_Within/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/The_Evil_Within/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/The_Evil_Within/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_The_Evil_Within",
@@ -886,16 +886,16 @@
 		},
 		{
 			"nombre": "Alien: Isolation",
-			"imagen": "src/images/juegos/terror/alien_isolation.png",
+			"imagen": "src/images/juegos/terror/Alien_Isolation/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Alien_Isolation/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Alien_Isolation/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Alien_Isolation/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Alien_Isolation",
@@ -922,16 +922,16 @@
 		},
 		{
 			"nombre": "Layers of Fear",
-			"imagen": "src/images/juegos/terror/layers_of_fear.png",
+			"imagen": "src/images/juegos/terror/Layers_of_Fear/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Layers_of_Fear/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Layers_of_Fear/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Layers_of_Fear/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Layers_of_Fear",
@@ -958,16 +958,16 @@
 		},
 		{
 			"nombre": "Phasmophobia",
-			"imagen": "src/images/juegos/terror/phasmophobia.png",
+			"imagen": "src/images/juegos/terror/Phasmophobia/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Phasmophobia/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Phasmophobia/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Phasmophobia/descarga.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Phasmophobia",
@@ -994,16 +994,16 @@
 		},
 		{
 			"nombre": "Fatal Frame II: Crimson Butterfly",
-			"imagen": "src/images/juegos/terror/fatal_frame_2.png", 
+			"imagen": "src/images/juegos/terror/Fatal_Frame_II_Crimson_Butterfly/portada.jpeg", 
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Fatal_Frame_II_Crimson_Butterfly/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Fatal_Frame_II_Crimson_Butterfly/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror"
+					"ruta": "src/images/juegos/terror/Fatal_Frame_II_Crimson_Butterfly/descarga.jpeg"
 				}
 			],
 			"calificacion": 8.9,
@@ -1033,16 +1033,16 @@
 	"Indie": [
 		{
 			"nombre": "Celeste",
-			"imagen": "src/images/juegos/indie/celeste.png",
+			"imagen": "src/images/juegos/indie/Celeste/im1.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Celeste/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Celeste/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Celeste/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Celeste",
@@ -1069,16 +1069,16 @@
 		},
 		{
 			"nombre": "Project Zomboid",
-			"imagen": "src/images/juegos/indie/project_zomboid.png",
+			"imagen": "src/images/juegos/indie/Project_Zomboid/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Project_Zomboid/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Project_Zomboid/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Project_Zomboid/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Project_Zomboid",
@@ -1105,16 +1105,16 @@
 		},
 		{
 			"nombre": "Stray",
-			"imagen": "src/images/juegos/indie/stray.png",
+			"imagen": "src/images/juegos/indie/Stray/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Stray/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Stray/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Stray/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Stray",
@@ -1141,16 +1141,16 @@
 		},
 		{
 			"nombre": "Hades",
-			"imagen": "src/images/juegos/indie/hades.png",
+			"imagen": "src/images/juegos/indie/Hades/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Hades/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Hades/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Hades/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Hades",
@@ -1177,16 +1177,16 @@
 		},
 		{
 			"nombre": "Vampire Survivors",
-			"imagen": "src/images/juegos/indie/vampire_survivors.png",
+			"imagen": "src/images/juegos/indie/Vampire_Survivors/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Vampire_Survivors/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Vampire_Survivors/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Vampire_Survivors/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Vampire_Survivors", 
@@ -1213,16 +1213,16 @@
 		},
 		{
 			"nombre": "The Witness",
-			"imagen": "src/images/juegos/indie/the_witness.png", 
+			"imagen": "src/images/juegos/indie/The_Witness/portada.jpeg", 
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/The_Witness/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/The_Witness/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/The_Witness/indice.jpeg"
 				}
 			],
 			"calificacion": 8.6,
@@ -1250,16 +1250,16 @@
 		},
 		{
 			"nombre": "Journey",
-			"imagen": "src/images/juegos/indie/journey.png",
+			"imagen": "src/images/juegos/indie/Journey/indice.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Journey/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Journey/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Journey/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Journey",
@@ -1286,16 +1286,16 @@
 		},
 		{
 			"nombre": "Terraria",
-			"imagen": "src/images/juegos/indie/terraria.png",
+			"imagen": "src/images/juegos/indie/Terraria/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Terraria/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Terraria/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Terraria/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Terraria",
@@ -1322,16 +1322,16 @@
 		},
 		{
 			"nombre": "Papers, Please",
-			"imagen": "src/images/juegos/indie/papers_please.png",
+			"imagen": "src/images/juegos/indie/Papers_Please/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Papers_Please/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Papers_Please/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Papers_Please/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Papers_Please",
@@ -1358,16 +1358,16 @@
 		},
 		{
 			"nombre": "Into the Breach",
-			"imagen": "src/images/juegos/indie/into_the_breach.png",
+			"imagen": "src/images/juegos/indie/Into_the_Breach/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Into_the_Breach/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Into_the_Breach/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/indie"
+					"ruta": "src/images/juegos/indie/Into_the_Breach/indice.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Into_the_Breach",
@@ -1396,16 +1396,16 @@
 	"Superviviencia": [
 		{
 			"nombre": "The Long Dark",
-			"imagen": "src/images/juegos/supervivencia/the_long_dark.png",
+			"imagen": "src/images/juegos/supervivencia/The_Long_Dark/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Long_Dark/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Long_Dark/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Long_Dark/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_The_Long_Dark", 
@@ -1432,16 +1432,16 @@
 		},
 		{
 			"nombre": "Rust",
-			"imagen": "src/images/juegos/supervivencia/rust.png",
+			"imagen": "src/images/juegos/supervivencia/Rust/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Rust/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Rust/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Rust/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Rust",
@@ -1468,16 +1468,16 @@
 		},
 		{
 			"nombre": "Don't Starve",
-			"imagen": "src/images/juegos/supervivencia/dont_starve.png",
+			"imagen": "src/images/juegos/supervivencia/Don't_Starve/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Don't_Starve/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Don't_Starve/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Don't_Starve/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Dont_Starve",
@@ -1504,16 +1504,16 @@
 		},
 		{
 			"nombre": "ARK: Survival Evolved",
-			"imagen": "src/images/juegos/supervivencia/ark.png",
+			"imagen": "src/images/juegos/supervivencia/ARK_Survival_Evolved/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/ARK_Survival_Evolved/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/ARK_Survival_Evolved/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/ARK_Survival_Evolved/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_ARK",
@@ -1540,16 +1540,16 @@
 		},
 		{
 			"nombre": "Subnautica",
-			"imagen": "src/images/juegos/supervivencia/subnautica.png",
+			"imagen": "src/images/juegos/supervivencia/Subnautica/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Subnautica/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Subnautica/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Subnautica/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Subnautica",
@@ -1576,16 +1576,16 @@
 		},
 		{
 			"nombre": "DayZ",
-			"imagen": "src/images/juegos/supervivencia/dayz.png", 
+			"imagen": "src/images/juegos/supervivencia/DayZ/portada.jpeg", 
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/DayZ/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/DayZ/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/DayZ/im3.jpeg"
 				}
 			],
 			"calificacion": 7.2,
@@ -1613,16 +1613,16 @@
 		},
 		{
 			"nombre": "Green Hell",
-			"imagen": "src/images/juegos/supervivencia/green_hell.png",
+			"imagen": "src/images/juegos/supervivencia/Green_Hell/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Green_Hell/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Green_Hell/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/Green_Hell/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Green_Hell",
@@ -1649,16 +1649,16 @@
 		},
 		{
 			"nombre": "7 Days to Die",
-			"imagen": "src/images/juegos/supervivencia/7_days_to_die.png",
+			"imagen": "src/images/juegos/supervivencia/7_Days_to_Die/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/7_Days_to_Die/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/7_Days_to_Die/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/7_Days_to_Die/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_7DaysToDie",
@@ -1685,16 +1685,16 @@
 		},
 		{
 			"nombre": "The Forest",
-			"imagen": "src/images/juegos/supervivencia/the_forest.png",
+			"imagen": "src/images/juegos/supervivencia/The_Forest/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Forest/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Forest/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/The_Forest/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Forest", 
@@ -1721,16 +1721,16 @@
 		},
 		{
 			"nombre": "SCUM",
-			"imagen": "src/images/juegos/supervivencia/scum.png",
+			"imagen": "src/images/juegos/supervivencia/SCUM/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/SCUM/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/SCUM/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/supervivencia"
+					"ruta": "src/images/juegos/supervivencia/SCUM/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_SCUM",
@@ -1759,16 +1759,16 @@
 	"Plataformas": [
 		{
 			"nombre": "Super Meat Boy",
-			"imagen": "src/images/juegos/plataformas/super_meat_boy.png",
+			"imagen": "src/images/juegos/plataformas/Super_Meat_Boy/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Super_Meat_Boy/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Super_Meat_Boy/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Super_Meat_Boy/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Super_Meat_Boy",
@@ -1795,16 +1795,16 @@
 		},
 		{
 			"nombre": "Ori and the Blind Forest", 
-			"imagen": "src/images/juegos/plataformas/ori_and_the_blind_forest.png",
+			"imagen": "src/images/juegos/plataformas/Ori_and_the_Blind_Forest/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Ori_and_the_Blind_Forest/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Ori_and_the_Blind_Forest/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Ori_and_the_Blind_Forest/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_ORI",
@@ -1831,52 +1831,52 @@
 		},
 		{
 			"nombre": "Celeste",
-			"imagen": "src/images/juegos/plataformas/celeste.png",
+			"imagen": "src/images/juegos/indie/Celeste/im1.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/indie/Celeste/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/indie/Celeste/im3.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/indie/Celeste/indice.jpeg"
 				}
 			],
-			"descripcion": "Texto_descripcion_Celeste", 
-			"fecha_lanzamiento": "25-01-2018",
-			"desarrollador": "Matt Makes Games Inc.",
+			"descripcion": "Texto_descripcion_Celeste",
+			"fecha_lanzamiento": "28-01-2018",
+			"desarrollador": "Matt Makes Games, Extremely OK Games, Ltd.",
 			"reviews": [
 				{
 					"comentario": "Texto_comentario1_celeste",
-					"calificacion": 9
+					"calificacion": 8
 				},
 				{
 					"comentario": "Texto_comentario2_celeste",
-					"calificacion": 10
+					"calificacion": 9
 				},
 				{
 					"comentario": "Texto_comentario3_celeste",
-					"calificacion": 9
+					"calificacion": 7
 				},
 				{
 					"comentario": "Texto_comentario4_celeste",
-					"calificacion": 9
+					"calificacion": 8
 				}
 			]
 		},
 		{
 			"nombre": "Hollow Knight",
-			"imagen": "src/images/juegos/plataformas/hollow_knight.png",
+			"imagen": "src/images/juegos/plataformas/Hollow_Knight/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Hollow_Knight/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Hollow_Knight/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Hollow_Knight/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_HN",
@@ -1903,16 +1903,16 @@
 		},
 		{
 			"nombre": "Rayman Legends",
-			"imagen": "src/images/juegos/plataformas/rayman_legends.png",
+			"imagen": "src/images/juegos/plataformas/Rayman_Legends/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Rayman_Legends/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Rayman_Legends/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Rayman_Legends/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Rayman",
@@ -1939,16 +1939,16 @@
 		},
 		{
 			"nombre": "Cuphead",
-			"imagen": "src/images/juegos/plataformas/cuphead.png",
+			"imagen": "src/images/juegos/plataformas/Cuphead/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Cuphead/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Cuphead/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Cuphead/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Cuphead",
@@ -1975,16 +1975,16 @@
 		},
 		{
 			"nombre": "A Hat in Time",
-			"imagen": "src/images/juegos/plataformas/a_hat_in_time.png",
+			"imagen": "src/images/juegos/plataformas/A_Hat_in_Time/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/A_Hat_in_Time/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/A_Hat_in_Time/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/A_Hat_in_Time/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_AHat",
@@ -2011,16 +2011,13 @@
 		},
 		{
 			"nombre": "Shovel Knight",
-			"imagen": "src/images/juegos/plataformas/shovel_knight.png",
+			"imagen": "src/images/juegos/plataformas/Shovel_Knight/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Shovel_Knight/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
-				},
-				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Shovel_Knight/im2.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Shovel",
@@ -2047,16 +2044,16 @@
 		},
 		{
 			"nombre": "Limbo",
-			"imagen": "src/images/juegos/plataformas/limbo.png",
+			"imagen": "src/images/juegos/plataformas/Limbo/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Limbo/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Limbo/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Limbo/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Limbo",
@@ -2083,16 +2080,16 @@
 		},
 		{
 			"nombre": "Fez",
-			"imagen": "src/images/juegos/plataformas/fez.png",
+			"imagen": "src/images/juegos/plataformas/Fez/portada.jpeg",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Fez/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Fez/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/plataformas"
+					"ruta": "src/images/juegos/plataformas/Fez/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Fez",
