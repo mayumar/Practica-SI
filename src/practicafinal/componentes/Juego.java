@@ -36,7 +36,6 @@ public class Juego extends JPanel {
      * @param nombre      El nombre del juego que este componente representará.
      * @param parentPanel El panel padre que contiene el componente.
      * @param oldPanel    El panel anterior que se reemplazará cuando se haga clic en el botón del juego.
-     * @param position    La posición del panel dentro del contenedor.
      * @param views       Un HashMap que contiene las vistas de los diferentes juegos.
      * @param bundleText  El ResourceBundle que contiene los textos traducidos.
      */
@@ -52,7 +51,7 @@ public class Juego extends JPanel {
 
         try {
             DataManager dataManager = new DataManager("src/data.json");
-            game = dataManager.getGameFromName(nombre);
+            game = dataManager.getGameFromName(this.nombre);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -71,7 +70,7 @@ public class Juego extends JPanel {
         layeredPane.add(juegoButton, JLayeredPane.DEFAULT_LAYER);
         
         // Añadir el recuadro al JLayeredPane en la capa superior (PALETTE_LAYER)
-        double calificacionDouble = DataManager.getRateMean(game);
+        double calificacionDouble = DataManager.getRateMean(this.game);
         Recuadro recuadro = new Recuadro(calificacionDouble);
         recuadro.setCursor(new Cursor(Cursor.HAND_CURSOR));
         layeredPane.add(recuadro, JLayeredPane.PALETTE_LAYER);
@@ -89,7 +88,7 @@ public class Juego extends JPanel {
     private JButton createJuego(){
         JButton juego = new JButton();
 
-        ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
+        ImageIcon imagen = new ImageIcon((String) this.game.get("imagen"));
 
         Image reescaled = imagen.getImage().getScaledInstance(207, 224, Image.SCALE_SMOOTH);
         imagen.setImage(reescaled);
@@ -117,13 +116,21 @@ public class Juego extends JPanel {
         return juego;
     }
 
+    /**
+     * Añade la portada del juego al HashMap de vistas si no está ya presente.
+     */
     private void addPortada(){
-        this.portada = new PortadaJuego(this.nombre, parentPanel, this.views, this.bundleText);
-        if(views.get(this.nombre) == null){
-            views.put(this.nombre, this.portada);
+        this.portada = new PortadaJuego(this.nombre, this.parentPanel, this.views, this.bundleText);
+        if(this.views.get(this.nombre) == null){
+            this.views.put(this.nombre, this.portada);
         }
     }
 
+    /**
+     * Actualiza los textos del componente y de la portada del juego con el nuevo ResourceBundle.
+     *
+     * @param bundleText El ResourceBundle que contiene los textos traducidos.
+     */
     public void updateTexts(ResourceBundle bundleText) {
         this.bundleText = bundleText;
 

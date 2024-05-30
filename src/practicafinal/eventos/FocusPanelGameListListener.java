@@ -1,7 +1,3 @@
-/*
-* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-* Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
-*/
 package practicafinal.eventos;
 
 import java.awt.BorderLayout;
@@ -15,9 +11,9 @@ import javax.swing.*;
 import practicafinal.paginas.Juegos;
 
 /**
- * La clase FocusPanelGameListener implementa ActionListener y se utiliza para cambiar el panel visible dentro de un contenedor.
+ * La clase FocusPanelGameListListener implementa ActionListener y se utiliza para cambiar el panel visible dentro de un contenedor.
  * Al activar el evento, oculta el panel antiguo y muestra el nuevo panel en la posición especificada.
-*/
+ */
 public class FocusPanelGameListListener implements ActionListener{
     private JPanel parentPanel;
     private JPanel oldPanel;
@@ -31,9 +27,11 @@ public class FocusPanelGameListListener implements ActionListener{
      *
      * @param parentPanel El panel padre que contiene los paneles a cambiar.
      * @param oldPanel    El panel antiguo que se ocultará.
-     * @param name    El nuevo panel que se mostrará.
-     * @param views     La posición del nuevo panel dentro del contenedor.
-    */
+     * @param name        El nombre del nuevo panel que se mostrará.
+     * @param views       Un HashMap que contiene las vistas de los diferentes paneles.
+     * @param bundleText  El ResourceBundle que contiene los textos traducidos.
+     * @param juegos      Una lista de juegos que se actualizará con el nuevo panel si no está presente.
+     */
     public FocusPanelGameListListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos){
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
@@ -51,7 +49,7 @@ public class FocusPanelGameListListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         this.oldPanel.setVisible(false);
-        this.parentPanel.remove(oldPanel);
+        this.parentPanel.remove(this.oldPanel);
         
 
         Juegos newPanel = new Juegos(this.name, this.parentPanel, this.views, false, this.bundleText);

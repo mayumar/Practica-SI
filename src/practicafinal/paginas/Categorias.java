@@ -41,19 +41,19 @@ public class Categorias extends JPanel {
         this.title = new Titulo(nlista, false);
         add(this.title, BorderLayout.NORTH);
 
-        contenido = new JPanel(new GridBagLayout());
+        this.contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(40, 40, 40, 40); // Espaciamiento entre elementos
 
         try {
-            dataManager = new DataManager("src/data.json");
+            this.dataManager = new DataManager("src/data.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         updateCategoryList();
 
-        add(contenido, BorderLayout.CENTER);
+        add(this.contenido, BorderLayout.CENTER);
     }
 
     /**
@@ -66,7 +66,7 @@ public class Categorias extends JPanel {
         
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(40, 40, 40, 40); // Espaciamiento entre elementos
-        Set<String> categorias = dataManager.getAllCategories();
+        Set<String> categorias = this.dataManager.getAllCategories();
 
         int row = 0, col = 0;
         int columns = 3; // Número de columnas en la cuadrícula
@@ -77,7 +77,7 @@ public class Categorias extends JPanel {
             
             if (cat.contains(" ")) cat = cat.replace(" ", "_");
 
-            this.contenido.add(new Categoria(cat, this.parentPanel, this, this.views, this.bundleText, juegos), c);
+            this.contenido.add(new Categoria(cat, this.parentPanel, this, this.views, this.bundleText, this.juegos), c);
             col++;
             if (col == columns) {
                 col = 0;
@@ -95,8 +95,8 @@ public class Categorias extends JPanel {
      * textos de las categorías se actualicen correctamente al realizarse un cambio de idioma.
      */
     private void updateCategoryTitles(){
-        for(Juegos j: juegos){
-            j.updateTexts(bundleText);
+        for(Juegos j: this.juegos){
+            j.updateTexts(this.bundleText);
         }
     }
 
@@ -107,7 +107,7 @@ public class Categorias extends JPanel {
      */
     public void updateTexts(ResourceBundle bundleText) {
         this.bundleText = bundleText;
-        this.title.setLabel(bundleText.getString("Texto_categorias"));
+        this.title.setLabel(this.bundleText.getString("Texto_categorias"));
         updateCategoryList();
         updateCategoryTitles();
     }

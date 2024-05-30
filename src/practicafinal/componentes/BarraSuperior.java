@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
-*/
-
 package practicafinal.componentes;
 
 import javax.swing.*;
@@ -14,9 +9,7 @@ import practicafinal.paginas.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 /**
  * La clase BarraSuperior extiende de JPanel y representa la barra de navegación superior de la aplicación.
@@ -73,29 +66,29 @@ public class BarraSuperior extends JPanel {
         JPanel botones = new JPanel(fl);
         botones.setBackground(Colores.cadet_gray);
         
-        b_inicio = new JButton(bundleText.getString("Texto_inicio"));
-        b_inicio.setBackground(Colores.cadet_gray);
-        b_inicio.setBorder(Bordes.button_empty_border);
-        b_inicio.setForeground(Colores.rising_black);
-        b_inicio.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_inicio.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("inicio"), BorderLayout.CENTER, jf));
-        botones.add(b_inicio);
+        this.b_inicio = new JButton(bundleText.getString("Texto_inicio"));
+        this.b_inicio.setBackground(Colores.cadet_gray);
+        this.b_inicio.setBorder(Bordes.button_empty_border);
+        this.b_inicio.setForeground(Colores.rising_black);
+        this.b_inicio.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        this.b_inicio.addActionListener(new FocusPanelButtonListener(this.parentPanel, this.views, this.views.get("inicio"), this.jf));
+        botones.add(this.b_inicio);
         
-        b_juegos = new JButton(bundleText.getString("Texto_juegos"));
-        b_juegos.setBackground(Colores.cadet_gray);
-        b_juegos.setBorder(Bordes.button_empty_border);
-        b_juegos.setForeground(Colores.rising_black);
-        b_juegos.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_juegos.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("juegos"), BorderLayout.CENTER, jf));
-        botones.add(b_juegos);
+        this.b_juegos = new JButton(bundleText.getString("Texto_juegos"));
+        this.b_juegos.setBackground(Colores.cadet_gray);
+        this.b_juegos.setBorder(Bordes.button_empty_border);
+        this.b_juegos.setForeground(Colores.rising_black);
+        this.b_juegos.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        this.b_juegos.addActionListener(new FocusPanelButtonListener(this.parentPanel, this.views, this.views.get("juegos"), this.jf));
+        botones.add(this.b_juegos);
         
-        b_categorias = new JButton(bundleText.getString("Texto_categorias"));
-        b_categorias.setBackground(Colores.cadet_gray);
-        b_categorias.setBorder(Bordes.button_empty_border);
-        b_categorias.setForeground(Colores.rising_black);
-        b_categorias.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        b_categorias.addActionListener(new FocusPanelButtonListener(parentPanel, this.views, this.views.get("categorias"), BorderLayout.CENTER, jf));
-        botones.add(b_categorias);
+        this.b_categorias = new JButton(bundleText.getString("Texto_categorias"));
+        this.b_categorias.setBackground(Colores.cadet_gray);
+        this.b_categorias.setBorder(Bordes.button_empty_border);
+        this.b_categorias.setForeground(Colores.rising_black);
+        this.b_categorias.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        this.b_categorias.addActionListener(new FocusPanelButtonListener(this.parentPanel, this.views, this.views.get("categorias"), this.jf));
+        botones.add(this.b_categorias);
 
         return botones;
     }
@@ -127,11 +120,11 @@ public class BarraSuperior extends JPanel {
         b_idioma.setPreferredSize(new Dimension(idioma.getIconWidth() + 5, idioma.getIconHeight()));
         b_idioma.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        menuIdiomas = new JPopupMenu();
-        itemEspanol = new JMenuItem(inter.getBundle().getString("Texto_espanol"));
-        menuIdiomas.add(itemEspanol);
-        itemIngles = new JMenuItem(inter.getBundle().getString("Texto_ingles"));
-        menuIdiomas.add(itemIngles);
+        this.menuIdiomas = new JPopupMenu();
+        this.itemEspanol = new JMenuItem(inter.getBundle().getString("Texto_espanol"));
+        this.menuIdiomas.add(this.itemEspanol);
+        this.itemIngles = new JMenuItem(inter.getBundle().getString("Texto_ingles"));
+        this.menuIdiomas.add(this.itemIngles);
 
         // Añadir un ActionListener al botón para mostrar el menú
         b_idioma.addActionListener(new ActionListener() {
@@ -142,7 +135,7 @@ public class BarraSuperior extends JPanel {
         });
 
         // Puedes añadir ActionListener a los ítems del menú para manejar sus acciones
-        itemEspanol.addActionListener(new ActionListener() {
+        this.itemEspanol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Acción para cambiar a Español
@@ -162,7 +155,7 @@ public class BarraSuperior extends JPanel {
             }
         });
         
-        itemIngles.addActionListener(new ActionListener() {
+        this.itemIngles.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Acción para cambiar a Inglés

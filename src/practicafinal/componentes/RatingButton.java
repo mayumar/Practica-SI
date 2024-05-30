@@ -49,7 +49,12 @@ public class RatingButton extends JButton {
         });
     }
     
-    // Método para obtener el color original del botón
+    /**
+     * Obtiene el color original del botón basado en su calificación.
+     *
+     * @param button El botón del cual se quiere obtener el color original.
+     * @return El color original del botón basado en su calificación.
+     */
     private Color getOriginalColor(RatingButton button) {
         int calification = Integer.parseInt(button.getText());
 

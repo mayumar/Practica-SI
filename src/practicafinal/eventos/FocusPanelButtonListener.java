@@ -2,6 +2,7 @@ package practicafinal.eventos;
 
 import java.util.HashMap;
 import java.awt.event.ActionListener;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
@@ -9,27 +10,23 @@ import javax.swing.*;
  * La clase FocusPanelButtonListener maneja los eventos de acción de los botones para cambiar el panel visible en un JFrame.
 */
 public class FocusPanelButtonListener implements ActionListener{
-    JPanel parent_panel;
-    HashMap<String,JPanel> old_panels;
-    JPanel new_panel;
-    String position;
+    JPanel parentPanel;
+    HashMap<String,JPanel> oldPanels;
+    JPanel newPanel;
     JFrame frame;
     
     /**
      * Crea una instancia de FocusPanelButtonListener.
      *
-     * @param parent_panel El panel padre que contiene los paneles antiguos y el nuevo panel.
-     * @param old_panels   Un HashMap que contiene los paneles antiguos que deben ocultarse.
-     * @param new_panel    El nuevo panel que debe mostrarse.
-     * @param position     La posición en el layout donde se debe añadir el nuevo panel.
-     * @param frame        El JFrame que contiene el parent_panel y necesita ser actualizado.
+     * @param parentPanel El panel padre que contiene los paneles antiguos y el nuevo panel.
+     * @param oldPanels   Un HashMap que contiene los paneles antiguos que deben ocultarse.
+     * @param newPanel    El nuevo panel que debe mostrarse.
+     * @param frame        El JFrame que contiene el parentPanel y necesita ser actualizado.
     */
-    public FocusPanelButtonListener(JPanel parent_panel, HashMap<String,JPanel> old_panels,
-            JPanel new_panel, String position, JFrame frame){
-        this.parent_panel = parent_panel;
-        this.old_panels = old_panels;
-        this.new_panel = new_panel;
-        this.position = position;
+    public FocusPanelButtonListener(JPanel parentPanel, HashMap<String,JPanel> oldPanels, JPanel newPanel, JFrame frame){
+        this.parentPanel = parentPanel;
+        this.oldPanels = oldPanels;
+        this.newPanel = newPanel;
         this.frame = frame;
     }
     
@@ -41,14 +38,14 @@ public class FocusPanelButtonListener implements ActionListener{
     */
     @Override
     public void actionPerformed(ActionEvent e){
-        for(String key: old_panels.keySet()){
-            old_panels.get(key).setVisible(false);
-            parent_panel.remove(old_panels.get(key));
+        for(String key: this.oldPanels.keySet()){
+            this.oldPanels.get(key).setVisible(false);
+            this.parentPanel.remove(this.oldPanels.get(key));
         }
         
-        new_panel.setVisible(true);
-        parent_panel.add(new_panel, position);
+        this.newPanel.setVisible(true);
+        this.parentPanel.add(this.newPanel, BorderLayout.CENTER);
         
-        frame.revalidate();
+        this.frame.revalidate();
     }
 }

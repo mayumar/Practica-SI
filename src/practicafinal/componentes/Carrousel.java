@@ -27,16 +27,16 @@ public class Carrousel extends JPanel {
     public Carrousel(ArrayList<JPanel> elements, int elementsToShow) {
         this.elements = elements;
         this.elementsToShow = elementsToShow;
-        currentIndex = 0;
+        this.currentIndex = 0;
 
-        elementsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+        this.elementsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
-        for (int i = 0; i < elementsToShow && i < elements.size(); i++) {
-            elementsPanel.add(elements.get(i));
+        for (int i = 0; i < this.elementsToShow && i < elements.size(); i++) {
+            this.elementsPanel.add(elements.get(i));
         }
 
         setLayout(new BorderLayout());
-        add(elementsPanel, BorderLayout.CENTER);
+        add(this.elementsPanel, BorderLayout.CENTER);
 
         JButton prevButton = new JButton("<");
         prevButton.addActionListener(new ActionListener() {
@@ -76,8 +76,8 @@ public class Carrousel extends JPanel {
      * Muestra el siguiente conjunto de elementos en el carrusel, si los hay.
     */
     public void showNext() {
-        if (currentIndex + elementsToShow < elements.size()) {
-            currentIndex++;
+        if (this.currentIndex + this.elementsToShow < this.elements.size()) {
+            this.currentIndex++;
             updateElements();
         }
     }
@@ -86,8 +86,8 @@ public class Carrousel extends JPanel {
      * Muestra el conjunto anterior de elementos en el carrusel, si los hay.
     */
     public void showPrevious() {
-        if (currentIndex - 1 >= 0) {
-            currentIndex--;
+        if (this.currentIndex - 1 >= 0) {
+            this.currentIndex--;
             updateElements();
         }
     }
@@ -96,11 +96,11 @@ public class Carrousel extends JPanel {
      * Actualiza los elementos visibles en el carrusel según el índice actual.
     */
     private void updateElements() {
-        elementsPanel.removeAll();
-        for (int i = currentIndex; i < currentIndex + elementsToShow && i < elements.size(); i++) {
-            elementsPanel.add(elements.get(i));
+        this.elementsPanel.removeAll();
+        for (int i = this.currentIndex; i < this.currentIndex + this.elementsToShow && i < elements.size(); i++) {
+            this.elementsPanel.add(elements.get(i));
         }
-        elementsPanel.revalidate();
-        elementsPanel.repaint();
+        this.elementsPanel.revalidate();
+        this.elementsPanel.repaint();
     }
 }

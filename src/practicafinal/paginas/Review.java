@@ -29,7 +29,12 @@ public class Review extends JPanel{
 
     /**
      * Crea una instancia de Review. Este panel utiliza un BorderLayout y contiene un título en la parte superior.
-    */
+     * 
+     * @param bundleText  ResourceBundle que contiene los textos para internacionalización.
+     * @param gameName    El nombre del juego asociado a esta reseña.
+     * @param parentPanel El panel principal al que se añadirá este panel de reseña.
+     * @param views       Un mapa de vistas para gestionar la navegación entre ellas.
+     */
     public Review(ResourceBundle bundleText, String gameName, JPanel parentPanel, HashMap<String,JPanel> views){
         this.textoMsgError = bundleText.getString("Texto_msg_error");
         this.textoMsgReviewCorrecta = bundleText.getString("Texto_msg_review_correcta");
@@ -45,6 +50,12 @@ public class Review extends JPanel{
         add(createFormReview(bundleText));
     }
 
+    /**
+     * Crea y devuelve un panel que contiene el formulario para que los usuarios escriban su reseña.
+     * 
+     * @param bundleText ResourceBundle que contiene los textos para internacionalización.
+     * @return Un JPanel que contiene el formulario de reseña.
+     */
     private JPanel createFormReview(ResourceBundle bundleText){
         JPanel formReview = new JPanel(new GridBagLayout());
 
@@ -119,6 +130,9 @@ public class Review extends JPanel{
         return formReview;
     }
 
+    /**
+     * Maneja el evento de clic en el botón OK del mensaje que aparece cuando se ha realizado la reseña con éxito.
+     */
     private void handleOkButtonClick() {
         this.setVisible(false);
         this.parentPanel.remove(this);
@@ -135,6 +149,11 @@ public class Review extends JPanel{
         this.parentPanel.repaint();
     }
 
+    /**
+     * Actualiza los textos de la interfaz de usuario con los valores proporcionados en el nuevo ResourceBundle.
+     * 
+     * @param bundleText El nuevo ResourceBundle con los textos actualizados.
+     */
     public void updateTexts(ResourceBundle bundleText) {
         this.title.setLabel(bundleText.getString("Texto_escribir_review"));
         this.nameInput.setText(bundleText.getString("Texto_nombre"));

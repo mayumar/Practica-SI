@@ -7,17 +7,13 @@ import org.json.simple.JSONObject;
 
 import practicafinal.DataManager;
 import practicafinal.componentes.*;
-import practicafinal.config.Bordes;
-import practicafinal.config.Colores;
+import practicafinal.config.*;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.ResourceBundle;
+import java.net.*;
+import java.util.*;
 
 /**
  * La clase PortadaJuego representa un panel que muestra la portada de un juego específico.
@@ -55,7 +51,7 @@ public class PortadaJuego extends JPanel{
 
         setLayout(new BorderLayout());
 
-        add(new Titulo(gameName, false), BorderLayout.NORTH);
+        add(new Titulo(this.gameName, false), BorderLayout.NORTH);
 
         JPanel contenido = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
@@ -66,7 +62,7 @@ public class PortadaJuego extends JPanel{
 
         try {
             DataManager dataManager = new DataManager("src/data.json");
-            this.game = dataManager.getGameFromName(gameName);
+            this.game = dataManager.getGameFromName(this.gameName);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -114,7 +110,7 @@ public class PortadaJuego extends JPanel{
         c.gridy = 1;
         c.gridheight = 1;
         c.gridwidth = 2;
-        contenido.add(reviews, c);
+        contenido.add(this.reviews, c);
         
         add(contenido, BorderLayout.CENTER);
     }
@@ -135,7 +131,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel descripcion = new JPanel(new GridLayout(1,1));
-        this.descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
+        this.descripcionLabel = new JLabel("<html><div style='text-align: center; margin: 15px;'>" + this.bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
         this.descripcionLabel.setHorizontalAlignment(SwingConstants.CENTER);
         this.descripcionLabel.setForeground(Colores.rising_black);
         descripcion.add(this.descripcionLabel);
@@ -156,7 +152,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
 
         JPanel info = new JPanel(new GridLayout(0,1));
-        this.infoLabel = new JLabel("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
+        this.infoLabel = new JLabel("<html><div style='margin: 10px'>" + this.bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + this.bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         this.infoLabel.setForeground(Colores.rising_black);
         info.add(this.infoLabel);
         
@@ -230,11 +226,11 @@ public class PortadaJuego extends JPanel{
         c.gridheight = 1;
         c.gridwidth = 1;
         c.weightx = 0.2;
-        this.calification = DataManager.getRateMean(game);
+        this.calification = DataManager.getRateMean(this.game);
         Recuadro recuadro = new Recuadro(this.calification);
         informacion.add(recuadro, c);
 
-        JPanel resume_reviews = getResumeReviews(this.calification);
+        JPanel resume_reviews = getResumeReviews();
 
         c.gridx = 1;
         c.gridy = 2;
@@ -247,7 +243,7 @@ public class PortadaJuego extends JPanel{
         /********************************************/
         /* Boton para hacer review                  */
         /********************************************/
-        this.buttonReviews = new JButton(bundleText.getString("Texto_escribir_review"));
+        this.buttonReviews = new JButton(this.bundleText.getString("Texto_escribir_review"));
         this.buttonReviews.setBackground(Colores.cadet_gray);
         this.buttonReviews.setBorder(Bordes.black_border);
         this.buttonReviews.setForeground(Colores.rising_black);
@@ -275,11 +271,15 @@ public class PortadaJuego extends JPanel{
                 parentPanel.revalidate();
             }
         });
-        //this.buttonReviews.addActionListener(new FocusPanelReviewListener(parentPanel, this, "review" + this.gameName, this.views, bundleText));
         
         return informacion;
     }
 
+    /**
+     * Abre la URL especificada en el navegador web predeterminado.
+     * 
+     * @param url La URL a abrir.
+     */
     private static void openURL(String url){
         if(Desktop.isDesktopSupported()){
             try{
@@ -292,32 +292,34 @@ public class PortadaJuego extends JPanel{
         }
     }
 
+    /**
+     * Añade el panel para realizar una reseña al HashMap de vistas si no existe ya.
+     */
     private void addReview(){
-        this.review = new Review(bundleText, gameName, parentPanel, views);
+        this.review = new Review(this.bundleText, this.gameName, this.parentPanel, this.views);
 
-        if(views.get("review" + gameName) == null)
-            views.put("review" + gameName, review);
+        if(this.views.get("review" + this.gameName) == null)
+            this.views.put("review" + this.gameName, this.review);
     }
 
     /**
      * Crea y devuelve un panel que resume las calificaciones y comentarios de los usuarios sobre el juego.
      * 
-     * @param calification La calificación promedio del juego.
      * @return Un JPanel que resume las calificaciones y comentarios de los usuarios.
      */
-    private JPanel getResumeReviews(Double calification){
+    private JPanel getResumeReviews(){
         JPanel resume_reviews = new JPanel(new GridLayout(1,1));
 
         //resume_reviews.setPreferredSize(new Dimension(350, 48));
         resume_reviews.setBorder(Bordes.black_border);
 
-        if(calification < 5.0){
+        if(this.calification < 5.0){
             resume_reviews.setBackground(Colores.light_red);
             this.linea = new JLabel("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
-        }else if(calification < 7.0){
+        }else if(this.calification < 7.0){
             resume_reviews.setBackground(Colores.naples_yellow);
             this.linea = new JLabel("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mixtas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
@@ -342,77 +344,82 @@ public class PortadaJuego extends JPanel{
     private JPanel createReviews(){
         GridLayout gl = new GridLayout(0, 1);
         gl.setVgap(10);
-        JPanel reviews = new JPanel(gl);
+        JPanel reviewsPanel = new JPanel(gl);
 
-        this.reviewlist = (JSONArray) game.get("reviews");
+        this.reviewlist = (JSONArray) this.game.get("reviews");
 
         for(Object reviewObject : this.reviewlist){
             JSONObject reviewJsonObject = (JSONObject) reviewObject;
 
-            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
+            JPanel fila = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
 
             Long calificacion = (Long) reviewJsonObject.get("calificacion");
             Recuadro recuadro = new Recuadro(calificacion);
-            linea.add(recuadro);
+            fila.add(recuadro);
 
-            JPanel review = new JPanel(new GridLayout(1, 1));
+            JPanel miniReview = new JPanel(new GridLayout(1, 1));
             JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + this.bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
             comentario.setHorizontalAlignment(SwingConstants.CENTER);
             comentario.setForeground(Colores.rising_black);
-            review.add(comentario);
-            review.setBackground(Colores.platinum);
-            review.setForeground(Colores.rising_black);
-            review.setBorder(Bordes.black_border);
-            review.setPreferredSize(new Dimension(1150, 47));
-            linea.add(review);
+            miniReview.add(comentario);
+            miniReview.setBackground(Colores.platinum);
+            miniReview.setForeground(Colores.rising_black);
+            miniReview.setBorder(Bordes.black_border);
+            miniReview.setPreferredSize(new Dimension(1150, 47));
+            fila.add(miniReview);
 
-            reviews.add(linea);
+            reviewsPanel.add(fila);
         }
         
-        return reviews;
+        return reviewsPanel;
     }
 
+    /**
+     * Actualiza los textos de la interfaz de usuario con los valores proporcionados en el nuevo ResourceBundle.
+     * 
+     * @param bundleText El nuevo ResourceBundle con los textos actualizados.
+     */
     public void updateTexts(ResourceBundle bundleText) {
         this.bundleText = bundleText;
 
-        this.descripcionLabel.setText("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
-        this.infoLabel.setText("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
+        this.descripcionLabel.setText("<html><div style='text-align: center; margin: 15px;'>" + this.bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
+        this.infoLabel.setText("<html><div style='margin: 10px'>" + this.bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + this.bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         
         if (this.calification < 5.0)
-            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
+            this.linea.setText("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
         else if (this.calification < 7.0)
-            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mixtas") + "</div></html>");
+            this.linea.setText("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mixtas") + "</div></html>");
         else
-            this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
+            this.linea.setText("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
 
-        this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
+        this.buttonReviews.setText(this.bundleText.getString("Texto_escribir_review"));
 
         if(this.review != null)
-            this.review.updateTexts(bundleText);
+            this.review.updateTexts(this.bundleText);
 
         this.reviews.removeAll();
 
         for(Object reviewObject : this.reviewlist){
             JSONObject reviewJsonObject = (JSONObject) reviewObject;
 
-            JPanel linea = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
+            JPanel fila = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
 
             Long calificacion = (Long) reviewJsonObject.get("calificacion");
             Recuadro recuadro = new Recuadro(calificacion);
-            linea.add(recuadro);
+            fila.add(recuadro);
 
-            JPanel review = new JPanel(new GridLayout(1, 1));
-            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
+            JPanel miniReview = new JPanel(new GridLayout(1, 1));
+            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + this.bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
             comentario.setHorizontalAlignment(SwingConstants.CENTER);
             comentario.setForeground(Colores.rising_black);
-            review.add(comentario);
-            review.setBackground(Colores.platinum);
-            review.setForeground(Colores.rising_black);
-            review.setBorder(Bordes.black_border);
-            review.setPreferredSize(new Dimension(1150, 47));
-            linea.add(review);
+            miniReview.add(comentario);
+            miniReview.setBackground(Colores.platinum);
+            miniReview.setForeground(Colores.rising_black);
+            miniReview.setBorder(Bordes.black_border);
+            miniReview.setPreferredSize(new Dimension(1150, 47));
+            fila.add(miniReview);
 
-            this.reviews.add(linea);
+            this.reviews.add(fila);
         }
 
         revalidate();

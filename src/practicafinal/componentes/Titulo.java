@@ -29,19 +29,19 @@ public class Titulo extends JPanel {
             logo.setHorizontalAlignment(JLabel.LEFT);
             add(logo, BorderLayout.NORTH);
 
-            textLabel = new JLabel(this.label);
-            textLabel.setForeground(Colores.rising_black);
-            textLabel.setBackground(Colores.rising_black);
-            Font fuente = textLabel.getFont();
-            textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
-            add(textLabel, BorderLayout.CENTER);
+            this.textLabel = new JLabel(this.label);
+            this.textLabel.setForeground(Colores.rising_black);
+            this.textLabel.setBackground(Colores.rising_black);
+            Font fuente = this.textLabel.getFont();
+            this.textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, fuente.getSize()));
+            add(this.textLabel, BorderLayout.CENTER);
         } else {
-            textLabel = new JLabel(this.label);
-            textLabel.setForeground(Colores.rising_black);
-            textLabel.setBackground(Colores.rising_black);
-            Font fuente = textLabel.getFont();
-            textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
-            add(textLabel, BorderLayout.CENTER);
+            this.textLabel = new JLabel(this.label);
+            this.textLabel.setForeground(Colores.rising_black);
+            this.textLabel.setBackground(Colores.rising_black);
+            Font fuente = this.textLabel.getFont();
+            this.textLabel.setFont(new Font(fuente.getFontName(), Font.PLAIN, 25));
+            add(this.textLabel, BorderLayout.CENTER);
         }
 
         add(new Linea(0, 5, 2000, 5), BorderLayout.SOUTH);
@@ -54,8 +54,8 @@ public class Titulo extends JPanel {
      */
     public void setLabel(String label) {
         this.label = label;
-        if (textLabel != null) {
-            textLabel.setText(label);
+        if (this.textLabel != null) {
+            this.textLabel.setText(label);
         }
     }
 }

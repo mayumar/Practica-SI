@@ -75,7 +75,7 @@ public class Juegos extends JPanel{
             }
         }
 
-        contenido.add(lista, BorderLayout.CENTER);
+        contenido.add(this.lista, BorderLayout.CENTER);
 
         add(contenido, BorderLayout.CENTER);
     }

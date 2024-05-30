@@ -32,7 +32,6 @@ public class Categoria extends JButton {
      * @param nombre      El nombre de la categoría que este botón representará.
      * @param parentPanel El panel padre que contiene el botón.
      * @param oldPanel    El panel anterior que se reemplazará cuando se haga clic en el botón.
-     * @param position    La posición del panel dentro del contenedor.
      * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
      * @param bundleText  Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
      * @param juegos      ArrayList que contiene la lista de juegos de la categoría.
