@@ -9,7 +9,6 @@ import practicafinal.DataManager;
 import practicafinal.componentes.*;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
-import practicafinal.eventos.FocusPanelReviewListener;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -36,6 +35,8 @@ public class PortadaJuego extends JPanel{
     private JSONArray reviewlist;
     private JPanel reviews;
     private Review review;
+    private ResourceBundle bundleText;
+    private JPanel oldPanel;
 
     /**
      * Crea una instancia de PortadaJuego que muestra la portada de un juego específico.
@@ -50,6 +51,8 @@ public class PortadaJuego extends JPanel{
         this.parentPanel = parentPanel;
         this.views = views;
         this.review = null;
+        this.bundleText = bundleText;
+
         setLayout(new BorderLayout());
 
         add(new Titulo(gameName, false), BorderLayout.NORTH);
@@ -97,7 +100,7 @@ public class PortadaJuego extends JPanel{
         c.gridwidth = 1;
         contenido.add(carrousel, c);
 
-        JPanel informacion = createInformacion(bundleText);
+        JPanel informacion = createInformacion();
 
         c.gridx = 1;
         c.gridy = 0;
@@ -105,7 +108,7 @@ public class PortadaJuego extends JPanel{
         c.gridwidth = 1;
         contenido.add(informacion, c);
 
-        this.reviews = createReviews(bundleText);
+        this.reviews = createReviews();
 
         c.gridx = 0;
         c.gridy = 1;
@@ -119,10 +122,9 @@ public class PortadaJuego extends JPanel{
     /**
      * Crea y devuelve un panel que contiene información detallada sobre el juego, incluida su descripción, fecha de lanzamiento, desarrollador y enlaces a tiendas.
      * 
-     * @param bundleText El ResourceBundle que contiene los textos necesarios para internacionalización.
      * @return Un JPanel que contiene la información detallada sobre el juego.
      */
-    private JPanel createInformacion(ResourceBundle bundleText){
+    private JPanel createInformacion(){
         JPanel informacion = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
@@ -232,7 +234,7 @@ public class PortadaJuego extends JPanel{
         Recuadro recuadro = new Recuadro(this.calification);
         informacion.add(recuadro, c);
 
-        JPanel resume_reviews = getResumeReviews(this.calification, bundleText);
+        JPanel resume_reviews = getResumeReviews(this.calification);
 
         c.gridx = 1;
         c.gridy = 2;
@@ -257,7 +259,23 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.5;
         informacion.add(this.buttonReviews, c);
 
-        this.buttonReviews.addActionListener(new FocusPanelReviewListener(parentPanel, this, "review" + this.gameName, this.views, bundleText));
+        this.oldPanel = this;
+
+        this.buttonReviews.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                oldPanel.setVisible(false);
+                parentPanel.remove(oldPanel);
+                
+                addReview();
+                
+                views.get("review" + gameName).setVisible(true);
+                parentPanel.add(views.get("review" + gameName), BorderLayout.CENTER);
+                
+                parentPanel.revalidate();
+            }
+        });
+        //this.buttonReviews.addActionListener(new FocusPanelReviewListener(parentPanel, this, "review" + this.gameName, this.views, bundleText));
         
         return informacion;
     }
@@ -274,13 +292,20 @@ public class PortadaJuego extends JPanel{
         }
     }
 
+    private void addReview(){
+        this.review = new Review(bundleText, gameName, parentPanel, views);
+
+        if(views.get("review" + gameName) == null)
+            views.put("review" + gameName, review);
+    }
+
     /**
      * Crea y devuelve un panel que resume las calificaciones y comentarios de los usuarios sobre el juego.
      * 
      * @param calification La calificación promedio del juego.
      * @return Un JPanel que resume las calificaciones y comentarios de los usuarios.
      */
-    private JPanel getResumeReviews(Double calification, ResourceBundle bundleText){
+    private JPanel getResumeReviews(Double calification){
         JPanel resume_reviews = new JPanel(new GridLayout(1,1));
 
         //resume_reviews.setPreferredSize(new Dimension(350, 48));
@@ -288,19 +313,19 @@ public class PortadaJuego extends JPanel{
 
         if(calification < 5.0){
             resume_reviews.setBackground(Colores.light_red);
-            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mayormente_negativas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
         }else if(calification < 7.0){
             resume_reviews.setBackground(Colores.naples_yellow);
-            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mixtas") + "</div></html>");
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mixtas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
         }else{
             resume_reviews.setBackground(Colores.aquamarine);
-            this.linea = new JLabel("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
+            this.linea = new JLabel("<html><div style='text-align: center;'>" + this.bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
             this.linea.setFont(new Font(this.linea.getFont().getFontName(), Font.BOLD, 9));
             this.linea.setHorizontalAlignment(SwingConstants.CENTER);
             resume_reviews.add(this.linea);
@@ -314,7 +339,7 @@ public class PortadaJuego extends JPanel{
      * 
      * @return Un JPanel que contiene las reseñas de los usuarios sobre el juego.
      */
-    private JPanel createReviews(ResourceBundle bundleText){
+    private JPanel createReviews(){
         GridLayout gl = new GridLayout(0, 1);
         gl.setVgap(10);
         JPanel reviews = new JPanel(gl);
@@ -331,7 +356,7 @@ public class PortadaJuego extends JPanel{
             linea.add(recuadro);
 
             JPanel review = new JPanel(new GridLayout(1, 1));
-            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
+            JLabel comentario = new JLabel("<html><div style='text-align: center; margin: 10px;'>" + this.bundleText.getString((String) reviewJsonObject.get("comentario")) + "</div></html>");
             comentario.setHorizontalAlignment(SwingConstants.CENTER);
             comentario.setForeground(Colores.rising_black);
             review.add(comentario);
@@ -348,6 +373,8 @@ public class PortadaJuego extends JPanel{
     }
 
     public void updateTexts(ResourceBundle bundleText) {
+        this.bundleText = bundleText;
+
         this.descripcionLabel.setText("<html><div style='text-align: center; margin: 15px;'>" + bundleText.getString((String) this.game.get("descripcion")) + "</div></html>");
         this.infoLabel.setText("<html><div style='margin: 10px'>" + bundleText.getString("Texto_fecha_lanzamiento") +": " + this.game.get("fecha_lanzamiento") + "<br/>" + bundleText.getString("Texto_desarrollador") + ": " + this.game.get("desarrollador") + "<div/></html>");
         

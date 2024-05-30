@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
+import practicafinal.eventos.FocusPanelGameListListener;
 import practicafinal.paginas.Juegos;
 
 /**
@@ -55,7 +56,7 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         
-        //addActionListener(new FocusPanelGameListListener(this.parentPanel, oldPanel, this.nombre, this.views, bundleText));
+        addActionListener(new FocusPanelGameListListener(this.parentPanel, oldPanel, this.nombre, this.views, bundleText));
     }
 
     /**
