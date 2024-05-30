@@ -6,6 +6,7 @@ package practicafinal.eventos;
 
 import java.awt.BorderLayout;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -23,6 +24,7 @@ public class FocusPanelGameListListener implements ActionListener{
     private String name;
     private HashMap<String,JPanel> views;
     private ResourceBundle bundleText;
+    private ArrayList<Juegos> juegos;
     
     /**
      * Crea un listener para cambiar el panel visible dentro de un contenedor.
@@ -32,12 +34,13 @@ public class FocusPanelGameListListener implements ActionListener{
      * @param name    El nuevo panel que se mostrará.
      * @param views     La posición del nuevo panel dentro del contenedor.
     */
-    public FocusPanelGameListListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText){
+    public FocusPanelGameListListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos){
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
         this.name = name;
         this.views = views;
         this.bundleText = bundleText;
+        this.juegos = juegos;
     }
     
     /**
@@ -54,7 +57,7 @@ public class FocusPanelGameListListener implements ActionListener{
         Juegos newPanel = new Juegos(this.name, this.parentPanel, this.views, false, this.bundleText);
 
         if(this.views.get(this.name) == null){
-            //juegos.add(newPanel);
+            juegos.add(newPanel);
             this.views.put(this.name, newPanel);
         }
         

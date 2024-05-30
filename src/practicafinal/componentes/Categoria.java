@@ -56,7 +56,7 @@ public class Categoria extends JButton {
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         
-        addActionListener(new FocusPanelGameListListener(this.parentPanel, oldPanel, this.nombre, this.views, bundleText));
+        addActionListener(new FocusPanelGameListListener(this.parentPanel, oldPanel, this.nombre, this.views, bundleText, juegos));
     }
 
     /**
