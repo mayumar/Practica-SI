@@ -49,6 +49,7 @@ public class PortadaJuego extends JPanel{
         this.gameName = gameName;
         this.parentPanel = parentPanel;
         this.views = views;
+        this.review = null;
         setLayout(new BorderLayout());
 
         add(new Titulo(gameName, false), BorderLayout.NORTH);
@@ -359,7 +360,8 @@ public class PortadaJuego extends JPanel{
 
         this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
 
-        this.review.updateTexts(bundleText);
+        if(this.review != null)
+            this.review.updateTexts(bundleText);
 
         this.reviews.removeAll();
 

@@ -2,6 +2,8 @@ package practicafinal.componentes;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import org.json.simple.JSONObject;
 
@@ -9,7 +11,6 @@ import practicafinal.paginas.PortadaJuego;
 import practicafinal.DataManager;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
-import practicafinal.eventos.FocusPanelGameListener;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ public class Juego extends JPanel {
     private JPanel oldPanel;
     private HashMap<String,JPanel> views;
     private JSONObject game;
+    private ResourceBundle bundleText;
     private PortadaJuego portada;
 
     /**
@@ -43,6 +45,8 @@ public class Juego extends JPanel {
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
         this.views = views;
+        this.bundleText = bundleText;
+        this.portada = null;
         
         JSONObject game = null;
 
@@ -56,7 +60,7 @@ public class Juego extends JPanel {
         this.game = game;
 
         // Crear el botón del juego
-        JButton juegoButton = createJuego(bundleText);
+        JButton juegoButton = createJuego();
 
         // Crear un JLayeredPane para contener el botón y el recuadro
         JLayeredPane layeredPane = new JLayeredPane();
@@ -80,10 +84,9 @@ public class Juego extends JPanel {
     /**
      * Crea un botón del juego con su imagen y configura su comportamiento.
      * 
-     * @param bundleText El ResourceBundle que contiene los textos traducidos.
      * @return Un JButton que representa el juego.
      */
-    private JButton createJuego(ResourceBundle bundleText){
+    private JButton createJuego(){
         JButton juego = new JButton();
 
         ImageIcon imagen = new ImageIcon((String) game.get("imagen"));
@@ -97,12 +100,34 @@ public class Juego extends JPanel {
         juego.setBackground(Colores.cadet_gray);
         juego.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        juego.addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, nombre, views, bundleText));
+        juego.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                oldPanel.setVisible(false);
+                parentPanel.remove(oldPanel);
+
+                addPortada();
+                views.get(nombre).setVisible(true);
+                parentPanel.add(views.get(nombre), BorderLayout.CENTER);
+                
+                parentPanel.revalidate();
+            }
+        });
 
         return juego;
     }
 
+    public void addPortada(){
+        this.portada = new PortadaJuego(this.nombre, parentPanel, this.views, this.bundleText);
+        if(views.get(this.nombre) == null){
+            views.put(this.nombre, this.portada);
+        }
+    }
+
     public void updateTexts(ResourceBundle bundleText) {
-        this.portada.updateTexts(bundleText);
+        this.bundleText = bundleText;
+        
+        if(this.portada != null)
+            this.portada.updateTexts(bundleText);
     }
 }

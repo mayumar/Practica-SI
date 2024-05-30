@@ -18,24 +18,24 @@ import practicafinal.paginas.Review;
  * Al activar el evento, oculta el panel antiguo y muestra el nuevo panel en la posición especificada.
 */
 public class FocusPanelReviewListener implements ActionListener{
-    private JPanel parent_panel;
-    private JPanel old_panel;
-    private String new_panel_name;
+    private JPanel parentPanel;
+    private JPanel oldPanel;
+    private String name;
     private HashMap<String,JPanel> views;
     private ResourceBundle bundleText;
     
     /**
      * Crea un listener para cambiar el panel visible dentro de un contenedor.
      *
-     * @param parent_panel El panel padre que contiene los paneles a cambiar.
-     * @param old_panel    El panel antiguo que se ocultará.
-     * @param new_panel_name    El nuevo panel que se mostrará.
+     * @param parentPanel El panel padre que contiene los paneles a cambiar.
+     * @param oldPanel    El panel antiguo que se ocultará.
+     * @param name    El nuevo panel que se mostrará.
      * @param views     La posición del nuevo panel dentro del contenedor.
     */
-    public FocusPanelReviewListener(JPanel parent_panel, JPanel old_panel, String new_panel_name, HashMap<String,JPanel> views, ResourceBundle bundleText){
-        this.parent_panel = parent_panel;
-        this.old_panel = old_panel;
-        this.new_panel_name = new_panel_name;
+    public FocusPanelReviewListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText){
+        this.parentPanel = parentPanel;
+        this.oldPanel = oldPanel;
+        this.name = name;
         this.views = views;
         this.bundleText = bundleText;
     }
@@ -47,18 +47,18 @@ public class FocusPanelReviewListener implements ActionListener{
     */
     @Override
     public void actionPerformed(ActionEvent e){
-        old_panel.setVisible(false);
-        parent_panel.remove(old_panel);
+        oldPanel.setVisible(false);
+        parentPanel.remove(oldPanel);
         
 
-        JPanel new_panel = new Review(bundleText, new_panel_name, parent_panel, this.views);
+        JPanel newPanel = new Review(bundleText, name, parentPanel, this.views);
 
-        if(this.views.get("review" + new_panel_name) == null)
-            this.views.put("review" + new_panel_name, new_panel);
+        if(this.views.get("review" + name) == null)
+            this.views.put("review" + name, newPanel);
         
-        this.views.get(this.new_panel_name).setVisible(true);
-        parent_panel.add(this.views.get(this.new_panel_name), BorderLayout.CENTER);
+        this.views.get("review" + name).setVisible(true);
+        parentPanel.add(this.views.get("review" + name), BorderLayout.CENTER);
         
-        parent_panel.revalidate();
+        parentPanel.revalidate();
     }
 }
