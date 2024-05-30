@@ -35,6 +35,7 @@ public class PortadaJuego extends JPanel{
     private JButton buttonReviews;
     private JSONArray reviewlist;
     private JPanel reviews;
+    private Review review;
 
     /**
      * Crea una instancia de PortadaJuego que muestra la portada de un juego específico.
@@ -255,8 +256,10 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.5;
         informacion.add(this.buttonReviews, c);
 
+        this.review = new Review(bundleText, this.gameName, this.parentPanel, this.views);
+
         if(this.views.get("review" + this.gameName) == null)
-            this.views.put("review" + this.gameName, new Review(bundleText, this.gameName, this.parentPanel, this.views));
+            this.views.put("review" + this.gameName, this.review);
 
         this.buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review" + this.gameName), BorderLayout.CENTER));
         
@@ -360,6 +363,8 @@ public class PortadaJuego extends JPanel{
             this.linea.setText("<html><div style='text-align: center;'>" + bundleText.getString("Texto_mayormente_positivas") + "</div></html>");
 
         this.buttonReviews.setText(bundleText.getString("Texto_escribir_review"));
+
+        this.review.updateTexts(bundleText);
 
         this.reviews.removeAll();
 
