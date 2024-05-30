@@ -63,19 +63,25 @@ public class PortadaJuego extends JPanel{
         }
 
         // Panel para la imagen
-        JPanel imagePanel = new JPanel(new GridLayout(1, 1));
-        ImageIcon imageIcon = new ImageIcon((String) this.game.get("imagen"));
+        JSONArray images = (JSONArray) this.game.get("capturas");
 
-        Image reescaled = imageIcon.getImage().getScaledInstance(443, 280, Image.SCALE_SMOOTH);
-        imageIcon.setImage(reescaled);
-        
-        JLabel imageLabel = new JLabel(imageIcon);
-        imagePanel.add(imageLabel);
-        imagePanel.setPreferredSize(new Dimension(443, 275));
-        imagePanel.setBorder(Bordes.black_border);
-        imagePanel.setBackground(Colores.platinum);
-        
-        elements.add(imagePanel);
+        for (Object image : images) {
+            JSONObject imageJSON = (JSONObject) image;
+
+            JPanel imagePanel = new JPanel(new GridLayout(1, 1));
+            ImageIcon imageIcon = new ImageIcon((String) imageJSON.get("ruta"));
+    
+            Image reescaled = imageIcon.getImage().getScaledInstance(443, 280, Image.SCALE_SMOOTH);
+            imageIcon.setImage(reescaled);
+            
+            JLabel imageLabel = new JLabel(imageIcon);
+            imagePanel.add(imageLabel);
+            imagePanel.setPreferredSize(new Dimension(443, 275));
+            imagePanel.setBorder(Bordes.black_border);
+            imagePanel.setBackground(Colores.platinum);
+            
+            elements.add(imagePanel);
+        }
 
         Carrousel carrousel = new Carrousel(elements, 1);
 
