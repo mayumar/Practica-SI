@@ -29,7 +29,7 @@ public class Carrousel extends JPanel {
         this.elementsToShow = elementsToShow;
         currentIndex = 0;
 
-        elementsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        elementsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
         for (int i = 0; i < elementsToShow && i < elements.size(); i++) {
             elementsPanel.add(elements.get(i));
