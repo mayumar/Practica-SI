@@ -12,6 +12,10 @@ import practicafinal.config.Colores;
 import practicafinal.eventos.FocusPanelGameListener;
 
 import java.awt.*;
+import java.awt.event.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -177,6 +181,12 @@ public class PortadaJuego extends JPanel{
         b_tienda1.setBorderPainted(false);
         b_tienda1.setPreferredSize(new Dimension(game_store.getIconWidth() + 5, info.getHeight()));
         b_tienda1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        b_tienda1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openURL("https://www.game.es/");
+            }
+        });
         c.gridx = 7;
         c.gridy = 1;
         c.gridheight = 1;
@@ -193,6 +203,12 @@ public class PortadaJuego extends JPanel{
         b_tienda2.setBorderPainted(false);
         b_tienda2.setPreferredSize(new Dimension(amazon.getIconWidth() + 5, info.getHeight()));
         b_tienda2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        b_tienda2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                openURL("https://www.amazon.es/");
+            }
+        });
         c.gridx = 8;
         c.gridy = 1;
         c.gridheight = 1;
@@ -245,6 +261,18 @@ public class PortadaJuego extends JPanel{
         this.buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review" + this.gameName), BorderLayout.CENTER));
         
         return informacion;
+    }
+
+    private static void openURL(String url){
+        if(Desktop.isDesktopSupported()){
+            try{
+                Desktop.getDesktop().browse(new URI(url));
+            }catch(IOException | URISyntaxException e){
+                e.printStackTrace();
+            }
+        }else{
+            System.err.println("Desktop is not supported");
+        }
     }
 
     /**
