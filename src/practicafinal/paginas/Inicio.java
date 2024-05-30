@@ -61,7 +61,7 @@ public class Inicio extends JPanel {
 
 
         for (int n : randomNum) {
-            this.elements.add(new Juego((String) games.get(n).get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
+            this.elements.add(new Juego((String) games.get(n).get("nombre"), parentPanel, this, views, bundleText));
         }
 
         // Crear el carrousel
@@ -92,7 +92,7 @@ public class Inicio extends JPanel {
 
         for (int i = 0; i < 3; i++) {
             JSONObject game = (JSONObject) games.get(i);
-            this.destacados.add(new Juego((String) game.get("nombre"), parentPanel, this, BorderLayout.CENTER, views, bundleText));
+            this.destacados.add(new Juego((String) game.get("nombre"), parentPanel, this, views, bundleText));
         }
 
         c.gridx = 0;

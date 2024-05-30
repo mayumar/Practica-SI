@@ -13,7 +13,7 @@ import javax.swing.SwingConstants;
 
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
-import practicafinal.eventos.FocusPanelGameListener;
+import practicafinal.eventos.FocusPanelGameListListener;
 import practicafinal.paginas.Juegos;
 
 /**
@@ -37,7 +37,7 @@ public class Categoria extends JButton {
      * @param bundleText  Bundle con los diferentes textos traducidos dependiendo del idioma seleccionado.
      * @param juegos      ArrayList que contiene la lista de juegos de la categoría.
     */
-    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos) {
+    public Categoria(String nombre, JPanel parentPanel, JPanel oldPanel, HashMap<String,JPanel> views, ResourceBundle bundleText, ArrayList<Juegos> juegos) {
         this.nombre = nombre;
         this.views = views;
         this.parentPanel = parentPanel;
@@ -55,14 +55,8 @@ public class Categoria extends JButton {
         setFont(new Font(getFont().getFontName(), Font.PLAIN, 25));
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-
-        Juegos listaJuegos = new Juegos(this.nombre, this.parentPanel, this.views, false, bundleText);
-        if(this.views.get(this.nombre) == null){
-            juegos.add(listaJuegos);
-            this.views.put(this.nombre, listaJuegos);
-        }
         
-        addActionListener(new FocusPanelGameListener(this.parentPanel, oldPanel, this.views.get(this.nombre), position));
+        addActionListener(new FocusPanelGameListListener(this.parentPanel, oldPanel, this.nombre, this.views, bundleText));
     }
 
     /**

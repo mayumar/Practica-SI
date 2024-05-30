@@ -9,7 +9,7 @@ import practicafinal.DataManager;
 import practicafinal.componentes.*;
 import practicafinal.config.Bordes;
 import practicafinal.config.Colores;
-import practicafinal.eventos.FocusPanelGameListener;
+import practicafinal.eventos.FocusPanelReviewListener;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -256,12 +256,7 @@ public class PortadaJuego extends JPanel{
         c.weightx = 0.5;
         informacion.add(this.buttonReviews, c);
 
-        this.review = new Review(bundleText, this.gameName, this.parentPanel, this.views);
-
-        if(this.views.get("review" + this.gameName) == null)
-            this.views.put("review" + this.gameName, this.review);
-
-        this.buttonReviews.addActionListener(new FocusPanelGameListener(parentPanel, this, this.views.get("review" + this.gameName), BorderLayout.CENTER));
+        this.buttonReviews.addActionListener(new FocusPanelReviewListener(parentPanel, this, "review" + this.gameName, this.views, bundleText));
         
         return informacion;
     }

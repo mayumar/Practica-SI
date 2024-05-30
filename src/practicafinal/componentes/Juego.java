@@ -24,7 +24,6 @@ public class Juego extends JPanel {
     private String nombre;
     private JPanel parentPanel;
     private JPanel oldPanel;
-    private String position;
     private HashMap<String,JPanel> views;
     private JSONObject game;
     private PortadaJuego portada;
@@ -39,11 +38,10 @@ public class Juego extends JPanel {
      * @param views       Un HashMap que contiene las vistas de los diferentes juegos.
      * @param bundleText  El ResourceBundle que contiene los textos traducidos.
      */
-    public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, String position, HashMap<String,JPanel> views, ResourceBundle bundleText) {
+    public Juego(String nombre, JPanel parentPanel, JPanel oldPanel, HashMap<String,JPanel> views, ResourceBundle bundleText) {
         this.nombre = nombre;
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
-        this.position = position;
         this.views = views;
         
         JSONObject game = null;
@@ -99,11 +97,7 @@ public class Juego extends JPanel {
         juego.setBackground(Colores.cadet_gray);
         juego.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        this.portada = new PortadaJuego(nombre, parentPanel, this.views, bundleText);
-        if(views.get(nombre) == null){
-            views.put(nombre, this.portada);
-        }
-        juego.addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, views.get(nombre), position));
+        juego.addActionListener(new FocusPanelGameListener(parentPanel, oldPanel, nombre, views, bundleText));
 
         return juego;
     }

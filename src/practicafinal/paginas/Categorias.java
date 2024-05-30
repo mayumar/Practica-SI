@@ -77,7 +77,7 @@ public class Categorias extends JPanel {
             
             if (cat.contains(" ")) cat = cat.replace(" ", "_");
 
-            this.contenido.add(new Categoria(cat, this.parentPanel, this, BorderLayout.CENTER, this.views, this.bundleText, juegos), c);
+            this.contenido.add(new Categoria(cat, this.parentPanel, this, this.views, this.bundleText, juegos), c);
             col++;
             if (col == columns) {
                 col = 0;

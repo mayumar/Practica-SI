@@ -11,13 +11,13 @@ import java.util.ResourceBundle;
 
 import javax.swing.*;
 
-import practicafinal.paginas.PortadaJuego;
+import practicafinal.paginas.Juegos;
 
 /**
  * La clase FocusPanelGameListener implementa ActionListener y se utiliza para cambiar el panel visible dentro de un contenedor.
  * Al activar el evento, oculta el panel antiguo y muestra el nuevo panel en la posición especificada.
 */
-public class FocusPanelGameListener implements ActionListener{
+public class FocusPanelGameListListener implements ActionListener{
     private JPanel parentPanel;
     private JPanel oldPanel;
     private String name;
@@ -32,7 +32,7 @@ public class FocusPanelGameListener implements ActionListener{
      * @param name    El nuevo panel que se mostrará.
      * @param views     La posición del nuevo panel dentro del contenedor.
     */
-    public FocusPanelGameListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText){
+    public FocusPanelGameListListener(JPanel parentPanel, JPanel oldPanel, String name, HashMap<String,JPanel> views, ResourceBundle bundleText){
         this.parentPanel = parentPanel;
         this.oldPanel = oldPanel;
         this.name = name;
@@ -47,18 +47,20 @@ public class FocusPanelGameListener implements ActionListener{
     */
     @Override
     public void actionPerformed(ActionEvent e){
-        oldPanel.setVisible(false);
-        parentPanel.remove(oldPanel);
+        this.oldPanel.setVisible(false);
+        this.parentPanel.remove(oldPanel);
         
 
-        PortadaJuego newPanel = new PortadaJuego(name, parentPanel, this.views, bundleText);
-        if(views.get(name) == null){
-            views.put(name, newPanel);
+        Juegos newPanel = new Juegos(this.name, this.parentPanel, this.views, false, this.bundleText);
+
+        if(this.views.get(this.name) == null){
+            //juegos.add(newPanel);
+            this.views.put(this.name, newPanel);
         }
-
-        this.views.get(name).setVisible(true);
-        parentPanel.add(this.views.get(name), BorderLayout.CENTER);
         
-        parentPanel.revalidate();
+        this.views.get(this.name).setVisible(true);
+        this.parentPanel.add(this.views.get(this.name), BorderLayout.CENTER);
+        
+        this.parentPanel.revalidate();
     }
 }
