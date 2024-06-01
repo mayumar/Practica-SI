@@ -1830,41 +1830,41 @@
 			]
 		},
 		{
-			"nombre": "Celeste",
-			"imagen": "src/images/juegos/indie/Celeste/im1.jpeg",
+			"nombre": "Mario Wonder",
+			"imagen": "src/images/juegos/plataformas/Mario_Wonder/portada.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/indie/Celeste/im2.jpeg"
+					"ruta": "src/images/juegos/plataformas/Mario_Wonder/im1.png"
 				},
 				{
-					"ruta": "src/images/juegos/indie/Celeste/im3.jpeg"
+					"ruta": "src/images/juegos/plataformas/Mario_Wonder/im2.png"
 				},
 				{
-					"ruta": "src/images/juegos/indie/Celeste/indice.jpeg"
+					"ruta": "src/images/juegos/plataformas/Mario_Wonder/im3.png"
 				}
 			],
-			"descripcion": "Texto_descripcion_Celeste",
-			"fecha_lanzamiento": "28-01-2018",
-			"desarrollador": "Matt Makes Games, Extremely OK Games, Ltd.",
+			"descripcion": "Texto_descripcion_Mario_Wonder",
+			"fecha_lanzamiento": "20-10-2023",
+			"desarrollador": "Nintendo, Nintendo Entertainment Planning & Development",
 			"reviews": [
 				{
-					"comentario": "Texto_comentario1_celeste",
-					"calificacion": 8
-				},
-				{
-					"comentario": "Texto_comentario2_celeste",
+					"comentario": "Texto_comentario1_mario_wonder",
 					"calificacion": 9
 				},
 				{
-					"comentario": "Texto_comentario3_celeste",
-					"calificacion": 7
+					"comentario": "Texto_comentario2_mario_wonder",
+					"calificacion": 10
 				},
 				{
-					"comentario": "Texto_comentario4_celeste",
+					"comentario": "Texto_comentario3_mario_wonder",
 					"calificacion": 8
+				},
+				{
+					"comentario": "Texto_comentario4_mario_wonder",
+					"calificacion": 9
 				}
 			]
-		},
+		},		
 		{
 			"nombre": "Hollow Knight",
 			"imagen": "src/images/juegos/plataformas/Hollow_Knight/portada.jpeg",
