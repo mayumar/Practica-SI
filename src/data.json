@@ -105,10 +105,10 @@
 			"imagen": "src/images/juegos/fps/Valorant/p_valorant.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/Valorant/im2.jpeg"
+					"ruta": "src/images/juegos/fps/Valorant/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/Valorant/im3.jpeg"
+					"ruta": "src/images/juegos/fps/Valorant/im2.jpeg"
 				},
 				{
 					"ruta": "src/images/juegos/fps/Valorant/indice.jpeg"
@@ -201,10 +201,10 @@
 			"imagen": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/p_halo.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im2.jpeg"
+					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im3.jpeg"
+					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/im2.jpeg"
 				},
 				{
 					"ruta": "src/images/juegos/fps/Halo_The_Master_Chief_Collection/indice.jpeg"
@@ -233,10 +233,10 @@
 			"imagen": "src/images/juegos/fps/Quake_II/p_quake.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/Quake_II/im2.jpeg"
+					"ruta": "src/images/juegos/fps/Quake_II/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/Quake_II/im3.jpeg"
+					"ruta": "src/images/juegos/fps/Quake_II/im2.jpeg"
 				},
 				{
 					"ruta": "src/images/juegos/fps/Quake_II/indice.jpeg"
@@ -265,10 +265,10 @@
 			"imagen": "src/images/juegos/fps/Helldivers_II/p_helldivers.png",
 			"capturas": [
 				{
-					"ruta": "src/images/juegos/fps/Helldivers_II/im2.jpeg"
+					"ruta": "src/images/juegos/fps/Helldivers_II/im1.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/fps/Helldivers_II/im3.jpeg"
+					"ruta": "src/images/juegos/fps/Helldivers_II/im2.jpeg"
 				},
 				{
 					"ruta": "src/images/juegos/fps/Helldivers_II/indice.jpeg"
@@ -751,7 +751,7 @@
 					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/descarga.jpeg"
+					"ruta": "src/images/juegos/terror/Resident_Evil_7_Biohazard/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Resident_Evil_7",
@@ -787,7 +787,7 @@
 					"ruta": "src/images/juegos/terror/Silent_Hill_2/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror/Silent_Hill_2/descarga.jpeg"
+					"ruta": "src/images/juegos/terror/Silent_Hill_2/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Silent_Hill_2",
@@ -931,7 +931,7 @@
 					"ruta": "src/images/juegos/terror/Layers_of_Fear/im2.jpeg"
 				},
 				{
-					"ruta": "src/images/juegos/terror/Layers_of_Fear/descarga.jpeg"
+					"ruta": "src/images/juegos/terror/Layers_of_Fear/im3.jpeg"
 				}
 			],
 			"descripcion": "Texto_descripcion_Layers_of_Fear",
