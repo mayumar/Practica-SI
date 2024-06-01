@@ -28,7 +28,7 @@ public class BarraSuperior extends JPanel {
     private HintTextField buscar;
 
     /**
-     * Crea una barra de navegación superior con los paneles y el marco especificados.
+     * Crea una barra de navegación superior.
      *
      * @param parentPanel El panel padre que contiene la barra de navegación.
      * @param views       Un HashMap que contiene las vistas de las diferentes secciones de la aplicación.
