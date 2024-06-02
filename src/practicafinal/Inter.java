@@ -19,7 +19,6 @@ public class Inter {
      */
     private Inter() {
         this.currentLocale = Locale.getDefault();
-        // this.currentLocale = new Locale("en", "GB");
     }
 
     /**
