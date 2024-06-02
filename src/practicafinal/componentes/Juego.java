@@ -121,9 +121,7 @@ public class Juego extends JPanel {
      */
     private void addPortada(){
         this.portada = new PortadaJuego(this.nombre, this.parentPanel, this.views, this.bundleText);
-        if(this.views.get(this.nombre) == null){
-            this.views.put(this.nombre, this.portada);
-        }
+        this.views.put(this.nombre, this.portada);
     }
 
     /**

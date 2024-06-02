@@ -298,8 +298,7 @@ public class PortadaJuego extends JPanel{
     private void addReview(){
         this.review = new Review(this.bundleText, this.gameName, this.parentPanel, this.views);
 
-        if(this.views.get("review" + this.gameName) == null)
-            this.views.put("review" + this.gameName, this.review);
+        this.views.put("review" + this.gameName, this.review);
     }
 
     /**
